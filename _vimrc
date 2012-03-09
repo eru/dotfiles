@@ -2,9 +2,12 @@
 set nocompatible
 filetype off
 
-" Vundle 読み込み
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" neobundle 読み込み
+set rtp+=~/dotfiles/neobundle.vim
+if has('vim_starting')
+	set runtimepath+=~/dotfiles/neobundle.vim
+	call neobundle#rc(expand('~/.vim/'))
+endif
 
 " 行番号表示
 set number
@@ -37,6 +40,38 @@ set autoread
 set hidden
 " バックスペースでがしがし消せる
 set backspace=indent,eol,start
+
+" Plugins
+" Reference を vim から見れるようにする(ex. :Ref perldoc Encode)
+NeoBundle 'thinca/vim-ref'
+" ちょーすごい補完
+NeoBundle 'Shougo/neocomplcache'
+" くいっくらん(ex. \r)
+NeoBundle 'thinca/vim-quickrun'
+" XML 編集を便利にする
+NeoBundle 'sukima/xmledit'
+" 整形
+NeoBundle 'Align'
+NeoBundle 'h1mesuke/vim-alignta'
+" テキストオブジェクトを便利にする
+NeoBundle 'surround.vim'
+" ワード移動
+NeoBundle 'smartword'
+" すむーずすくろーる
+NeoBundle 'Smooth-Scroll'
+" 外部 grep
+NeoBundle 'grep.vim'
+" vim の正規表現を perl とかと同じにする(ex. :%S/(aa|bb|cc|)//g)
+NeoBundle 'eregex.vim'
+" SQL 整形(ex. :SQLUFormatter)
+NeoBundle 'SQLUtilities'
+" メソッド, 変数宣言一覧(ex. :Tlist)
+NeoBundle 'taglist.vim'
+" Vim にも Shell を！
+NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/vimshell'
+" 一覧
+NeoBundle 'Shougo/unite.vim'
 
 " Vundle用設定
 filetype plugin indent on
