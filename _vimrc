@@ -37,3 +37,6 @@ set autoread
 set hidden
 " バックスペースでがしがし消せる
 set backspace=indent,eol,start
+
+" Vundle用設定
+filetype plugin indent on
