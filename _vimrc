@@ -1,0 +1,22 @@
+set nocompatible
+set number
+set tabstop=4
+set shiftwidth=4
+set showmatch
+syntax on
+set hlsearch
+set showmode
+set autoindent
+set smartindent
+set ruler
+set showcmd
+set laststatus=2
+set statusline=%<%f\ %m%r%h%w
+set statusline+=%{'['.(&fenc!=''?&fenc:&enc).']['.&fileformat.']'}
+set statusline+=%=%l/%L,%c%V%8P
+set scrolloff=5
+set nobackup
+set autoread
+set noswapfile
+set hidden
+set backspace=indent,eol,start
