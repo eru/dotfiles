@@ -1,0 +1,13 @@
+# /dotfiles/_bashrc_plus
+# .bashrc を管理するとOSの違いでしんどいんでこれを読み込ませる.
+
+# えいりあす
+alias la='ls -la'
+alias ll='ls -ll'
+alias rm='rm -i'
+alias mv='mv -i'
+alias cp='cp -i'
+alias gp='git pull'
+alias gc='git commit'
+alias gp='git push'
+alias cd..='cd ..'
