@@ -3,6 +3,10 @@
 # .bashrc
 echo ". ~/dotfiles/_bashrc_plus" >> ~/.bashrc
 
+# tmux
+rm -i ~/.tmux.conf
+ln -s ~/dotfiles/_tmux.conf ~/.tmux.conf
+
 # vim
 rm -i ~/.vimrc
 rm -ri ~/.vim
