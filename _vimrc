@@ -41,6 +41,9 @@ set hidden
 " バックスペースでがしがし消せる
 set backspace=indent,eol,start
 
+" ColorScheme
+colorscheme zellner
+
 " Plugins
 " Reference を vim から見れるようにする(ex. :Ref perldoc Encode)
 NeoBundle 'thinca/vim-ref'
