@@ -42,7 +42,8 @@ set hidden
 set backspace=indent,eol,start
 
 " ColorScheme
-colorscheme zellner
+colorscheme developer
+hi LineNr ctermfg=1
 
 " Plugins
 " Reference を vim から見れるようにする(ex. :Ref perldoc Encode)

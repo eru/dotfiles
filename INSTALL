@@ -11,6 +11,8 @@ ln -s ~/dotfiles/_tmux.conf ~/.tmux.conf
 rm -i ~/.vimrc
 rm -ri ~/.vim
 ln -s ~/dotfiles/_vimrc ~/.vimrc
+mkdir ~/.vim
+ln -s ~/dotfiles/_vim/colors ~/.vim/colors
 
 # Submodule
 git submodule init
