@@ -14,6 +14,8 @@ set number
 " Tab幅設定
 set tabstop=4
 set shiftwidth=4
+" softtab使う
+set expandtab
 " ハイライト
 syntax on
 set hlsearch
@@ -40,6 +42,10 @@ set autoread
 set hidden
 " バックスペースでがしがし消せる
 set backspace=indent,eol,start
+" 保存時に行末スペース削除
+autocmd BufWritePre * :%s/\s\+$//e
+" 保存時にHardTab=>SoftTab変換
+autocmd BufWritePre * :retab
 
 " ColorScheme
 colorscheme developer
