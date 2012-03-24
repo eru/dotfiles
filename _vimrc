@@ -5,8 +5,8 @@ filetype off
 " neobundle 読み込み
 set rtp+=~/dotfiles/neobundle.vim
 if has('vim_starting')
-	set runtimepath+=~/dotfiles/neobundle.vim
-	call neobundle#rc(expand('~/.vim/'))
+    set runtimepath+=~/dotfiles/neobundle.vim
+    call neobundle#rc(expand('~/.vim/'))
 endif
 
 " 行番号表示
@@ -14,6 +14,7 @@ set number
 " Tab幅設定
 set tabstop=4
 set shiftwidth=4
+set smarttab
 " softtab使う
 set expandtab
 " ハイライト
