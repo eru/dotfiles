@@ -86,6 +86,9 @@ NeoBundle 'Shougo/unite.vim'
 " 括弧閉じ忘れ防止
 NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'Highlight-UnMatched-Brackets'
+" Gist
+NeoBundle 'mattn/webapi-vim'
+NeoBundle 'mattn/gist-vim'
 
 " NeoBundle用設定
 filetype plugin indent on
