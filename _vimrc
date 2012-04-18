@@ -83,6 +83,8 @@ NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/vimshell'
 " 一覧
 NeoBundle 'Shougo/unite.vim'
+" 括弧閉じ忘れ防止
+NeoBundle 'UnMtchBracket.vim'
 
 " Vundle用設定
 filetype plugin indent on
