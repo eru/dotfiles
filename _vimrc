@@ -1,8 +1,8 @@
-" Vundle動かすのに必要
+" NeoBundle動かすのに必要
 set nocompatible
 filetype off
 
-" neobundle 読み込み
+" NeoBundle 読み込み
 set rtp+=~/dotfiles/neobundle.vim
 if has('vim_starting')
     set runtimepath+=~/dotfiles/neobundle.vim
@@ -84,7 +84,8 @@ NeoBundle 'Shougo/vimshell'
 " 一覧
 NeoBundle 'Shougo/unite.vim'
 " 括弧閉じ忘れ防止
-NeoBundle 'UnMtchBracket.vim'
+NeoBundle 'Townk/vim-autoclose'
+NeoBundle 'Highlight-UnMatched-Brackets'
 
-" Vundle用設定
+" NeoBundle用設定
 filetype plugin indent on
