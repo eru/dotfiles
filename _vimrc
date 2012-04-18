@@ -89,6 +89,8 @@ NeoBundle 'Highlight-UnMatched-Brackets'
 " Gist
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/gist-vim'
+" コメントアウト
+NeoBundle 'EnhCommentify.vim'
 
 " NeoBundle用設定
 filetype plugin indent on
