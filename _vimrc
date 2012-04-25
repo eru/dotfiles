@@ -70,7 +70,7 @@ NeoBundle 'surround.vim'
 NeoBundle 'smartword'
 " すむーずすくろーる
 NeoBundle 'Smooth-Scroll'
-" 外部 grep
+" 外部 grep(ex. :Grep hoge)
 NeoBundle 'grep.vim'
 " vim の正規表現を perl とかと同じにする(ex. :%S/(aa|bb|cc|)//g)
 NeoBundle 'eregex.vim'
