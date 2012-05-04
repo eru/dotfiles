@@ -2,7 +2,7 @@
 # .bashrc を管理するとOSの違いで, しんどいんでこれを読み込ませる.
 
 # えいりあす
-alias la='ls -la'
+alias la='ls -lah'
 alias ll='ls -ll'
 alias rm='rm -i'
 alias mv='mv -i'
