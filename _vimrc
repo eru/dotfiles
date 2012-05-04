@@ -48,6 +48,20 @@ autocmd BufWritePre * :%s/\s\+$//e
 " 保存時にHardTab=>SoftTab変換
 autocmd BufWritePre * :retab
 
+" KeyMap
+" いつでも, h j k l でカーソル移動
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+noremap <C-k> <Up>
+noremap <C-l> <Right>
+" いつでも, C-a C-e で行頭/行末移動
+noremap <C-a> <Home>
+noremap! <C-a> <Home>
+noremap <C-e> <End>
+noremap! <C-e> <End>
+
 " ColorScheme
 colorscheme developer
 hi LineNr ctermfg=1
