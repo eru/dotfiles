@@ -8,6 +8,7 @@ alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
 alias cd..='cd ..'
+alias ta='tmux attach'
 ## Git 関連
 alias ga='git add'
 alias gb='git branch'
