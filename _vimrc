@@ -64,6 +64,14 @@ noremap! <C-e> <End>
 " PgUp, PgDown でも SmoothScroll を使う
 map <PageUp> <C-b><Home>
 map <PageDown> <C-f><Down><Home>
+" 表示行単位で上下移動するように
+nnoremap j gj
+nnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up>   gk
+" 逆に普通の行単位で移動したい時のために逆の map も設定しておく
+nnoremap gj j
+nnoremap gk k
 
 " ColorScheme
 colorscheme developer
