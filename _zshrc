@@ -113,3 +113,6 @@ esac
 #function cd() {
 #  builtin cd $@ && ls;
 #}
+
+# 環境ごとに違う設定は，.zshrc.mine に書く
+[ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
