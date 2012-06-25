@@ -89,9 +89,9 @@ PROMPT2=$tmp_prompt2  # セカンダリのプロンプト(コマンドが2行以
 RPROMPT=$tmp_rprompt  # 右側のプロンプト
 SPROMPT=$tmp_sprompt  # スペル訂正用プロンプト
 # SSHログイン時のプロンプト
-[ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
-  PROMPT="%{${fg[white]}%}${HOST%%.*} ${PROMPT}"
-;
+#[ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
+#  PROMPT="${HOST%%.*} ${PROMPT}"
+#;
 
 ### Title (user@hostname) ###
 case "${TERM}" in
