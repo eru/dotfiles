@@ -1,0 +1,4 @@
+# bash 起動時に zsh があれば，zsh を起動する
+if [ -f `which zsh` -a "$SHELL" != `which zsh` ]; then
+  exec `which zsh`
+fi

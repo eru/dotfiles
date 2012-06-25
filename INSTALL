@@ -1,7 +1,13 @@
 #!/bin/bash
 
 # .bashrc
-echo ". ~/dotfiles/_bashrc_plus" >> ~/.bashrc
+echo ". ~/dotfiles/alias" >> ~/.bashrc
+
+# zsh
+rm -i ~/.bash_login
+ln -s ~/dotfiles/_bash_login ~/.bash_login
+rm -i ~/.zshrc
+ln -s ~/dotfiles/_zshrc ~/.zshrc
 
 # tmux
 rm -i ~/.tmux.conf
