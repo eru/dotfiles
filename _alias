@@ -1,16 +1,25 @@
-# /dotfiles/_bashrc_plus
-# .bashrc を管理するとOSの違いで, しんどいんでこれを読み込ませる.
-
-# えいりあす
+# ls
 alias la='ls -lah'
-alias ll='ls -ll'
+alias ll='ls -lh'
+
+# rm, mv, cp する時は確認する
 alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
+
+# よく間違えるねん
 alias cd..='cd ..'
+
+# tmux
+alias tm='tmux'
 alias ta='tmux attach'
+
+# ssh
+# 問題出るまではこれで誤魔化す
 alias ssh='ssh -t'
-## Git 関連
+
+# git
+alias g='git'
 alias ga='git add'
 alias gb='git branch'
 alias gba='git branch -a'
@@ -21,3 +30,40 @@ alias gpl='git pull'
 alias gp='git push'
 alias gst='git status'
 alias gss='git status -s'
+
+# du/df
+alias du='du -h'
+alias df='df -h'
+alias duh='du -h ./ --max-depth=1'
+
+# su
+alias su='su -l'
+
+# less
+alias less='less -R'
+
+# extract http://d.hatena.ne.jp/jeneshicc/20110215/1297778049
+extract () {
+  if [ -f $1 ] ; then
+      case $1 in
+          *.tar.bz2) tar xvjf $1 ;;
+          *.tar.gz) tar xvzf $1 ;;
+          *.tar.xz) tar xvJf $1 ;;
+          *.bz2) bunzip2 $1 ;;
+          *.rar) unrar x $1 ;;
+          *.gz) gunzip $1 ;;
+          *.tar) tar xvf $1 ;;
+          *.tbz2) tar xvjf $1 ;;
+          *.tgz) tar xvzf $1 ;;
+          *.zip) unzip $1 ;;
+          *.Z) uncompress $1 ;;
+          *.7z) 7z x $1 ;;
+          *.lzma) lzma -dv $1 ;;
+          *.xz) xz -dv $1 ;;
+          *) echo "don't know how to extract '$1'..." ;;
+      esac
+  else
+      echo "'$1' is not a valid file!"
+  fi
+}
+alias ex='extract'

@@ -13,6 +13,10 @@ ln -s ~/dotfiles/_zshrc ~/.zshrc
 rm -i ~/.tmux.conf
 ln -s ~/dotfiles/_tmux.conf ~/.tmux.conf
 
+# git
+rm -i ~/.gitconfig
+ln -s ~/dotfiles/_gitconfig ~/.gitconfig
+
 # vim
 rm -i ~/.vimrc
 rm -ri ~/.vim
