@@ -67,3 +67,13 @@ extract () {
   fi
 }
 alias ex='extract'
+
+# realpath
+case "${OSTYPE}" in
+    darwin*)
+        alias fullpath='grealpath -s'
+        ;;
+    linux*)
+        alias fullpath='realpath -s'
+        ;;
+esac
