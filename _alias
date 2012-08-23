@@ -1,4 +1,5 @@
 # ls
+alias ls='ls --color'
 alias la='ls -lah'
 alias ll='ls -lh'
 
@@ -41,6 +42,9 @@ alias su='su -l'
 
 # less
 alias less='less -R'
+
+# vim
+alias vi='vim'
 
 # extract http://d.hatena.ne.jp/jeneshicc/20110215/1297778049
 extract () {
