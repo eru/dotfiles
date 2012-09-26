@@ -13,6 +13,7 @@ alias cd..='cd ..'
 # tmux
 alias tm='tmux'
 alias ta='tmux attach'
+alias tl='tmux list-sessions'
 
 # ssh
 # 問題出るまではこれで誤魔化す
