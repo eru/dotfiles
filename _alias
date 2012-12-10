@@ -27,10 +27,12 @@ alias gba='git branch -a'
 alias gci='git commit'
 alias gco='git checkout'
 alias gd='git diff'
+alias gdc='git diff --cached'
 alias gpl='git pull'
 alias gp='git push'
 alias gst='git status'
 alias gss='git status -s'
+alias gm='git merge --no-ff'
 
 # du/df
 alias du='du -h'

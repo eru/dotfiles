@@ -51,6 +51,12 @@ set backspace=indent,eol,start
 autocmd BufWritePre * :%s/\s\+$//e
 " 保存時にHardTab=>SoftTab変換
 autocmd BufWritePre * :retab
+" 改行コードの自動認識
+set fileformats=unix,dos,mac
+" □とか○の文字があってもカーソル位置がずれないようにする
+if exists('&ambiwidth')
+set ambiwidth=double
+endif
 
 " KeyMap
 " いつでも, h j k l でカーソル移動
