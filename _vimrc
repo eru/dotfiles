@@ -9,6 +9,10 @@ if has('vim_starting')
     call neobundle#rc(expand('~/.vim/'))
 endif
 
+" 文字コードと改行コード
+set encoding=utf-8
+set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+set fileformats=unix,dos,mac
 " 行番号表示
 set number
 " Tab幅設定
