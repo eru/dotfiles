@@ -116,4 +116,4 @@
     # This config support git version <= 1.7.10
     path = ~/.gitconfig.mine
 [push]
-	default = matching
+    default = matching
