@@ -57,6 +57,9 @@ set fileformats=unix,dos,mac
 if exists('&ambiwidth')
 set ambiwidth=double
 endif
+" 折りたたみ
+set foldmethod=indent
+set foldlevel=100
 
 " KeyMap
 " いつでも, h j k l でカーソル移動
