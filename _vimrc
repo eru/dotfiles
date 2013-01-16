@@ -119,6 +119,12 @@ NeoBundle 'SQLUtilities'
 NeoBundle 'taglist.vim'
 " Vim にも Shell を！
 NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/vimproc', {
+    \ 'build' : {
+    \     'mac' : 'make -f make_mac.mak',
+    \     'unix' : 'make -f make_unix.mak',
+    \    },
+    \ }
 NeoBundle 'Shougo/vimshell'
 " 一覧
 NeoBundle 'Shougo/unite.vim'
