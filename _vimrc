@@ -11,7 +11,7 @@ endif
 
 " 文字コードと改行コード
 set encoding=utf-8
-set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+set fileencodings=ucs-bom,utf-8,iso-2022-jp,euc-jp,sjis,cp932,cp20932
 set fileformats=unix,dos,mac
 " 行番号表示
 set number
