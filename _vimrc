@@ -118,7 +118,6 @@ NeoBundle 'SQLUtilities'
 " メソッド, 変数宣言一覧(ex. :Tlist)
 NeoBundle 'taglist.vim'
 " Vim にも Shell を！
-NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/vimproc', {
     \ 'build' : {
     \     'mac' : 'make -f make_mac.mak',
