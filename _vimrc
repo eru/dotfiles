@@ -3,11 +3,10 @@ set nocompatible
 filetype off
 
 " NeoBundle 読み込み
-set rtp+=~/dotfiles/neobundle.vim
 if has('vim_starting')
-    set runtimepath+=~/dotfiles/neobundle.vim
-    call neobundle#rc(expand('~/.vim/'))
+    set runtimepath+=~/dotfiles/neobundle.vim/
 endif
+call neobundle#rc(expand('~/.vim/'))
 
 " 文字コードと改行コード
 set encoding=utf-8
