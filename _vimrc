@@ -138,6 +138,8 @@ NeoBundle 'EnhCommentify.vim'
 NeoBundle 'tpope/vim-fugitive'
 " markdown
 NeoBundle 'tpope/vim-markdown'
+" ag
+NeoBundle 'rking/ag.vim'
 
 " NeoBundle用設定
 filetype plugin indent on
