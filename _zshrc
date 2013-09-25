@@ -114,6 +114,9 @@ esac
 ### Aliases ###
 [ -f ~/dotfiles/_alias ] && source ~/dotfiles/_alias
 
+### Higglighting ###
+[ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 # cdコマンド実行後、lsを実行する
 #function cd() {
 #  builtin cd $@ && ls;
