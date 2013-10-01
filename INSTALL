@@ -24,6 +24,10 @@ ln -s ~/dotfiles/_vimrc ~/.vimrc
 mkdir ~/.vim
 ln -s ~/dotfiles/_vim/colors ~/.vim/colors
 
+# powerline
+rm -ri ~/.config/powerline
+ln -s ~/dotfiles/_config/powerline ~/.config/powerline
+
 # Submodule
 git submodule init
 git submodule update
