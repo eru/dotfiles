@@ -111,10 +111,13 @@ esac
 # ------------------------------
 # Other Settings
 # ------------------------------
+### powerline ###
+[ -f ~/.vim/powerline/scripts/powerline ] && export PATH=$PATH:~/.vim/powerline/scripts && \
+
 ### Aliases ###
 [ -f ~/dotfiles/_alias ] && source ~/dotfiles/_alias
 
-### Higglighting ###
+### Highlighting ###
 [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # cdコマンド実行後、lsを実行する
