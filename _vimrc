@@ -87,7 +87,7 @@ nnoremap gk k
 
 " ColorScheme
 colorscheme developer
-hi LineNr ctermfg=1
+set background=dark
 
 " Plugins
 " Reference を vim から見れるようにする(ex. :Ref perldoc Encode)

@@ -1,15 +1,9 @@
 {
     "default_module": "powerline.segments.common",
     "segment_data": {
-        "hostname": {
-            "before": "@"
-        }
     },
     "segments": {
         "left": [
-            {
-                "name": "hostname"
-            }
         ],
         "right": [
             {
@@ -26,6 +20,9 @@
                     "format": "%a %m/%d %H:%M",
                     "istime": true
                 }
+            },
+            {
+                "name": "hostname"
             }
         ]
     }
