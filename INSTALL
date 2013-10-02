@@ -24,17 +24,18 @@ ln -s ~/dotfiles/_vimrc ~/.vimrc
 mkdir ~/.vim
 ln -s ~/dotfiles/_vim/colors ~/.vim/colors
 
+# xvim
+rm -i ~/.xvimrc
+ln -s ~/dotfiles/_xvimrc ~/.xvimrc
+
 # powerline
+if [ ! -d ~/.config ] then;
+    mkdir ~/.config
+fi
 rm -ri ~/.config/powerline
 ln -s ~/dotfiles/_config/powerline ~/.config/powerline
+
 
 # Submodule
 git submodule init
 git submodule update
-
-# Git Config
-git config --global alias.br 'branch'
-git config --global alias.co 'checkout'
-git config --global alias.ci 'commit'
-git config --global alias.di 'diff'
-git config --global alias.st 'status -s'
