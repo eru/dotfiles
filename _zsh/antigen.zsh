@@ -12,11 +12,12 @@ antigen bundle yum
 antigen bundle heroku
 antigen bundle pip
 antigen bundle lein
-antigen bundle command-not-found
 antigen bundle autojump
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Completions bundle.
 antigen bundle zsh-users/zsh-completions
 
 # Load the theme.

@@ -77,18 +77,23 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 ### Prompt ###
 # プロンプトに色を付ける
 autoload -U colors; colors
+USER_BG=$'%{\e[48;5;31m%}'
+USER_FGBG=$'%{\e[38;5;31m%}'
+USER_FG=$'%{\e[38;5;254m%}'
+PWD_BG=$'%{\e[48;5;240m%}'
+PWD_FGBG=$'%{\e[38;5;240m%}'
+PWD_FG=$'%{\e[38;5;250m%}'
+
 # 一般ユーザ時
-tmp_prompt="%U%m:%n%{${reset_color}%} $ "
-tmp_prompt2="%U% {${reset_color}%}> "
-tmp_rprompt="%U%{${fg[green]}%}[%~]%{${reset_color}%}"
+tmp_prompt="$USER_BG$USER_FG %m:%n %k%f$USER_FGBG%f "
+tmp_prompt2="% {${reset_color}%}> "
+tmp_rprompt="$PWD_FGBG%f$PWD_BG$PWD_FG %~ %f%k"
 tmp_sprompt="%r is correct? [Yes, No, Abort, Edit]:"
 
 # rootユーザ時(太字にする)
 if [ ${UID} -eq 0 ]; then
-  tmp_prompt="%B${tmp_prompt}%u%b"
-  tmp_prompt2="%B${tmp_prompt2}%u%b"
-  tmp_rprompt="%B${tmp_rprompt}%u%b"
-  tmp_sprompt="%B${tmp_sprompt}%u%b"
+  tmp_prompt="%B${tmp_prompt}%b"
+  tmp_prompt2="%B${tmp_prompt2}%b"
 fi
 
 PROMPT=$tmp_prompt    # 通常のプロンプト
