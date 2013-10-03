@@ -4,6 +4,9 @@
     },
     "segments": {
         "left": [
+            {
+                "name": "user"
+            }
         ],
         "right": [
             {
