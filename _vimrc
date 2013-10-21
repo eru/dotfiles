@@ -147,6 +147,9 @@ NeoBundle 'alpaca-tc/alpaca_powertabline'
 NeoBundle 'Lokaltog/powerline', {'rtp' : 'powerline/bindings/vim'}
 " emmet-vim
 NeoBundle 'mattn/emmet-vim'
+" Dash
+NeoBundle 'rizzatti/funcoo.vim'
+NeoBundle 'rizzatti/dash.vim'
 
 " NeoBundle用設定
 filetype plugin indent on
