@@ -19,6 +19,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Completions bundle.
 antigen bundle zsh-users/zsh-completions
+[[ -d ~/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-zsh-users-SLASH-zsh-completions.git/src ]] && fpath=(~/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-zsh-users-SLASH-zsh-completions.git/src $fpath)
 
 # Load the theme.
 #antigen theme robbyrussell
