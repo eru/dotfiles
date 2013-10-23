@@ -59,8 +59,6 @@ endif
 " 折りたたみ
 set foldmethod=indent
 set foldlevel=100
-" クリップボード共有みたいなの
-set clipboard=unnamed,autoselect
 
 " KeyMap
 " いつでも, h j k l でカーソル移動
