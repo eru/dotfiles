@@ -109,7 +109,7 @@ NeoBundle 'smartword'
 " NeoBundle 'Smooth-Scroll'
 " NeoBundle 'eru/Smooth-Scroll'
 " 外部 grep(ex. :Grep hoge)
-NeoBundle 'grep.vim'
+" NeoBundle 'grep.vim'
 " vim の正規表現を perl とかと同じにする(ex. :%S/(aa|bb|cc|)//g)
 NeoBundle 'eregex.vim'
 " SQL 整形(ex. :SQLUFormatter)
