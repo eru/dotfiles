@@ -74,8 +74,8 @@ noremap! <C-a> <Home>
 noremap <C-e> <End>
 noremap! <C-e> <End>
 " PgUp, PgDown でも SmoothScroll を使う
-map <PageUp> <C-b><Home>
-map <PageDown> <C-f><Down><Home>
+"map <PageUp> <C-b><Home>
+"map <PageDown> <C-f><Down><Home>
 " 表示行単位で上下移動するように
 nnoremap j gj
 nnoremap k gk
@@ -107,7 +107,7 @@ NeoBundle 'surround.vim'
 NeoBundle 'smartword'
 " すむーずすくろーる
 " NeoBundle 'Smooth-Scroll'
-NeoBundle 'eru/Smooth-Scroll'
+" NeoBundle 'eru/Smooth-Scroll'
 " 外部 grep(ex. :Grep hoge)
 NeoBundle 'grep.vim'
 " vim の正規表現を perl とかと同じにする(ex. :%S/(aa|bb|cc|)//g)
