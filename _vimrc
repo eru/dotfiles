@@ -148,6 +148,10 @@ NeoBundle 'mattn/emmet-vim'
 " Dash
 NeoBundle 'rizzatti/funcoo.vim'
 NeoBundle 'rizzatti/dash.vim'
+" php
+NeoBundle 'eru/php.vim-html-enhanced'
+" plantuml
+NeoBundle 'aklt/plantuml-syxtax'
 
 " NeoBundle用設定
 filetype plugin indent on
