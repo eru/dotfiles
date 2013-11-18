@@ -43,7 +43,7 @@ alias duh='du -h ./ --max-depth=1'
 alias su='su -l'
 
 # less
-alias less='less -R'
+alias less='less -iRM'
 
 # vim
 alias vi='vim'
@@ -107,3 +107,10 @@ function pcolor() {
 
 # plantuml
 alias plantuml='java -jar /usr/local/bin/plantuml.jar'
+
+# colordiff
+case "${OSTYPE}" in
+    darwin*)
+        alias diff='colordiff'
+        ;;
+esac

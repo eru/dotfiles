@@ -150,8 +150,8 @@ NeoBundle 'rizzatti/funcoo.vim'
 NeoBundle 'rizzatti/dash.vim'
 " php
 NeoBundle 'eru/php.vim-html-enhanced'
-" plantuml
-NeoBundle 'aklt/plantuml-syxtax'
+" vim-over
+NeoBundle 'osyo-manga/vim-over'
 
 " NeoBundle用設定
 filetype plugin indent on
