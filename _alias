@@ -114,3 +114,6 @@ case "${OSTYPE}" in
         alias diff='colordiff'
         ;;
 esac
+
+# ag
+alias ag='ag --pager="less"'
