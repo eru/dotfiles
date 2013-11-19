@@ -143,14 +143,14 @@ NeoBundle 'rking/ag.vim'
 " powerline
 NeoBundle 'alpaca-tc/alpaca_powertabline'
 NeoBundle 'Lokaltog/powerline', {'rtp' : 'powerline/bindings/vim'}
-" emmet-vim
+" emmet-vim C-y ,
 NeoBundle 'mattn/emmet-vim'
 " Dash
 NeoBundle 'rizzatti/funcoo.vim'
 NeoBundle 'rizzatti/dash.vim'
 " php
 NeoBundle 'eru/php.vim-html-enhanced'
-" vim-over
+" vim-over :OverCommandLine
 NeoBundle 'osyo-manga/vim-over'
 
 " NeoBundle用設定
