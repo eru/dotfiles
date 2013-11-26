@@ -23,6 +23,7 @@ setopt magic_equal_subst # =以降も補完する(--prefix=/usrなど)
 setopt prompt_subst      # プロンプト定義内で変数置換やコマンド置換を扱う
 setopt notify            # バックグラウンドジョブの状態変化を即時報告する
 setopt equals            # =commandを`which command`と同じ処理にする
+setopt combining_chars   # Macの濁点、半濁点文字化け対策
 
 ### Complement ###
 autoload -U compinit; compinit # 補完機能を有効にする
