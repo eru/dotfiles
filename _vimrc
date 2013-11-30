@@ -116,6 +116,8 @@ NeoBundle 'eregex.vim'
 NeoBundle 'SQLUtilities'
 " メソッド, 変数宣言一覧(ex. :Tlist)
 NeoBundle 'taglist.vim'
+set tags=tags
+let Tlist_Exit_OnlyWindow=1
 " Vim にも Shell を！
 NeoBundle 'Shougo/vimproc', {
     \ 'build' : {
