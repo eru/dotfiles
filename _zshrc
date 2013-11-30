@@ -119,8 +119,11 @@ esac
 # ------------------------------
 # Other Settings
 # ------------------------------
+### PATH
+export PATH=/usr/local/bin:$PATH
+
 ### powerline ###
-[ -f ~/.vim/powerline/scripts/powerline ] && export PATH=$PATH:~/.vim/powerline/scripts
+[ -f ~/.vim/powerline/scripts/powerline ] && export PATH=~/.vim/powerline/scripts:$PATH
 
 ### Aliases ###
 [ -f ~/dotfiles/_alias ] && source ~/dotfiles/_alias
