@@ -94,6 +94,9 @@ set background=dark
 NeoBundle 'thinca/vim-ref'
 " ちょーすごい補完
 NeoBundle 'Shougo/neocomplcache'
+if filereadable(expand('~/dotfiles/_vim/neocomplecache.vimrc'))
+    source ~/dotfiles/_vim/neocomplecache.vimrc
+endif
 " くいっくらん(ex. \r)
 NeoBundle 'thinca/vim-quickrun'
 " XML 編集を便利にする
