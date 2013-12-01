@@ -74,25 +74,26 @@ extract () {
 }
 alias ex='extract'
 
-# realpath
+# OS別の設定
 case "${OSTYPE}" in
     darwin*)
+        # realpath
         alias fullpath='grealpath -s'
+        # java
+        alias javac='javac -J-Dfile.encoding=UTF-8'
+        alias java='java -Dfile.encoding=UTF-8'
+        # colordiff
+        alias diff='colordiff'
+        # coreutils ls
+        alias ls='gls --color'
         ;;
     linux*)
+        # realpath
         alias fullpath='realpath -s'
         ;;
 esac
 alias fpath='fullpath'
 alias fp='fullpath'
-
-# java
-case "${OSTYPE}" in
-    darwin*)
-        alias javac='javac -J-Dfile.encoding=UTF-8'
-        alias java='java -Dfile.encoding=UTF-8'
-        ;;
-esac
 
 # colors
 function pcolor() {
@@ -107,13 +108,6 @@ function pcolor() {
 
 # plantuml
 alias plantuml='java -jar /usr/local/bin/plantuml.jar'
-
-# colordiff
-case "${OSTYPE}" in
-    darwin*)
-        alias diff='colordiff'
-        ;;
-esac
 
 # ag
 alias ag='ag --pager="less"'
