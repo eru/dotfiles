@@ -84,6 +84,22 @@ nnoremap <Up>   gk
 " 逆に普通の行単位で移動したい時のために逆の map も設定しておく
 nnoremap gj j
 nnoremap gk k
+" 貼り付け自動化
+if &term =~ "xterm" || &term =~ "screen"
+    let &t_ti .= "\e[?2004h"
+    let &t_te .= "\e[?2004l"
+    let &pastetoggle = "\e[201~"
+
+    function XTermPasteBegin(ret)
+        set paste
+        return a:ret
+    endfunction
+
+    noremap <special> <expr> <Esc>[200~ XTermPasteBegin("0i")
+    inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
+    cnoremap <special> <Esc>[200~ <nop>
+    cnoremap <special> <Esc>[201~ <nop>
+endif
 
 " ColorScheme
 colorscheme developer
