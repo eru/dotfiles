@@ -29,7 +29,7 @@ rm -i ~/.xvimrc
 ln -s ~/dotfiles/_xvimrc ~/.xvimrc
 
 # powerline
-if [ ! -d ~/.config ] then;
+if [ ! -d ~/.config ]; then
     mkdir ~/.config
 fi
 rm -ri ~/.config/powerline
