@@ -1,5 +1,8 @@
 # (d) is default on
 
+### PATH ###
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
 ### antigen ###
 [ -f ~/dotfiles/_zsh/antigen.zsh ] && source ~/dotfiles/_zsh/antigen.zsh
 
@@ -119,9 +122,6 @@ esac
 # ------------------------------
 # Other Settings
 # ------------------------------
-### PATH
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
 ### powerline ###
 [ -f ~/.vim/powerline/scripts/powerline ] && export PATH=~/.vim/powerline/scripts:$PATH
 
