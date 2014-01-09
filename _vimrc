@@ -124,10 +124,6 @@ NeoBundle 'h1mesuke/vim-alignta'
 NeoBundle 'surround.vim'
 " ワード移動
 NeoBundle 'smartword'
-" すむーずすくろーる
-" NeoBundle 'Smooth-Scroll'
-" NeoBundle 'eru/Smooth-Scroll'
-" 外部 grep(ex. :Grep hoge)
 " NeoBundle 'grep.vim'
 " vim の正規表現を perl とかと同じにする(ex. :%S/(aa|bb|cc|)//g)
 NeoBundle 'eregex.vim'
@@ -173,6 +169,25 @@ NeoBundle 'rizzatti/dash.vim'
 NeoBundle 'eru/php.vim-html-enhanced'
 " vim-over :OverCommandLine
 NeoBundle 'osyo-manga/vim-over'
+" Riv: reStructuredText in Vim
+NeoBundle 'Rykka/riv.vim'
+" open-browser
+NeoBundle 'open-browser.vim'
+" sphinx quickrun hook
+NeoBundle 'daisuzu/quickrun-hook-sphinx'
+" table mode
+"NeoBundle 'dhruvasagar/vim-table-mode'
+
+" quickrun config
+let g:quickrun_config = {}
+" reST preview
+let g:quickrun_config['rst'] = {
+            \ 'command': 'make',
+            \ 'outputter': 'quickfix',
+            \ 'hook/sphinx_open/enable' : 1,
+            \ 'cmdopt': 'html',
+            \ 'exec': '%c %o'
+            \ }
 
 " NeoBundle用設定
 filetype plugin indent on
