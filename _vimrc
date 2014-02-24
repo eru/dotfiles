@@ -105,6 +105,9 @@ endif
 colorscheme developer
 set background=dark
 
+" extension
+au BufNewFile,BufRead *.rst set tabstop=3 shiftwidth=3
+
 " Plugins
 " Reference を vim から見れるようにする(ex. :Ref perldoc Encode)
 NeoBundle 'thinca/vim-ref'
