@@ -101,6 +101,9 @@ if &term =~ "xterm" || &term =~ "screen"
     cnoremap <special> <Esc>[201~ <nop>
 endif
 
+" sudo w
+cabbrev sudo w !sudo tee %
+
 " ColorScheme
 colorscheme developer
 set background=dark
