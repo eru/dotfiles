@@ -180,6 +180,7 @@ NeoBundle 'open-browser.vim'
 NeoBundle 'daisuzu/quickrun-hook-sphinx'
 " table mode
 "NeoBundle 'dhruvasagar/vim-table-mode'
+NeoBundle 'renamer.vim'
 
 " quickrun config
 let g:quickrun_config = {}
