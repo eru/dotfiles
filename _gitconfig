@@ -118,3 +118,5 @@
     path = ~/.gitconfig.mine
 [push]
     default = matching
+[github]
+	user = eru
