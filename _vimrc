@@ -169,8 +169,8 @@ NeoBundle 'Lokaltog/powerline', {'rtp' : 'powerline/bindings/vim'}
 " emmet-vim C-y ,
 NeoBundle 'mattn/emmet-vim'
 " Dash
-NeoBundle 'rizzatti/funcoo.vim'
-NeoBundle 'rizzatti/dash.vim'
+"NeoBundle 'rizzatti/funcoo.vim'
+"NeoBundle 'rizzatti/dash.vim'
 " php
 NeoBundle 'eru/php.vim-html-enhanced'
 " vim-over :OverCommandLine
