@@ -86,6 +86,8 @@ case "${OSTYPE}" in
         alias diff='colordiff'
         # coreutils ls
         alias ls='gls --color'
+        # spotlight locate
+        alias locate='mdfind -name'
         ;;
     linux*)
         # realpath
