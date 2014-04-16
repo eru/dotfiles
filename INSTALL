@@ -23,6 +23,7 @@ rm -ri ~/.vim
 ln -s ~/dotfiles/_vimrc ~/.vimrc
 mkdir ~/.vim
 ln -s ~/dotfiles/_vim/colors ~/.vim/colors
+ln -s ~/dotfiles/_vim/ftdetect ~/.vim/ftdetect
 
 # xvim
 rm -i ~/.xvimrc
