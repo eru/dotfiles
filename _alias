@@ -115,3 +115,6 @@ alias plantuml='java -jar /usr/local/bin/plantuml.jar'
 
 # ag
 alias ag='ag --pager="less"'
+vag () {
+    vim -c "Ag $1";
+}
