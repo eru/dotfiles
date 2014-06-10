@@ -118,6 +118,16 @@ kterm*|xterm*|)
   ;;
 esac
 
+## IP Addr
+case "${OSTYPE}" in
+    darwin*)
+        ETH_DEV=en0
+        ;;
+    linux*)
+        ETH_DEV=eth0
+        ;;
+esac
+MYIP=`ifconfig ${ETH_DEV} 2>/dev/null | grep -v inet6 | grep inet | cut -f 2 -d':' | cut -d' ' -f 2`
 
 # ------------------------------
 # Other Settings
