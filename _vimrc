@@ -8,6 +8,12 @@ if has('vim_starting')
 endif
 call neobundle#rc(expand('~/.vim/'))
 
+" makeしたい
+let g:make = 'gmake'
+if system('uname -o') =~ '^GNU/'
+        let g:make = 'make'
+endif
+
 " 文字コードと改行コード
 set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,iso-2022-jp,euc-jp,sjis,cp932,cp20932
@@ -143,7 +149,7 @@ let Tlist_Exit_OnlyWindow=1
 NeoBundle 'Shougo/vimproc', {
     \ 'build' : {
     \     'mac' : 'make -f make_mac.mak',
-    \     'unix' : 'make -f make_unix.mak',
+    \     'unix' : g:make,
     \    },
     \ }
 NeoBundle 'Shougo/vimshell'
