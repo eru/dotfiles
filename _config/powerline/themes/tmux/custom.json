@@ -2,6 +2,10 @@
     "default_module": "powerline.segments.common",
     "segments": {
         "left": [
+            {
+                "function": "user",
+                "name": "user"
+            }
         ],
         "right": [
             {
