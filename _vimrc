@@ -1,9 +1,7 @@
 " NeoBundle動かすのに必要
-set nocompatible
-filetype off
-
 " NeoBundle 読み込み
 if has('vim_starting')
+    set nocompatible
     set runtimepath+=~/dotfiles/neobundle.vim/
 endif
 call neobundle#rc(expand('~/.vim/'))
@@ -146,7 +144,7 @@ NeoBundle 'taglist.vim'
 set tags=tags
 let Tlist_Exit_OnlyWindow=1
 " Vim にも Shell を！
-NeoBundle 'Shougo/vimproc', {
+NeoBundle 'Shougo/vimproc.vim', {
     \ 'build' : {
     \     'mac' : 'make -f make_mac.mak',
     \     'unix' : g:make,
@@ -203,4 +201,5 @@ let g:quickrun_config['rst'] = {
             \ }
 
 " NeoBundle用設定
+call neobundle#end()
 filetype plugin indent on

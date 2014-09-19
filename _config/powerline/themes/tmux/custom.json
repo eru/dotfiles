@@ -1,30 +1,27 @@
 {
     "default_module": "powerline.segments.common",
-    "segment_data": {
-    },
     "segments": {
         "left": [
-            {
-                "name": "user"
-            }
         ],
         "right": [
             {
+                "function": "uptime",
                 "name": "uptime",
                 "priority": 50
             },
             {
-                "name": "system_load",
+                "function": "system_load",
                 "priority": 50
             },
             {
-                "name": "date",
+                "function": "date",
                 "args": {
                     "format": "%a %m/%d %H:%M",
                     "istime": true
                 }
             },
             {
+                "function": "hostname",
                 "name": "hostname"
             }
         ]
