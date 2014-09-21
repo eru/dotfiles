@@ -133,7 +133,7 @@ MYIP=`ifconfig ${ETH_DEV} 2>/dev/null | grep -v inet6 | grep inet | cut -f 2 -d'
 # Other Settings
 # ------------------------------
 ### powerline ###
-[ -f ~/.vim/powerline/scripts/powerline ] && export PATH=~/.vim/powerline/scripts:$PATH
+[ -d ~/.vim/powerline/scripts ] && export PATH=~/.vim/powerline/scripts:$PATH
 
 ### Aliases ###
 [ -f ~/dotfiles/_alias ] && source ~/dotfiles/_alias
