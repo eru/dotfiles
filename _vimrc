@@ -4,7 +4,7 @@ if has('vim_starting')
     set nocompatible
     set runtimepath+=~/dotfiles/neobundle.vim/
 endif
-call neobundle#rc(expand('~/.vim/'))
+call neobundle#begin(expand('~/.vim/'))
 
 " makeしたい
 let g:make = 'gmake'
