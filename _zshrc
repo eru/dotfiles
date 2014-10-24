@@ -2,6 +2,8 @@
 
 ### PATH ###
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+[ -d ~/local/sbin ] && export PATH=~/local/sbin:$PATH
+[ -d ~/local/bin ] && export PATH=~/local/bin:$PATH
 
 ### antigen ###
 [ -f ~/dotfiles/_zsh/antigen.zsh ] && source ~/dotfiles/_zsh/antigen.zsh
