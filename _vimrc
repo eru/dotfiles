@@ -180,7 +180,7 @@ NeoBundle 'eru/php.vim-html-enhanced'
 " vim-over :OverCommandLine
 NeoBundle 'osyo-manga/vim-over'
 " Riv: reStructuredText in Vim
-NeoBundle 'Rykka/riv.vim'
+" NeoBundle 'Rykka/riv.vim'
 " open-browser
 NeoBundle 'open-browser.vim'
 " sphinx quickrun hook
