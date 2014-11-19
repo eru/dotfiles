@@ -11,6 +11,7 @@ alias cp='cp -i'
 alias cd..='cd ..'
 
 # tmux
+alias tmux='tmux -u'
 alias tm='tmux'
 alias ta='tmux attach'
 alias tl='tmux list-sessions'
