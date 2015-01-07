@@ -8,11 +8,23 @@ antigen bundle git
 antigen bundle git-flow
 antigen bundle github
 antigen bundle tmux
-antigen bundle yum
 antigen bundle heroku
 antigen bundle pip
 antigen bundle lein
 antigen bundle autojump
+antigen bundle extract
+
+# OS別の設定
+case "${OSTYPE}" in
+    darwin*)
+        antigen bundle osx
+        antigen bundle xcode
+        antigen bundle brew
+        ;;
+    linux*)
+        antigen bundle yum
+        ;;
+esac
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
