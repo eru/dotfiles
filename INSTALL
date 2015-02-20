@@ -1,42 +1,58 @@
 #!/bin/bash
 
-# .bashrc
-echo ". ~/dotfiles/alias" >> ~/.bashrc
-
 # zsh
-rm -i ~/.bash_login
-ln -s ~/dotfiles/_bash_login ~/.bash_login
-rm -i ~/.zshrc
+if [ -f ~/.zshrc ]; then
+    rm -f ~/.zshrc
+fi
 ln -s ~/dotfiles/_zshrc ~/.zshrc
 
 # tmux
-rm -i ~/.tmux.conf
+if [ -f ~/.tmux.conf ]; then
+    rm -f ~/.tmux.conf
+fi
 ln -s ~/dotfiles/_tmux.conf ~/.tmux.conf
 
 # git
-rm -i ~/.gitconfig
+if [ -f ~/.gitconfig ]; then
+    rm -f ~/.gitconfig
+fi
 ln -s ~/dotfiles/_gitconfig ~/.gitconfig
 
 # vim
-rm -i ~/.vimrc
-rm -ri ~/.vim
+if [ -f ~/.vimrc ]; then
+    rm -f ~/.vimrc
+fi
 ln -s ~/dotfiles/_vimrc ~/.vimrc
-mkdir ~/.vim
+if [ ! -d ~/.vim ]; then
+    mkdir ~/.vim
+fi
+if [ -d ~/.vim/colors ]; then
+    rm -rf ~/.vim/colors
+fi
 ln -s ~/dotfiles/_vim/colors ~/.vim/colors
+if [ -d ~/.vim/ftdetect ]; then
+    rm -f ~/.vim/ftdetect
+fi
 ln -s ~/dotfiles/_vim/ftdetect ~/.vim/ftdetect
+if [ -f ~/.vim/ambiwidth.vimrc ]; then
+    rm -f ~/.vim/ambiwidth.vimrc
+fi
 ln -s ~/dotfiles/_vim/ambiwidth.vimrc ~/.vim/ambiwidth.vimrc
 
 # xvim
-rm -i ~/.xvimrc
+if [ -f ~/.xvimrc ]; then
+    rm -f ~/.xvimrc
+fi
 ln -s ~/dotfiles/_xvimrc ~/.xvimrc
 
 # powerline
 if [ ! -d ~/.config ]; then
     mkdir ~/.config
 fi
-rm -ri ~/.config/powerline
+if [ -d ~/.config/powerline ]; then
+    rm -rf ~/.config/powerline
+fi
 ln -s ~/dotfiles/_config/powerline ~/.config/powerline
-
 
 # Submodule
 git submodule init
