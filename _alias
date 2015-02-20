@@ -57,25 +57,24 @@ alias ex='extract'
 # OS別の設定
 case "${OSTYPE}" in
     darwin*)
-        # realpath
-        alias fullpath='grealpath -s'
         # java
         alias javac='javac -J-Dfile.encoding=UTF-8'
         alias java='java -Dfile.encoding=UTF-8'
         # colordiff
         alias diff='colordiff'
-        # coreutils ls
-        alias ls='gls --color'
+        # coreutils
+        if [ -d /usr/local/opt/coreutils/libexec/gnubin ] ; then
+          export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
+          export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
+          alias ls='ls --color=auto'
+        fi
         # spotlight locate
         alias locate='mdfind -name'
         ;;
     linux*)
-        # realpath
-        alias fullpath='realpath -s'
         ;;
 esac
-alias fpath='fullpath'
-alias fp='fullpath'
+alias fp='realpath -s'
 
 # colors
 function pcolor() {
@@ -87,9 +86,6 @@ function pcolor() {
     done
     echo
 }
-
-# plantuml
-alias plantuml='java -jar /usr/local/bin/plantuml.jar'
 
 # ag
 alias ag='ag --pager="less"'
