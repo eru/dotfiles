@@ -60,3 +60,6 @@ git submodule update
 
 # Vim Plugin
 vim -c NeoBundleInstall! -c quit
+
+# iTerm2 theme
+# https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Mathias.itermcolors
