@@ -1,8 +1,11 @@
 " NeoBundle動かすのに必要
 " NeoBundle 読み込み
 if has('vim_starting')
+  if &compatible
     set nocompatible
-    set runtimepath+=~/dotfiles/neobundle.vim/
+  endif
+  " Required:
+  set runtimepath+=~/dotfiles/neobundle.vim/
 endif
 call neobundle#begin(expand('~/.vim/'))
 
@@ -19,8 +22,8 @@ set fileformats=unix,dos,mac
 " 行番号表示
 set number
 " Tab幅設定
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set smarttab
 " softtab使う
 set expandtab
@@ -28,6 +31,7 @@ set expandtab
 syntax on
 set hlsearch
 set showmatch
+set matchtime=1
 " 自動インデント
 set autoindent
 set smartindent
@@ -36,9 +40,9 @@ set ruler
 set showcmd
 set showmode
 set laststatus=2
-set statusline=%<%f\ %m%r%h%w
-set statusline+=%{'['.(&fenc!=''?&fenc:&enc).']['.&fileformat.']'}
-set statusline+=%=%l/%L,%c%V%8P
+"set statusline=%<%f\ %m%r%h%w
+"set statusline+=%{'['.(&fenc!=''?&fenc:&enc).']['.&fileformat.']'}
+"set statusline+=%=%l/%L,%c%V%8P
 " スクロールした時にいい感じに
 set scrolloff=5
 " バックアップとらない
@@ -52,10 +56,7 @@ set hidden
 set backspace=indent,eol,start
 " 保存時に行末スペース削除
 autocmd BufWritePre * :%s/\s\+$//e
-" 保存時にHardTab=>SoftTab変換
-autocmd BufWritePre * :retab
-" 改行コードの自動認識
-set fileformats=unix,dos,mac
+" 保存時にHardTab=>SoftTab変換 autocmd BufWritePre * :retab " 改行コードの自動認識 set fileformats=unix,dos,mac
 " □とか○の文字があってもカーソル位置がずれないようにする
 if filereadable(expand('~/.vim/ambwidth.vimrc'))
     source ~/.vim/ambwidth.vimrc
@@ -63,6 +64,8 @@ endif
 " 折りたたみ
 set foldmethod=indent
 set foldlevel=100
+" 一行が長くても表示させる
+set display=lastline
 
 " KeyMap
 " いつでも, h j k l でカーソル移動
@@ -70,8 +73,6 @@ inoremap <C-h> <Left>
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-l> <Right>
-noremap <C-k> <Up>
-noremap <C-l> <Right>
 " いつでも, C-a C-e で行頭/行末移動
 noremap <C-a> <Home>
 noremap! <C-a> <Home>
@@ -104,6 +105,11 @@ if &term =~ "xterm" || &term =~ "screen"
     cnoremap <special> <Esc>[200~ <nop>
     cnoremap <special> <Esc>[201~ <nop>
 endif
+" 行末までのヤンク
+nnoremap Y y$
+" インクリメント
+nnoremap + <C-a>
+nnoremap - <C-x>
 
 " sudo w
 cabbrev sudo w !sudo tee %
@@ -187,6 +193,7 @@ NeoBundle 'open-browser.vim'
 NeoBundle 'daisuzu/quickrun-hook-sphinx'
 " table mode
 "NeoBundle 'dhruvasagar/vim-table-mode'
+" renamer
 NeoBundle 'renamer.vim'
 
 " quickrun config
