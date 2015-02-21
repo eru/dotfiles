@@ -57,3 +57,6 @@ ln -s ~/dotfiles/_config/powerline ~/.config/powerline
 # Submodule
 git submodule init
 git submodule update
+
+# Vim Plugin
+vim -c NeoBundleInstall! -c quit

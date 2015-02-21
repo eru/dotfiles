@@ -1,10 +1,5 @@
 # (d) is default on
 
-### PATH ###
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-[ -d ~/local/sbin ] && export PATH=~/local/sbin:$PATH
-[ -d ~/local/bin ] && export PATH=~/local/bin:$PATH
-
 ### antigen ###
 [ -f ~/dotfiles/_zsh/antigen.zsh ] && source ~/dotfiles/_zsh/antigen.zsh
 
@@ -65,11 +60,11 @@ bindkey "^N" history-beginning-search-forward-end
 # Look And Feel Settings
 # ------------------------------
 ### Ls Color ###
-# 色の設定
+# bsd ls用の色設定
 export LSCOLORS=Exfxcxdxbxegedabagacad
-# 補完時の色の設定
+# gnu ls用の色設定
 export LS_COLORS='di=01;34:ln=01;35:so=01;32:ex=01;31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
-# ZLS_COLORSとは？
+# 補完時の色の設定
 export ZLS_COLORS=$LS_COLORS
 # lsコマンド時、自動で色がつく(ls -Gのようなもの？)
 export CLICOLOR=true
@@ -130,6 +125,12 @@ MYIP=`ifconfig ${ETH_DEV} 2>/dev/null | grep -v inet6 | grep inet | cut -f 2 -d'
 # ------------------------------
 # Other Settings
 # ------------------------------
+### PATH ###
+[ -d /usr/local/sbin ] && export PATH=/usr/local/sbin:$PATH
+[ -d /usr/local/bin ] && export PATH=/usr/local/bin:$PATH
+[ -d ~/local/sbin ] && export PATH=~/local/sbin:$PATH
+[ -d ~/local/bin ] && export PATH=~/local/bin:$PATH
+
 ### powerline ###
 [ -d ~/.vim/powerline/scripts ] && export PATH=~/.vim/powerline/scripts:$PATH
 
