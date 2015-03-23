@@ -46,8 +46,8 @@ set laststatus=2
 " スクロールした時にいい感じに
 set scrolloff=5
 " バックアップとらない
-set nobackup
-set noswapfile
+"set nobackup
+"set noswapfile
 " 変更されたら自動読み込み
 set autoread
 " 編集中でも開けるようにする
