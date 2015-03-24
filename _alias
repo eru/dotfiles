@@ -56,39 +56,44 @@ alias ex='extract'
 
 # OS別の設定
 case "${OSTYPE}" in
-    darwin*)
-        # java
-        alias javac='javac -J-Dfile.encoding=UTF-8'
-        alias java='java -Dfile.encoding=UTF-8'
-        # colordiff
-        alias diff='colordiff'
-        # coreutils
-        if [ -d /usr/local/opt/coreutils/libexec/gnubin ] ; then
-          export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
-          export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
-          alias ls='ls --color=auto'
-        fi
-        # spotlight locate
-        alias locate='mdfind -name'
-        ;;
-    linux*)
-        ;;
+  darwin*)
+    # java
+    alias javac='javac -J-Dfile.encoding=UTF-8'
+    alias java='java -Dfile.encoding=UTF-8'
+    # colordiff
+    alias diff='colordiff'
+    # gnu coreutils
+    if [ -d /usr/local/opt/coreutils/libexec/gnubin ] ; then
+      export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
+      export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
+      alias ls='ls --color=auto'
+    fi
+    # gnu sed
+    if [ -d /usr/local/opt/gnu-sed/libexec/gnubin ] ; then
+      export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
+      export MANPATH=/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH
+    fi
+    # spotlight locate
+    alias locate='mdfind -name'
+    ;;
+  linux*)
+    ;;
 esac
 alias fp='realpath -s'
 
 # colors
 function pcolor() {
-    for ((f = 0; f < 255; f++)); do
-        printf "\e[38;5;%dm %3d#\e[m" $f $f
-        if [[ $f%8 -eq 7 ]] then
-            printf "\n"
-        fi
-    done
-    echo
+  for ((f = 0; f < 255; f++)); do
+    printf "\e[38;5;%dm %3d#\e[m" $f $f
+    if [[ $f%8 -eq 7 ]] then
+      printf "\n"
+    fi
+  done
+  echo
 }
 
 # ag
 alias ag='ag --pager="less"'
 vag () {
-    vim -c "Ag $1";
+  vim -c "Ag $1";
 }
