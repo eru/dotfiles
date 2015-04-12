@@ -1,0 +1,14 @@
+# main viewの左端にコミットIDを表示する
+set main-view = id date author commit-title:graph=yes,refs=yes
+
+# 画面を水平方向に分割する
+set vertical-split = no
+
+# 水平分割したウィンドウの下画面サイズを % で指定（行数指定も可）
+set split-view-height = 80%
+
+# 空白差分無視 (diff -b相当）
+set ignore-space = all
+
+# 長い行を自動改行
+set wrap-lines = yes
