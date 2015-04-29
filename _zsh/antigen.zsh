@@ -13,17 +13,29 @@ antigen bundle pip
 antigen bundle lein
 antigen bundle autojump
 antigen bundle extract
+antigen bundle bundler
+antigen bundle coffee
+antigen bundle docker
+antigen bundle history
+antigen bundle node
+antigen bundle npm
+antigen bundle rsync
+antigen bundle tmux
+antigen bundle vagrant
+antigen bundle web-search
 
 # OS別の設定
 case "${OSTYPE}" in
-    darwin*)
-        antigen bundle osx
-        antigen bundle xcode
-        antigen bundle brew
-        ;;
-    linux*)
-        antigen bundle yum
-        ;;
+  darwin*)
+    antigen bundle osx
+    antigen bundle xcode
+    antigen bundle brew
+    antigen bundle brew-cask
+    ;;
+  linux*)
+    antigen bundle yum
+    antigen bundle systemd
+    ;;
 esac
 
 # Syntax highlighting bundle.

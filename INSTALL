@@ -58,7 +58,7 @@ ln -s ~/dotfiles/_config/powerline ~/.config/powerline
 if [ -f ~/.tigrc ]; then
   rm -f ~/.tigrc
 fi
-ln -s ~/dotfiles/_tigrc
+ln -s ~/dotfiles/_tigrc ~/.tigrc
 
 # Submodule
 git submodule init
