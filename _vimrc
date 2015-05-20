@@ -113,6 +113,8 @@ nnoremap - <C-x>
 
 " sudo w
 cabbrev sudo w !sudo tee %
+" 保存時にsudo権限で無理やり保存
+cnoremap w!! w !sudo tee > /dev/null %<CR> :e!<CR>
 
 " ColorScheme
 colorscheme developer
