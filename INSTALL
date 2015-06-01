@@ -5,6 +5,10 @@ if [ -f ~/.zshrc ]; then
   rm -f ~/.zshrc
 fi
 ln -s ~/dotfiles/_zshrc ~/.zshrc
+if [ -f ~/.zprofile ]; then
+  rm -f ~/.zprofile
+fi
+ln -s ~/dotfiles/_zprofile ~/.zprofile
 
 # tmux
 if [ -f ~/.tmux.conf ]; then

@@ -125,15 +125,6 @@ MYIP=`ifconfig ${ETH_DEV} 2>/dev/null | grep -v inet6 | grep inet | cut -f 2 -d'
 # ------------------------------
 # Other Settings
 # ------------------------------
-### PATH ###
-[ -d /usr/local/sbin ] && export PATH=/usr/local/sbin:$PATH
-[ -d /usr/local/bin ] && export PATH=/usr/local/bin:$PATH
-[ -d ~/local/sbin ] && export PATH=~/local/sbin:$PATH
-[ -d ~/local/bin ] && export PATH=~/local/bin:$PATH
-
-### powerline ###
-[ -d ~/.vim/powerline/scripts ] && export PATH=~/.vim/powerline/scripts:$PATH
-
 ### Aliases ###
 [ -f ~/dotfiles/_alias ] && source ~/dotfiles/_alias
 

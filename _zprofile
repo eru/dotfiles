@@ -1,0 +1,19 @@
+### PATH ###
+[ -d /usr/local/sbin ] && export PATH=/usr/local/sbin:$PATH
+[ -d /usr/local/bin ] && export PATH=/usr/local/bin:$PATH
+[ -d ~/local/sbin ] && export PATH=~/local/sbin:$PATH
+[ -d ~/local/bin ] && export PATH=~/local/bin:$PATH
+
+### powerline ###
+[ -d ~/.vim/powerline/scripts ] && export PATH=~/.vim/powerline/scripts:$PATH
+
+### Aliases ###
+[ -f ~/dotfiles/_alias ] && source ~/dotfiles/_alias
+
+### rubyenv ###
+[ -d ~/.rbenv/bin ] && export PATH=~/.rbenv/bin:$PATH
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+### pyenv ###
+[ -d ~/.pyenv/bin ] && export PATH=~/.pyenv/bin:$PATH
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
