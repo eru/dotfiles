@@ -104,21 +104,21 @@ SPROMPT=$tmp_sprompt  # スペル訂正用プロンプト
 
 ### Title (user@hostname) ###
 case "${TERM}" in
-kterm*|xterm*|)
-  precmd() {
-    echo -ne "\033]0;${USER}@${HOST%%.*}\007"
-  }
-  ;;
+  kterm*|xterm*)
+    precmd() {
+      echo -ne "\033]0;${USER}@${HOST%%.*}\007"
+    }
+    ;;
 esac
 
 ## IP Addr
 case "${OSTYPE}" in
-    darwin*)
-        ETH_DEV=en0
-        ;;
-    linux*)
-        ETH_DEV=eth0
-        ;;
+  darwin*)
+    ETH_DEV=en0
+    ;;
+  linux*)
+    ETH_DEV=eth0
+    ;;
 esac
 MYIP=`ifconfig ${ETH_DEV} 2>/dev/null | grep -v inet6 | grep inet | cut -f 2 -d':' | cut -d' ' -f 2`
 
