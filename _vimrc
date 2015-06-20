@@ -197,6 +197,9 @@ NeoBundle 'daisuzu/quickrun-hook-sphinx'
 "NeoBundle 'dhruvasagar/vim-table-mode'
 " renamer
 NeoBundle 'renamer.vim'
+" coffee-script
+NeoBundle 'kchmck/vim-coffee-script'
+au BufRead,BufNewFile,BufReadPre *.coffee set filetype=coffee
 
 " quickrun config
 let g:quickrun_config = {}
