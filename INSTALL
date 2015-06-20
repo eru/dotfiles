@@ -9,6 +9,10 @@ if [ -f ~/.zprofile ]; then
   rm -f ~/.zprofile
 fi
 ln -s ~/dotfiles/_zprofile ~/.zprofile
+if [ -d ~/.zgen ]; then
+  rm -rf ~/.zgen
+fi
+git clone https://github.com/tarjoilija/zgen.git ~/.zgen
 
 # tmux
 if [ -f ~/.tmux.conf ]; then

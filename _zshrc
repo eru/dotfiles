@@ -1,7 +1,7 @@
 # (d) is default on
 
-### antigen ###
-[ -f ~/dotfiles/_zsh/antigen.zsh ] && source ~/dotfiles/_zsh/antigen.zsh
+### zgen ###
+[ -f ~/dotfiles/_zsh/zgen.zsh ] && source ~/dotfiles/_zsh/zgen.zsh
 
 # ------------------------------
 # General Settings
