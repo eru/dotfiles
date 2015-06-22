@@ -1,13 +1,14 @@
 " NeoBundle動かすのに必要
 " NeoBundle 読み込み
+if 0 | endif
 if has('vim_starting')
   if &compatible
     set nocompatible
   endif
   " Required:
-  set runtimepath+=~/dotfiles/neobundle.vim/
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
-call neobundle#begin(expand('~/.vim/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " makeしたい
 let g:make = 'gmake'
@@ -123,6 +124,9 @@ set background=dark
 " extension
 au BufNewFile,BufRead *.rst set tabstop=3 shiftwidth=3
 
+" Let NeoBundle manage NeoBundle
+NeoBundleFetch 'Shougo/neobundle.vim'
+
 " Plugins
 " Reference を vim から見れるようにする(ex. :Ref perldoc Encode)
 NeoBundle 'thinca/vim-ref'
@@ -215,3 +219,7 @@ let g:quickrun_config['rst'] = {
 " NeoBundle用設定
 call neobundle#end()
 filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck

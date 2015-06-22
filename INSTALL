@@ -1,10 +1,14 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 
 # zsh
 if [ -f ~/.zshrc ]; then
   rm -f ~/.zshrc
 fi
 ln -s ~/dotfiles/_zshrc ~/.zshrc
+if [ -d ~/.zsh ]; then
+  rm -rf ~/.zsh
+fi
+mkdir ~/.zsh
 if [ -f ~/.zprofile ]; then
   rm -f ~/.zprofile
 fi
@@ -12,7 +16,7 @@ ln -s ~/dotfiles/_zprofile ~/.zprofile
 if [ -d ~/.zgen ]; then
   rm -rf ~/.zgen
 fi
-git clone https://github.com/tarjoilija/zgen.git ~/.zgen
+git clone https://github.com/tarjoilija/zgen.git ~/.zsh/zgen
 
 # tmux
 if [ -f ~/.tmux.conf ]; then
@@ -31,9 +35,11 @@ if [ -f ~/.vimrc ]; then
   rm -f ~/.vimrc
 fi
 ln -s ~/dotfiles/_vimrc ~/.vimrc
-if [ ! -d ~/.vim ]; then
-  mkdir ~/.vim
+if [ -d ~/.vim ]; then
+  rm -rf ~/.vim
 fi
+mkdir -p ~/.vim/bundle
+git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 if [ -d ~/.vim/colors ]; then
   rm -rf ~/.vim/colors
 fi
@@ -68,12 +74,8 @@ if [ -f ~/.tigrc ]; then
 fi
 ln -s ~/dotfiles/_tigrc ~/.tigrc
 
-# Submodule
-git submodule init
-git submodule update
-
 # Vim Plugin
-vim -c NeoBundleInstall! -c quit
+vim -c NeoBundleInstall -c quit
 
 # iTerm2 theme
 # https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Mathias.itermcolors
