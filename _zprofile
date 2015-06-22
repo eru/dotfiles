@@ -12,8 +12,8 @@
 
 ### rubyenv ###
 [ -d ~/.rbenv/bin ] && export PATH=~/.rbenv/bin:$PATH
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which rbenv > /dev/null 2>&1; then eval "$(rbenv init -)"; fi
 
 ### pyenv ###
 [ -d ~/.pyenv/bin ] && export PATH=~/.pyenv/bin:$PATH
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+if which pyenv > /dev/null 2>&1; then eval "$(pyenv init -)"; fi
