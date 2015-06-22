@@ -11,7 +11,7 @@ if ! zgen saved; then
   # plugins
   zgen oh-my-zsh plugins/git
   zgen oh-my-zsh plugins/git-flow
-  zgen oh-my-zsh plugins/github
+#  zgen oh-my-zsh plugins/github
   zgen oh-my-zsh plugins/tmux
   zgen oh-my-zsh plugins/heroku
   zgen oh-my-zsh plugins/pip
