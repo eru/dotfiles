@@ -5,7 +5,7 @@
 [ -d ~/local/bin ] && export PATH=~/local/bin:$PATH
 
 ### powerline ###
-[ -d ~/.vim/powerline/scripts ] && export PATH=~/.vim/powerline/scripts:$PATH
+[ -d ~/.vim/bundle/powerline/scripts ] && export PATH=~/.vim/bundle/powerline/scripts:$PATH
 
 ### Aliases ###
 [ -f ~/dotfiles/_alias ] && source ~/dotfiles/_alias
