@@ -11,6 +11,7 @@
     editor = vim
     pager = less -R
     quotepath = false
+    filemode = true
 [merge]
     tool = vimdiff
 [alias]
