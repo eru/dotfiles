@@ -41,6 +41,8 @@ if ! zgen saved; then
     linux*)
     zgen oh-my-zsh plugins/yum
     zgen oh-my-zsh plugins/systemd
+    zgen oh-my-zsh plugins/docker
+    zgen oh-my-zsh plugins/docker-compose
     ;;
   esac
 

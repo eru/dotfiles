@@ -204,6 +204,8 @@ NeoBundle 'renamer.vim'
 " coffee-script
 NeoBundle 'kchmck/vim-coffee-script'
 au BufRead,BufNewFile,BufReadPre *.coffee set filetype=coffee
+" javascript/es6
+NeoBundle 'othree/yajs.vim'
 
 " quickrun config
 let g:quickrun_config = {}
