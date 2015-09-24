@@ -13,7 +13,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 " makeしたい
 let g:make = 'gmake'
 if system('uname -o') =~ '^GNU/'
-        let g:make = 'make'
+  let g:make = 'make'
 endif
 
 " 文字コードと改行コード
@@ -57,7 +57,10 @@ set hidden
 set backspace=indent,eol,start
 " 保存時に行末スペース削除
 autocmd BufWritePre * :%s/\s\+$//e
-" 保存時にHardTab=>SoftTab変換 autocmd BufWritePre * :retab " 改行コードの自動認識 set fileformats=unix,dos,mac
+" 保存時にHardTab=>SoftTab変換
+autocmd BufWritePre * :retab
+" 改行コードの自動認識
+set fileformats=unix,dos,mac
 " □とか○の文字があってもカーソル位置がずれないようにする
 if filereadable(expand('~/.vim/ambwidth.vimrc'))
     source ~/.vim/ambwidth.vimrc
@@ -92,19 +95,19 @@ nnoremap gj j
 nnoremap gk k
 " 貼り付け自動化
 if &term =~ "xterm" || &term =~ "screen"
-    let &t_ti .= "\e[?2004h"
-    let &t_te .= "\e[?2004l"
-    let &pastetoggle = "\e[201~"
+  let &t_ti .= "\e[?2004h"
+  let &t_te .= "\e[?2004l"
+  let &pastetoggle = "\e[201~"
 
-    function XTermPasteBegin(ret)
-        set paste
-        return a:ret
-    endfunction
+  function XTermPasteBegin(ret)
+    set paste
+    return a:ret
+  endfunction
 
-    noremap <special> <expr> <Esc>[200~ XTermPasteBegin("0i")
-    inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
-    cnoremap <special> <Esc>[200~ <nop>
-    cnoremap <special> <Esc>[201~ <nop>
+  noremap <special> <expr> <Esc>[200~ XTermPasteBegin("0i")
+  inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
+  cnoremap <special> <Esc>[200~ <nop>
+  cnoremap <special> <Esc>[201~ <nop>
 endif
 " 行末までのヤンク
 nnoremap Y y$
@@ -133,7 +136,7 @@ NeoBundle 'thinca/vim-ref'
 " ちょーすごい補完
 NeoBundle 'Shougo/neocomplcache'
 if filereadable(expand('~/dotfiles/_vim/neocomplecache.vimrc'))
-    source ~/dotfiles/_vim/neocomplecache.vimrc
+  source ~/dotfiles/_vim/neocomplecache.vimrc
 endif
 " くいっくらん(ex. \r)
 NeoBundle 'thinca/vim-quickrun'
@@ -157,11 +160,11 @@ set tags=tags
 let Tlist_Exit_OnlyWindow=1
 " Vim にも Shell を！
 NeoBundle 'Shougo/vimproc.vim', {
-    \ 'build' : {
-    \     'mac' : 'make -f make_mac.mak',
-    \     'unix' : g:make,
-    \    },
-    \ }
+  \ 'build' : {
+  \     'mac' : 'make -f make_mac.mak',
+  \     'unix' : g:make,
+  \    },
+  \ }
 NeoBundle 'Shougo/vimshell'
 " 一覧
 NeoBundle 'Shougo/unite.vim'
@@ -206,17 +209,26 @@ NeoBundle 'kchmck/vim-coffee-script'
 au BufRead,BufNewFile,BufReadPre *.coffee set filetype=coffee
 " javascript/es6
 NeoBundle 'othree/yajs.vim'
+" incremental search
+NeoBundle 'haya14busa/incsearch.vim'
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+set hlsearch
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
 
 " quickrun config
 let g:quickrun_config = {}
 " reST preview
 let g:quickrun_config['rst'] = {
-            \ 'command': 'make',
-            \ 'outputter': 'quickfix',
-            \ 'hook/sphinx_open/enable' : 1,
-            \ 'cmdopt': 'html',
-            \ 'exec': '%c %o'
-            \ }
+  \ 'command': 'make',
+  \ 'outputter': 'quickfix',
+  \ 'hook/sphinx_open/enable' : 1,
+  \ 'cmdopt': 'html',
+  \ 'exec': '%c %o'
+  \ }
 
 " NeoBundle用設定
 call neobundle#end()
