@@ -1,4 +1,3 @@
-au! BufNewFile,BufRead *.md setf markdown
-au! BufNewFile,BufRead *.md.txt setf markdown
-au! BufNewFile,BufRead *.rst set tabstop=3 shiftwidth=3
-au! BufNewFile,BufRead *.es6 setf javascript
+au BufRead,BufNewFile *.txt set filetype=markdown
+au BufNewFile,BufRead *.rst set tabstop=3 shiftwidth=3
+au BufNewFile,BufRead *.es6 set filetype=javascript
