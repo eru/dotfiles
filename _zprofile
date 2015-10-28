@@ -17,3 +17,8 @@ if which rbenv > /dev/null 2>&1; then eval "$(rbenv init -)"; fi
 ### pyenv ###
 [ -d ~/.pyenv/bin ] && export PATH=~/.pyenv/bin:$PATH
 if which pyenv > /dev/null 2>&1; then eval "$(pyenv init -)"; fi
+
+### linuxbrew ###
+[ -d ~/.linuxbrew/bin ] && export PATH=~/.linuxbrew/bin:$PATH
+[ -d ~/.linuxbrew/share/man ] && export MANPATH=~/.linuxbrew/share/man:$MANPATH
+[ -d ~/.linuxbrew/share/info ] && export INFOPATH=~/.linuxbrew/share/info:$INFOPATH
