@@ -9,21 +9,26 @@ if ! zgen saved; then
   zgen oh-my-zsh
 
   # plugins
+  zgen oh-my-zsh plugins/autojump
+  zgen oh-my-zsh plugins/brew
+  zgen oh-my-zsh plugins/bundler
+  zgen oh-my-zsh plugins/cake
+  zgen oh-my-zsh plugins/cakephp3
+  zgen oh-my-zsh plugins/coffee
+  zgen oh-my-zsh plugins/cpanm
+  zgen oh-my-zsh plugins/composer
+  zgen oh-my-zsh plugins/docker
+  zgen oh-my-zsh plugins/docker-compose
+  zgen oh-my-zsh plugins/extract
   zgen oh-my-zsh plugins/git
   zgen oh-my-zsh plugins/git-flow
-#  zgen oh-my-zsh plugins/github
-  zgen oh-my-zsh plugins/tmux
   zgen oh-my-zsh plugins/heroku
-  zgen oh-my-zsh plugins/pip
-  zgen oh-my-zsh plugins/lein
-  zgen oh-my-zsh plugins/autojump
-  zgen oh-my-zsh plugins/extract
-  zgen oh-my-zsh plugins/bundler
-  zgen oh-my-zsh plugins/coffee
-  zgen oh-my-zsh plugins/docker
   zgen oh-my-zsh plugins/history
+  zgen oh-my-zsh plugins/lein
+  zgen oh-my-zsh plugins/mosh
   zgen oh-my-zsh plugins/node
   zgen oh-my-zsh plugins/npm
+  zgen oh-my-zsh plugins/pip
   zgen oh-my-zsh plugins/rsync
   zgen oh-my-zsh plugins/tmux
   zgen oh-my-zsh plugins/vagrant
@@ -33,16 +38,13 @@ if ! zgen saved; then
   # OS別の設定
   case "${OSTYPE}" in
     darwin*)
+    zgen oh-my-zsh plugins/brew-cask
     zgen oh-my-zsh plugins/osx
     zgen oh-my-zsh plugins/xcode
-    zgen oh-my-zsh plugins/brew
-    zgen oh-my-zsh plugins/brew-cask
     ;;
     linux*)
-    zgen oh-my-zsh plugins/yum
     zgen oh-my-zsh plugins/systemd
-    zgen oh-my-zsh plugins/docker
-    zgen oh-my-zsh plugins/docker-compose
+    zgen oh-my-zsh plugins/yum
     ;;
   esac
 
