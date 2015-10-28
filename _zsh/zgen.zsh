@@ -52,6 +52,9 @@ if ! zgen saved; then
   # Completions oh-my-zsh.
   zgen load zsh-users/zsh-completions src
 
+  # next generation cd
+  zgen load b4b4r07/enhancd
+
   # theme
   #zgen oh-my-zsh plugins/themes/arrow
 
