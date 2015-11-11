@@ -62,17 +62,7 @@ case "${OSTYPE}" in
     alias java='java -Dfile.encoding=UTF-8'
     # colordiff
     alias diff='colordiff'
-    # gnu coreutils
-    if [ -d /usr/local/opt/coreutils/libexec/gnubin ] ; then
-      export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
-      export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
-      alias ls='ls --color=auto'
-    fi
-    # gnu sed
-    if [ -d /usr/local/opt/gnu-sed/libexec/gnubin ] ; then
-      export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
-      export MANPATH=/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH
-    fi
+    alias ls='ls --color=auto'
     # spotlight locate
     alias locate='mdfind -name'
     ;;
