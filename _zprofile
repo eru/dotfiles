@@ -25,3 +25,7 @@ if which pyenv > /dev/null 2>&1; then eval "$(pyenv init -)"; fi
 
 ### direnv ###
 if which direnv > /dev/null 2>&1; then eval "$(direnv hook $SHELL)"; fi
+
+### fzf ###
+[ -d ~/.fzf/bin ] && export PATH=~/.fzf/bin:$PATH
+[ -d ~/.fzf/man ] && export MANPATH=~/.fzf/man:$MANPATH
