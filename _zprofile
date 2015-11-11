@@ -3,6 +3,7 @@
 [ -d /usr/local/bin ] && export PATH=/usr/local/bin:$PATH
 [ -d ~/local/sbin ] && export PATH=~/local/sbin:$PATH
 [ -d ~/local/bin ] && export PATH=~/local/bin:$PATH
+[ -d "/Applications/VMware Fusion.app/Contents/Library" ] && export PATH="/Applications/VMware Fusion.app/Contents/Library:$PATH"
 
 ### powerline ###
 [ -d ~/.vim/bundle/powerline/scripts ] && export PATH=~/.vim/bundle/powerline/scripts:$PATH
