@@ -11,4 +11,4 @@ set split-view-height = 80%
 set ignore-space = all
 
 # 長い行を自動改行
-set wrap-lines = yes
+#set wrap-lines = yes
