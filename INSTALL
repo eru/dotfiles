@@ -19,6 +19,11 @@ fi
 git clone https://github.com/tarjoilija/zgen.git ~/.zsh/zgen
 
 # tmux
+if [ -d ~/.tmux ]; then
+  rm -rf ~/.tmux
+fi
+mkdir -p ~/.tmux/plugins
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 if [ -f ~/.tmux.conf ]; then
   rm -f ~/.tmux.conf
 fi
