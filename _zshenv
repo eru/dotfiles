@@ -7,7 +7,7 @@ path=(
     $HOME/.vim/bundle/powerline/scripts(N-/)
     /usr/local/opt/coreutils/libexec/gnubin(N-/)
     /usr/local/opt/gnu-sed/libexec/gnubin(N-/)
-    /Applications/VMware Fusion.app/Contents/Library(N-/)
+    /Applications/VMware\ Fusion.app/Contents/Library(N-/)
     $HOME/.linuxbrew/bin
     $HOME/local/sbin(N-/)
     $HOME/local/bin(N-/)
