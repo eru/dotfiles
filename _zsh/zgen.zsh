@@ -29,6 +29,7 @@ if ! zgen saved; then
   zgen oh-my-zsh plugins/node
   zgen oh-my-zsh plugins/npm
   zgen oh-my-zsh plugins/pip
+  zgen oh-my-zsh plugins/pyenv
   zgen oh-my-zsh plugins/rsync
   zgen oh-my-zsh plugins/tmux
   zgen oh-my-zsh plugins/vagrant

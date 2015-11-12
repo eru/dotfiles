@@ -62,6 +62,7 @@ case "${OSTYPE}" in
     alias java='java -Dfile.encoding=UTF-8'
     # colordiff
     alias diff='colordiff'
+    # gnu ls
     alias ls='ls --color=auto'
     # spotlight locate
     alias locate='mdfind -name'

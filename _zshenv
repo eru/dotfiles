@@ -1,0 +1,70 @@
+# Don't allow duplication
+typeset -U path
+
+# (N-/): don't register directories which do not exist
+path=(
+    $HOME/.fzf/bin(N-/)
+    $HOME/.vim/bundle/powerline/scripts(N-/)
+    /usr/local/opt/coreutils/libexec/gnubin(N-/)
+    /usr/local/opt/gnu-sed/libexec/gnubin(N-/)
+    /Applications/VMware Fusion.app/Contents/Library(N-/)
+    $HOME/.linuxbrew/bin
+    $HOME/local/sbin(N-/)
+    $HOME/local/bin(N-/)
+    /opt/X11/bin(N-/)
+    /usr/local/sbin(N-/)
+    /usr/local/bin(N-/)
+    /usr/sbin(N-/)
+    /usr/bin(N-/)
+    /sbin(N-/)
+    /bin(N-/)
+)
+
+# Don't allow duplication
+typeset -U manpath
+
+# (N-/): don't register directories which do not exist
+manpath=(
+    $HOME/.fzf/man(N-/)
+    /usr/local/opt/coreutils/libexec/gnuman(N-/)
+    /usr/local/opt/gnu-sed/libexec/gnuman(N-/)
+    $HOME/.linuxbrew/share/man(N-/)
+    $HOME/local/share/man(N-/)
+    /usr/local/share/man(N-/)
+    /usr/share/man(N-/)
+)
+
+# Don't allow duplication
+typeset -U manpath
+
+# (N-/): don't register directories which do not exist
+infopath=(
+    $HOME/.linuxbrew/share/info(N-/)
+)
+
+# Use most as pager, otherwise use less.
+if which most > /dev/null 2>&1; then
+    export PAGER="most"
+    export MANPAGER="most"
+else
+    export PAGER="less"
+    export MANPAGER="less"
+fi
+
+# Use Emacs as editor
+export EDITOR="vim"
+
+# The basic language settings used by applications
+export LANG="ja_JP.UTF-8"
+export LC_ALL="ja_JP.UTF-8"
+
+# rubyenv
+# defined by oh-my-zsh plugin
+#if which rbenv > /dev/null 2>&1; then eval "$(rbenv init -)"; fi
+
+# pyenv
+# defined by oh-my-zsh plugin
+#if which pyenv > /dev/null 2>&1; then eval "$(pyenv init -)"; fi
+
+# direnv
+if which direnv > /dev/null 2>&1; then eval "$(direnv hook $SHELL)"; fi

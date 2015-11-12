@@ -9,10 +9,10 @@ if [ -d ~/.zsh ]; then
   rm -rf ~/.zsh
 fi
 mkdir ~/.zsh
-if [ -f ~/.zprofile ]; then
-  rm -f ~/.zprofile
+if [ -f ~/.zshenv ]; then
+  rm -f ~/.zshenv
 fi
-ln -s ~/dotfiles/_zprofile ~/.zprofile
+ln -s ~/dotfiles/_zshenv ~/.zshenv
 if [ -d ~/.zgen ]; then
   rm -rf ~/.zgen
 fi
