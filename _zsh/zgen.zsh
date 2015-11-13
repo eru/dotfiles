@@ -58,9 +58,19 @@ if ! zgen saved; then
   # next generation cd
   zgen load b4b4r07/enhancd
 
+  # autosuggestions should be loaded last
+  zgen load tarruda/zsh-autosuggestions
+
   # theme
   #zgen oh-my-zsh plugins/themes/arrow
 
   # save all to init script
   zgen save
 fi
+
+# Enable autosuggestions automatically.
+zle-line-init() {
+    zle autosuggest-start
+}
+zle -N zle-line-init
+bindkey '^f' vi-forward-blank-word
