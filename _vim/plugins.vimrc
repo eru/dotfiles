@@ -126,3 +126,6 @@ let g:quickrun_config['rst'] = {
   \ 'cmdopt': 'html',
   \ 'exec': '%c %o'
   \ }
+
+" git commit message editor
+NeoBundle 'rhysd/committia.vim'
