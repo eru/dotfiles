@@ -1,18 +1,16 @@
 " Plugins
 
-" Reference を vim から見れるようにする(ex. :Ref perldoc Encode)
+" Reference を vim から見れるようにする (ex. :Ref perldoc Encode)
 NeoBundle 'thinca/vim-ref'
 
 " ちょーすごい補完
-NeoBundle 'Shougo/neocomplcache'
-if filereadable(expand('~/dotfiles/_vim/neocomplecache.vimrc'))
-  source ~/dotfiles/_vim/neocomplecache.vimrc
-endif
+NeoBundle 'Shougo/neocomplete.vim'
+let g:neocomplete#enable_at_startup=1
 
 " XML 編集を便利にする
 NeoBundle 'sukima/xmledit'
 
-" 整形
+" 整形 (ex. :Align <keyword>)
 NeoBundle 'Align'
 NeoBundle 'h1mesuke/vim-alignta'
 
@@ -22,13 +20,13 @@ NeoBundle 'surround.vim'
 " ワード移動
 NeoBundle 'smartword'
 
-" vim の正規表現を perl とかと同じにする(ex. :%S/(aa|bb|cc|)//g)
+" vim の正規表現を perl とかと同じにする (ex. :%S/(aa|bb|cc|)//g)
 NeoBundle 'eregex.vim'
 
-" SQL 整形(ex. :SQLUFormatter)
+" SQL 整形 (ex. :SQLUFormatter)
 NeoBundle 'SQLUtilities'
 
-" メソッド, 変数宣言一覧(ex. :Tlist)
+" メソッド, 変数宣言一覧 (ex. :Tlist)
 NeoBundle 'taglist.vim'
 set tags=tags
 let Tlist_Exit_OnlyWindow=1
@@ -56,7 +54,7 @@ NeoBundle 'Highlight-UnMatched-Brackets'
 NeoBundle 'mattn/webapi-vim'
 NeoBundle 'mattn/gist-vim'
 
-" コメントアウト(ex. 範囲選択 -> \x)
+" コメントアウト (ex. 範囲選択 -> \x)
 NeoBundle 'EnhCommentify.vim'
 
 " Git client
@@ -65,14 +63,14 @@ NeoBundle 'tpope/vim-fugitive'
 " markdown
 NeoBundle 'tpope/vim-markdown'
 
-" ag(ex. :Ag)
+" ag (ex. :Ag)
 NeoBundle 'rking/ag.vim'
 
 " powerline
 NeoBundle 'alpaca-tc/alpaca_powertabline'
 NeoBundle 'Lokaltog/powerline', {'rtp' : 'powerline/bindings/vim'}
 
-" emmet-vim(ex. C-y ,)
+" emmet-vim (ex. C-y ,)
 NeoBundle 'mattn/emmet-vim'
 
 " Dash
@@ -117,7 +115,7 @@ let g:incsearch#auto_nohlsearch = 1
 map n  <Plug>(incsearch-nohl-n)
 map N  <Plug>(incsearch-nohl-N)
 
-" くいっくらん(ex. \r)
+" quickrun (ex. \r)
 NeoBundle 'thinca/vim-quickrun'
 let g:quickrun_config = {}
 " reST preview
