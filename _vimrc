@@ -1,5 +1,5 @@
 " plugin
-source ~/dotfiles/_vim/neobundle.vimrc
+source ~/dotfiles/_vim/manager.vimrc
 
 " 基本設定
 source ~/dotfiles/_vim/basic.vimrc

@@ -93,4 +93,4 @@ vag () {
 alias tree='tree -N'
 
 # update dotfile
-alias dot-update='cd ~/dotfiles && git pull && zgen selfupdate && yes | zgen update && src && vim -c NeoBundleClean -c NeoBundleUpdate! -c quit'
+alias dot-update='cd ~/dotfiles && git pull && zgen selfupdate && yes | zgen update && src && vim -c PlugUpgrade -c PlugClean! -c PlugUpdate -c quit -c quit'
