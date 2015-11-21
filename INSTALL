@@ -53,10 +53,6 @@ if [ -d ~/.vim/ftdetect ]; then
   rm -f ~/.vim/ftdetect
 fi
 ln -s ~/dotfiles/_vim/ftdetect ~/.vim/ftdetect
-if [ -f ~/.vim/ambiwidth.vimrc ]; then
-  rm -f ~/.vim/ambiwidth.vimrc
-fi
-ln -s ~/dotfiles/_vim/ambiwidth.vimrc ~/.vim/ambiwidth.vimrc
 
 # xvim
 if [ -f ~/.xvimrc ]; then
