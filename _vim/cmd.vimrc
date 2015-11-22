@@ -26,3 +26,4 @@ inoremap <silent> <ESC> <ESC>:set iminsert=0<CR>
 
 " :Ptで貼り付けモード
 command! Pt :set paste!
+command! NoPt :set nopaste

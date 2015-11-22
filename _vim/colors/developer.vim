@@ -2,6 +2,7 @@
 " Maintainer:	Jens Frederich <jfrederich@gmail.com>
 
 " First remove all old syntax autocommands.
+set background=dark
 hi clear
 if exists("syntax_on")
   syntax reset
