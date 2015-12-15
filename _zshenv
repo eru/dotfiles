@@ -51,7 +51,7 @@ else
     export MANPAGER="less"
 fi
 
-# Use Emacs as editor
+# Use vim as editor
 export EDITOR="vim"
 
 # The basic language settings used by applications
