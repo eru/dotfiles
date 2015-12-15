@@ -74,14 +74,11 @@ if [ -f ~/.tigrc ]; then
 fi
 ln -s ~/dotfiles/_tigrc ~/.tigrc
 
-# install vim plugins
-vim -c PlugUpdate -c quit -c quit
-
-# install tmux plugins
-~/.tmux/plugins/tpm/bin/install_plugins
-
-# install zsh plugins
-source ~/.zshrc
+# install plugins
+# 表示がぶっ壊れるが速さ優先
+(source ~/.zshrc) & \
+(vim -c PlugUpdate -c quit -c quit) & \
+(~/.tmux/plugins/tpm/bin/install_plugins)
 
 # iTerm2 theme
 # https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Mathias.itermcolors
