@@ -35,7 +35,7 @@ zplug "plugins/yum", from:oh-my-zsh, if:"which yum"
 # zplug "plugins/zsh_reload", from:oh-my-zsh
 
 # Syntax highlighting oh-my-zsh.
-zplug "zsh-users/zsh-syntax-highlighting", nice:8
+zplug "zsh-users/zsh-syntax-highlighting", nice:10
 
 # Completions oh-my-zsh.
 zplug "zsh-users/zsh-completions"
@@ -45,7 +45,7 @@ zplug "junegunn/fzf", do:"./install --all --key-bindings --no-completion --no-up
   | zplug "b4b4r07/enhancd", of:enhancd.sh
 
 # autosuggestions should be loaded last
-zplug "tarruda/zsh-autosuggestions", nice:9
+zplug "tarruda/zsh-autosuggestions", nice:19
 
 # emoji completion
 zplug "stedolan/jq", as:command, file:jq, from:gh-r \
