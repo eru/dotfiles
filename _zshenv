@@ -8,7 +8,7 @@ path=(
     /usr/local/opt/coreutils/libexec/gnubin(N-/)
     /usr/local/opt/gnu-sed/libexec/gnubin(N-/)
     /Applications/VMware\ Fusion.app/Contents/Library(N-/)
-    $HOME/.linuxbrew/bin
+    $HOME/.linuxbrew/bin(N-/)
     $HOME/local/sbin(N-/)
     $HOME/local/bin(N-/)
     /opt/X11/bin(N-/)

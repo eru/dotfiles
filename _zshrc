@@ -1,7 +1,7 @@
 # (d) is default on
 
-### zgen ###
-[ -f ~/dotfiles/_zsh/zgen.zsh ] && source ~/dotfiles/_zsh/zgen.zsh
+### zplug ###
+[ -f ~/dotfiles/_zsh/zplug.zsh ] && source ~/dotfiles/_zsh/zplug.zsh
 
 # ------------------------------
 # General Settings
