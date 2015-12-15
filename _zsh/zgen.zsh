@@ -9,7 +9,6 @@ if ! zgen saved; then
   zgen oh-my-zsh
 
   # plugins
-  zgen oh-my-zsh plugins/autojump
   zgen oh-my-zsh plugins/brew
   zgen oh-my-zsh plugins/bundler
   zgen oh-my-zsh plugins/cake
@@ -46,6 +45,7 @@ if ! zgen saved; then
     linux*)
     zgen oh-my-zsh plugins/systemd
     zgen oh-my-zsh plugins/yum
+    zgen og-my-zsh plugins/fedora
     ;;
   esac
 
