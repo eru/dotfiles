@@ -13,10 +13,10 @@ if [ -f ~/.zshenv ]; then
   rm -f ~/.zshenv
 fi
 ln -s ~/dotfiles/_zshenv ~/.zshenv
-if [ -d ~/.zgen ]; then
-  rm -rf ~/.zgen
+if [ -d ~/.zplug ]; then
+  rm -rf ~/.zplug
 fi
-git clone https://github.com/tarjoilija/zgen.git ~/.zsh/zgen
+curl -fLo ~/.zplug/zplug --create-dirs https://git.io/zplug
 
 # tmux
 if [ -d ~/.tmux ]; then
@@ -74,14 +74,14 @@ if [ -f ~/.tigrc ]; then
 fi
 ln -s ~/dotfiles/_tigrc ~/.tigrc
 
-# zgen plugins
-source ~/.zshrc
-
-# vim plugins
+# install vim plugins
 vim -c PlugUpdate -c quit -c quit
 
-# tmux plugins
+# install tmux plugins
 ~/.tmux/plugins/tpm/bin/install_plugins
+
+# install zsh plugins
+source ~/.zshrc
 
 # iTerm2 theme
 # https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Mathias.itermcolors
