@@ -129,5 +129,9 @@ MYIP=`ifconfig ${ETH_DEV} 2>/dev/null | grep -v inet6 | grep inet | cut -f 2 -d'
 ### Aliases ###
 [ -f ~/dotfiles/_alias ] && source ~/dotfiles/_alias
 
+### fzf ###
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # 環境ごとに違う設定は，.zshrc.mine に書く
 [ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
+
