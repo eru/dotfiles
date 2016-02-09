@@ -34,9 +34,6 @@ zplug "plugins/pip", from:oh-my-zsh, if:"which pip"
 zplug "plugins/yum", from:oh-my-zsh, if:"which yum"
 # zplug "plugins/zsh_reload", from:oh-my-zsh
 
-# Syntax highlighting oh-my-zsh.
-zplug "zsh-users/zsh-syntax-highlighting", nice:10
-
 # Completions oh-my-zsh.
 zplug "zsh-users/zsh-completions"
 
@@ -44,8 +41,11 @@ zplug "zsh-users/zsh-completions"
 zplug "junegunn/fzf", do:"./install --all --key-bindings --no-completion --no-update-rc" \
   | zplug "b4b4r07/enhancd", of:enhancd.sh
 
-# autosuggestions should be loaded last
-zplug "tarruda/zsh-autosuggestions", nice:19
+# autosuggestions should be loaded before Syntax highlighting and after compinit
+zplug "tarruda/zsh-autosuggestions", nice:18, of:dist/autosuggestions.zsh
+
+# Syntax highlighting oh-my-zsh.
+zplug "zsh-users/zsh-syntax-highlighting", nice:19
 
 # emoji completion
 zplug "stedolan/jq", as:command, file:jq, from:gh-r \
@@ -69,9 +69,5 @@ fi
 
 # Enable autosuggestions automatically.
 if zplug check "tarruda/zsh-autosuggestions"; then
-  zle-line-init() {
-    zle autosuggest-start
-  }
-  zle -N zle-line-init
-  bindkey '^f' vi-end-of-line
+  autosuggest_start
 fi
