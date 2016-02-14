@@ -42,7 +42,7 @@ zplug "junegunn/fzf", do:"./install --all --key-bindings --no-completion --no-up
   | zplug "b4b4r07/enhancd", of:enhancd.sh
 
 # autosuggestions should be loaded before Syntax highlighting and after compinit
-zplug "tarruda/zsh-autosuggestions", nice:18
+#zplug "tarruda/zsh-autosuggestions", nice:18
 
 # Syntax highlighting oh-my-zsh.
 zplug "zsh-users/zsh-syntax-highlighting", nice:19
