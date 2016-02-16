@@ -33,7 +33,7 @@ Plug 'majutsushi/tagbar'
 nmap <F8> :TagbarToggle<CR>
 
 " Vim にも Shell を！
-Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+Plug 'Shougo/vimproc.vim', { 'do': 'make clean && make' }
 Plug 'Shougo/vimshell'
 
 " 一覧
