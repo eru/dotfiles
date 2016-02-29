@@ -118,5 +118,8 @@ esac
 ### Aliases ###
 [ -f ~/dotfiles/_alias ] && source ~/dotfiles/_alias
 
+### iterm integration
+##[ -f ~/.iterm2_shell_integration.zsh ] && source ~/.iterm2_shell_integration.zsh
+
 # 環境ごとに違う設定は，.zshrc.mine に書く
 [ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
