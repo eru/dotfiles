@@ -7,6 +7,8 @@ Plug 'thinca/vim-ref'
 Plug 'Shougo/neocomplete.vim'
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
+let g:neocomplete#sources#dictionary#dictionaries = {'_': '', 'php': $HOME .'/dotfiles/_vim/dict/php.dict'}
+let g:neoinclude#exts  = {'php': ['php', 'inc', 'tpl', 'ctp']}
 let g:neocomplete#enable_at_startup = 1
 
 " XML 編集を便利にする
