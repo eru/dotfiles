@@ -85,8 +85,7 @@ function pcolor() {
 
 # tmux-ssh
 function ssh() {
-  if [[ -n $(printenv TMUX) ]]
-  then
+  if [[ -n $(printenv TMUX) ]]; then
     local window_name=$(tmux display -p '#{window_name}')
     tmux rename-window -- "$@[-1]" # zsh specified
     # tmux rename-window -- "${!#}" # for bash
@@ -96,6 +95,20 @@ function ssh() {
     command ssh $@
   fi
 }
+
+# tmux-sync
+function tmux-sync() {
+  if [[ -n $(printenv TMUX) ]]; then
+    if (tmux show-options -w | grep -q synchronize-panes); then
+      MODE="off"
+    else
+      MODE="on"
+    fi
+    tmux set-window-option synchronize-panes ${MODE}
+    echo "synchronize-panes ${MODE}"
+  fi
+}
+alias ts='tmux-sync'
 
 # ag
 alias ag='ag --pager="less"'
