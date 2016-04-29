@@ -16,7 +16,8 @@ ln -s ~/dotfiles/_zshenv ~/.zshenv
 if [ -d ~/.zplug ]; then
   rm -rf ~/.zplug
 fi
-curl -fLo ~/.zplug/zplug --create-dirs https://git.io/zplug
+export ZPLUG_HOME=~/.zplug
+curl -sL git.io/zplug | zsh
 
 # tmux
 if [ -d ~/.tmux ]; then
