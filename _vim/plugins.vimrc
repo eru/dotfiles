@@ -5,18 +5,29 @@ Plug 'thinca/vim-ref'
 
 " ちょーすごい補完
 Plug 'Shougo/neocomplete.vim'
-Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 let g:neocomplete#sources#dictionary#dictionaries = {'_': '', 'php': $HOME .'/dotfiles/_vim/dict/php.dict'}
 let g:neoinclude#exts  = {'php': ['php', 'inc', 'tpl', 'ctp']}
 let g:neocomplete#enable_at_startup = 1
+imap <C-@> <Plug>(neosnippet_expand_or_jump)
+smap <C-@> <Plug>(neosnippet_expand_or_jump)
+xmap <C-@> <Plug>(neosnippet_expand_target)
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+  \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+if has('conceal')
+    set conceallevel=2 concealcursor=niv
+endif
 
 " XML 編集を便利にする
 Plug 'sukima/xmledit', { 'for': 'xml' }
 
-" 整形 (ex. :Align <keyword>)
-Plug 'Align'
-Plug 'h1mesuke/vim-alignta'
+" 整形 (ex. :EasyAlign <keyword>)
+Plug 'junegunn/vim-easy-align'
+cabbrev Align EasyAlign
+
+" split (gS, gJ)
+Plug 'AndrewRadev/splitjoin.vim'
 
 " テキストオブジェクトを便利にする
 Plug 'surround.vim'
@@ -73,7 +84,7 @@ Plug 'mattn/emmet-vim', { 'for': ['html', 'php', 'tpl'] }
 "Plug 'rizzatti/dash.vim'
 
 " php with html
-Plug 'eru/php.vim-html-enhanced', { 'for': 'php' }
+Plug 'php.vim-html-enhanced', { 'for': 'php' }
 
 " vim-over :OverCommandLine
 Plug 'osyo-manga/vim-over'
@@ -95,7 +106,6 @@ Plug 'renamer.vim'
 
 " coffee-script
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
-au BufRead,BufNewFile,BufReadPre *.coffee set filetype=coffee
 
 " javascript/es6
 Plug 'othree/yajs.vim', { 'for': 'javascript' }
@@ -142,6 +152,17 @@ Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
 
 " less
 Plug 'groenewege/vim-less', { 'for': 'less' }
+
+" html tag match
+Plug 'Valloric/MatchTagAlways', { 'for': ['html', 'php'] }
+let g:mta_filetypes = {
+  \ 'html' : 1,
+  \ 'xhtml' : 1,
+  \ 'xml' : 1,
+  \ 'jinja' : 1,
+  \ 'php' : 1,
+  \ }
+nnoremap <leader>% :MtaJumpToOtherTag<cr>
 
 " syntax check
 Plug 'scrooloose/syntastic'

@@ -66,6 +66,8 @@ case "${OSTYPE}" in
     alias ls='ls --color=auto'
     # spotlight locate
     alias locate='mdfind -name'
+    # open
+    alias o='open'
     ;;
   linux*)
     ;;
@@ -111,7 +113,7 @@ function tmux-sync() {
 alias ts='tmux-sync'
 
 # ag
-alias ag='ag --pager="less"'
+alias ag='ag --pager="less -iRM"'
 vag () {
   vim -c "Ag $1";
 }
