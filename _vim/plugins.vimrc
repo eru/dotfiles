@@ -8,7 +8,7 @@ Plug 'Shougo/neocomplete.vim'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 let g:neocomplete#sources#dictionary#dictionaries = {'_': '', 'php': $HOME .'/dotfiles/_vim/dict/php.dict'}
-let g:neoinclude#exts  = {'php': ['php', 'inc', 'tpl', 'ctp']}
+let g:neoinclude#exts  = {'php': ['php', 'inc', 'ctp'], 'smarty': ['tpl']}
 let g:neocomplete#enable_at_startup = 1
 imap <C-@> <Plug>(neosnippet_expand_or_jump)
 smap <C-@> <Plug>(neosnippet_expand_or_jump)
@@ -154,13 +154,14 @@ Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
 Plug 'groenewege/vim-less', { 'for': 'less' }
 
 " html tag match
-Plug 'Valloric/MatchTagAlways', { 'for': ['html', 'php'] }
+Plug 'Valloric/MatchTagAlways', { 'for': ['html', 'php', 'smarty'] }
 let g:mta_filetypes = {
   \ 'html' : 1,
   \ 'xhtml' : 1,
   \ 'xml' : 1,
   \ 'jinja' : 1,
   \ 'php' : 1,
+  \ 'smarty' : 1,
   \ }
 nnoremap <leader>% :MtaJumpToOtherTag<cr>
 
@@ -173,3 +174,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" template
+Plug 'aperezdc/vim-template'
+let g:username = 'Kazuki Hashimoto'
+let g:email = 'eru.tndl@gmail.com'
