@@ -37,6 +37,7 @@ Plug 'kana/vim-smartword'
 
 " vim の正規表現を perl とかと同じにする (ex. :%S/(aa|bb|cc|)//g)
 Plug 'othree/eregex.vim'
+let g:eregex_default_enable = 0 " 置換だけ使えればいいので検索機能などは無効にしておく
 
 " SQL 整形 (ex. :SQLUFormatter)
 "Plug 'SQLUtilities'
