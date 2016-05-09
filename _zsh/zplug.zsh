@@ -54,6 +54,9 @@ zplug "b4b4r07/emoji-cli", on:"stedolan/jq"
 # emoji on cli
 zplug "mrowa44/emojify", as:command, rename-to:emojify
 
+# phpctags
+zplug "vim-php/phpctags", hook-build:"make clean && make", as:command, use:"build/phpctags.phar", rename-to:phpctags
+
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
   zplug install

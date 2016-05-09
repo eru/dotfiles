@@ -30,20 +30,24 @@ cabbrev Align EasyAlign
 Plug 'AndrewRadev/splitjoin.vim'
 
 " テキストオブジェクトを便利にする
-Plug 'surround.vim'
+Plug 'tpope/vim-surround'
 
 " ワード移動
-Plug 'smartword'
+Plug 'kana/vim-smartword'
 
 " vim の正規表現を perl とかと同じにする (ex. :%S/(aa|bb|cc|)//g)
-Plug 'eregex.vim'
+Plug 'othree/eregex.vim'
 
 " SQL 整形 (ex. :SQLUFormatter)
-Plug 'SQLUtilities'
+"Plug 'SQLUtilities'
 
 " メソッド, 変数宣言一覧 (ex. :TagbarToggle)
 Plug 'majutsushi/tagbar'
 nmap <F8> :TagbarToggle<CR>
+
+" phptagbar
+Plug 'vim-php/tagbar-phpctags.vim', { 'for': 'php' }
+let g:tagbar_phpctags_bin='~/.zplug/bin/phpctags'
 
 " Vim にも Shell を！
 Plug 'Shougo/vimproc.vim', { 'do': 'make clean && make' }
@@ -53,15 +57,14 @@ Plug 'Shougo/vimshell'
 Plug 'Shougo/unite.vim'
 
 " 括弧閉じ忘れ防止
-Plug 'Townk/vim-autoclose'
-Plug 'Highlight-UnMatched-Brackets'
+Plug 'cohama/lexima.vim'
 
 " Gist
 Plug 'mattn/webapi-vim'
 Plug 'mattn/gist-vim'
 
-" コメントアウト (ex. 範囲選択 -> \x)
-Plug 'EnhCommentify.vim'
+" コメントアウト (ex. 範囲選択 -> gcc)
+Plug 'tyru/caw.vim'
 
 " Git client
 Plug 'tpope/vim-fugitive'
@@ -73,11 +76,10 @@ Plug 'tpope/vim-markdown', { 'for': 'markdown' }
 Plug 'rking/ag.vim'
 
 " powerline
-"Plug 'alpaca-tc/alpaca_powertabline'
 Plug 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim' }
 
 " emmet-vim (ex. C-y ,)
-Plug 'mattn/emmet-vim', { 'for': ['html', 'php', 'tpl'] }
+Plug 'mattn/emmet-vim', { 'for': ['html', 'php', 'smarty'] }
 
 " Dash
 "Plug 'rizzatti/funcoo.vim'
@@ -102,7 +104,7 @@ Plug 'daisuzu/quickrun-hook-sphinx'
 "Plug 'dhruvasagar/vim-table-mode'
 
 " renamer
-Plug 'renamer.vim'
+Plug 'qpkorr/vim-renamer'
 
 " coffee-script
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
@@ -145,10 +147,11 @@ Plug 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'tagbar', 'unite']
 
 " html5
-Plug 'othree/html5.vim', { 'for': ['html', 'php', 'tpl'] }
+Plug 'othree/html5.vim', { 'for': ['html', 'php', 'smarty'] }
 
 " css3
 Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
+Plug 'gorodinskiy/vim-coloresque', { 'for': ['css', 'html', 'php', 'smarty'] }
 
 " less
 Plug 'groenewege/vim-less', { 'for': 'less' }
@@ -179,3 +182,9 @@ let g:syntastic_check_on_wq = 0
 Plug 'aperezdc/vim-template'
 let g:username = 'Kazuki Hashimoto'
 let g:email = 'eru.tndl@gmail.com'
+
+" tmux client
+Plug 'tpope/vim-tbone'
+
+" color schema
+Plug 'lanox/lanox-vim-theme'
