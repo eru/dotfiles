@@ -3,18 +3,18 @@ source ~/.zplug/init.zsh
 
 # plugins
 zplug "plugins/brew", from:oh-my-zsh
-zplug "plugins/brew-cask", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+zplug "plugins/brew-cask", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]", nice:18
 zplug "plugins/bundler", from:oh-my-zsh
 # zplug "plugins/cake", from:oh-my-zsh
 # zplug "plugins/cakephp3", from:oh-my-zsh
 # zplug "plugins/coffee", from:oh-my-zsh
 zplug "plugins/cpanm", from:oh-my-zsh, if:"which cpanm"
-zplug "plugins/composer", from:oh-my-zsh
+zplug "plugins/composer", from:oh-my-zsh, nice:18
 zplug "plugins/docker", from:oh-my-zsh, if:"which docker"
 zplug "plugins/docker-compose", from:oh-my-zsh, if:"which docker-compose"
 zplug "plugins/extract", from:oh-my-zsh
 zplug "plugins/fedora", from:oh-my-zsh, if:"which dnf"
-zplug "plugins/git", from:oh-my-zsh
+zplug "plugins/git", from:oh-my-zsh, nice:18
 zplug "plugins/git-flow", from:oh-my-zsh
 # zplug "plugins/heroku", from:oh-my-zsh
 # zplug "plugins/history", from:oh-my-zsh
