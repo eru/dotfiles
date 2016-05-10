@@ -47,8 +47,10 @@ Plug 'majutsushi/tagbar'
 nmap <F8> :TagbarToggle<CR>
 
 " phptagbar
-Plug 'vim-php/tagbar-phpctags.vim', { 'for': 'php' }
-let g:tagbar_phpctags_bin='~/.zplug/bin/phpctags'
+if filereadable(expand('~/.zplug/bin/phpctags'))
+  Plug 'vim-php/tagbar-phpctags.vim', { 'for': 'php' }
+  let g:tagbar_phpctags_bin='~/.zplug/bin/phpctags'
+endif
 
 " Vim にも Shell を！
 Plug 'Shougo/vimproc.vim', { 'do': 'make clean && make' }

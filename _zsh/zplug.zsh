@@ -52,10 +52,13 @@ zplug "stedolan/jq", as:command, rename-to:jq, from:gh-r
 zplug "b4b4r07/emoji-cli", on:"stedolan/jq"
 
 # emoji on cli
-zplug "mrowa44/emojify", as:command, rename-to:emojify
+zplug "mrowa44/emojify", as:command, use:"emojify"
 
 # phpctags
-zplug "vim-php/phpctags", hook-build:"make clean && make", as:command, use:"build/phpctags.phar", rename-to:phpctags
+zplug "vim-php/phpctags", hook-build:"make clean && make", as:command, use:"build/phpctags.phar", rename-to:phpctags, if:"which php"
+
+# self management
+zplug "zplug/zplug"
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then

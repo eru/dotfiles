@@ -6,7 +6,9 @@ set background=dark
 
 " ColorScheme
 "colorscheme developer
-colorscheme lanox
+if filereadable(expand('~/.vim/plugged/lanox-vim-theme/colors/lanox.vim'))
+  colorscheme lanox
+endif
 
 " transparent background
 highlight Normal ctermbg=none

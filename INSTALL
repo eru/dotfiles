@@ -17,7 +17,7 @@ if [ -d ~/.zplug ]; then
   rm -rf ~/.zplug
 fi
 export ZPLUG_HOME=~/.zplug
-curl -sL git.io/zplug | zsh
+git clone https://github.com/zplug/zplug $ZPLUG_HOME
 
 # tmux
 if [ -d ~/.tmux ]; then
@@ -76,10 +76,12 @@ fi
 ln -s ~/dotfiles/_tigrc ~/.tigrc
 
 # install plugins
-# 表示がぶっ壊れるが速さ優先
-(source ~/.zshrc) & \
-(vim -c PlugUpdate -c quit -c quit) & \
-(~/.tmux/plugins/tpm/bin/install_plugins)
+echo '
+### Please execute these commands. ###
+~/.tmux/plugins/tpm/bin/install_plugins
+vim -c PlugUpdate
+exec $SHELL -l
+'
 
 # iTerm2 theme
 # https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Mathias.itermcolors
