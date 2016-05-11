@@ -101,7 +101,7 @@ function ssh() {
 # tmux-sync
 function tmux-sync() {
   if [[ -n $(printenv TMUX) ]]; then
-    if (tmux show-options -w | grep -q synchronize-panes); then
+    if (tmux show-options -w | grep -q 'synchronize-panes on'); then
       MODE="off"
     else
       MODE="on"
