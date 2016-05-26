@@ -39,7 +39,7 @@ zplug "zsh-users/zsh-completions"
 
 # fuzzy finder and next generation cd
 zplug "junegunn/fzf", hook-build:"./install --all --key-bindings --no-completion --no-update-rc"
-zplug "b4b4r07/enhancd", use:enhancd.sh, on:"junegunn/fzf"
+zplug "b4b4r07/enhancd", use:init.sh, on:"junegunn/fzf"
 
 # autosuggestions should be loaded before Syntax highlighting and after compinit
 zplug "tarruda/zsh-autosuggestions", nice:19
@@ -63,12 +63,6 @@ zplug "zplug/zplug"
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
   zplug install
-fi
-
-# zplug check returns true if the given repository exists
-if zplug check b4b4r07/enhancd; then
-  # setting if enhancd is available
-  export ENHANCD_FILTER=fzf-tmux
 fi
 
 # Then, source plugins and add commands to $PATH
