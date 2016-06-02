@@ -75,7 +75,7 @@ esac
 alias fp='realpath -s'
 
 # colors
-function pcolor() {
+pcolor() {
   for ((f = 0; f < 255; f++)); do
     printf "\e[38;5;%dm %3d#\e[m" $f $f
     if [[ $f%8 -eq 7 ]] then
@@ -86,7 +86,7 @@ function pcolor() {
 }
 
 # tmux-ssh
-function ssh() {
+ssh() {
   if [[ -n $(printenv TMUX) ]]; then
     local window_name=$(tmux display -p '#{window_name}')
     tmux rename-window -- "$@[-1]" # zsh specified
@@ -99,7 +99,7 @@ function ssh() {
 }
 
 # tmux-sync
-function tmux-sync() {
+tmux-sync() {
   if [[ -n $(printenv TMUX) ]]; then
     if (tmux show-options -w | grep -q 'synchronize-panes on'); then
       MODE="off"
@@ -116,6 +116,14 @@ alias ts='tmux-sync'
 alias ag='ag --pager="less -iRM"'
 vag () {
   vim -c "Ag $1";
+}
+
+# git checkout
+gcof() {
+  local branches branch
+  branches=$(git branch -vv) &&
+  branch=$(echo "$branches" | fzf-tmux +m) &&
+  git checkout $(echo "$branch" | awk '{print $1}' | sed "s/.* //")
 }
 
 # tree

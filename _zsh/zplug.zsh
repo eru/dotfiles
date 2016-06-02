@@ -65,6 +65,12 @@ if ! zplug check --verbose; then
   zplug install
 fi
 
+# zplug check returns true if the given repository exists
+if zplug check b4b4r07/enhancd; then
+  # setting if enhancd is available
+  export ENHANCD_DISABLE_DOT=1
+fi
+
 # Then, source plugins and add commands to $PATH
 zplug load
 
