@@ -22,7 +22,7 @@ zplug "plugins/git-flow", from:oh-my-zsh
 # zplug "plugins/mosh", from:oh-my-zsh, if:"which mosh"
 # zplug "plugins/node", from:oh-my-zsh
 # zplug "plugins/npm", from:oh-my-zsh, if:"which npm"
-zplug "plugins/osx", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+zplug "plugins/osx", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]", nice:18
 zplug "plugins/pip", from:oh-my-zsh, if:"which pip"
 # zplug "plugins/pyenv", from:oh-my-zsh
 # zplug "plugins/rsync", from:oh-my-zsh
