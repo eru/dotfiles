@@ -112,8 +112,13 @@ Plug 'qpkorr/vim-renamer'
 " coffee-script
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 
-" javascript/es6
-Plug 'othree/yajs.vim', { 'for': 'javascript' }
+" javascript/es6/jsx
+Plug 'othree/yajs.vim'
+Plug 'maxmellon/vim-jsx-pretty'
+
+" optional
+Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'othree/es.next.syntax.vim'
 
 " incremental search
 Plug 'haya14busa/incsearch.vim'
