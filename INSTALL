@@ -16,8 +16,7 @@ ln -s ~/dotfiles/_zshenv ~/.zshenv
 if [ -d ~/.zplug ]; then
   rm -rf ~/.zplug
 fi
-export ZPLUG_HOME=~/.zplug
-git clone https://github.com/zplug/zplug $ZPLUG_HOME
+curl -sL zplug.sh/installer | zsh
 
 # tmux
 if [ -d ~/.tmux ]; then
