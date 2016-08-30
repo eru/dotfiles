@@ -80,6 +80,7 @@ echo '
 ~/.tmux/plugins/tpm/bin/install_plugins
 vim -c PlugUpdate
 exec $SHELL -l
+zplug update --self
 '
 
 # iTerm2 theme

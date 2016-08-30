@@ -133,4 +133,4 @@ gcof() {
 alias tree='tree -N'
 
 # update dotfile
-alias dot-update='OLD_DIR=`pwd` && cd ~/dotfiles && git pull && zplug update --self && zplug update && vim -c PlugUpgrade -c PlugClean! -c PlugUpdate -c quit -c quit && cd "$OLD_DIR"'
+alias dot-update='OLD_DIR=`pwd` && cd ~/dotfiles && git pull && zplug update && vim -c PlugUpgrade -c PlugClean! -c PlugUpdate -c quit -c quit && cd "$OLD_DIR"'
