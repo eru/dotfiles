@@ -3,6 +3,7 @@ typeset -U path
 
 # (N-/): don't register directories which do not exist
 path=(
+    $HOME/.go/bin(N-/)
     $HOME/.fzf/bin(N-/)
     $HOME/.vim/plugged/powerline/scripts(N-/)
     /usr/local/opt/coreutils/libexec/gnubin(N-/)
