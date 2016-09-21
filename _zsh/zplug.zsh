@@ -3,7 +3,7 @@ source ~/.zplug/init.zsh
 
 # plugins
 zplug "plugins/brew", from:oh-my-zsh
-zplug "plugins/brew-cask", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]", nice:18
+# zplug "plugins/brew-cask", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]", nice:18
 zplug "plugins/bundler", from:oh-my-zsh
 # zplug "plugins/cake", from:oh-my-zsh
 # zplug "plugins/cakephp3", from:oh-my-zsh
@@ -31,7 +31,7 @@ zplug "plugins/pip", from:oh-my-zsh, if:"which pip"
 # zplug "plugins/vagrant", from:oh-my-zsh
 # zplug "plugins/web-search", from:oh-my-zsh
 # zplug "plugins/xcode", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
-zplug "plugins/yum", from:oh-my-zsh, if:"which yum"
+# zplug "plugins/yum", from:oh-my-zsh, if:"which yum"
 # zplug "plugins/zsh_reload", from:oh-my-zsh
 
 # Completions oh-my-zsh.
