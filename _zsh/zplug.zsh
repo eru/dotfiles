@@ -61,7 +61,7 @@ zplug "vim-php/phpctags", hook-build:"make clean && make", as:command, use:"buil
 zplug "zplug/zplug"
 
 # Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
+if ! zplug check; then
   zplug install
 fi
 
