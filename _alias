@@ -57,6 +57,9 @@ alias ex='extract'
 # php-cs-fixer
 alias pfix='php-cs-fixer fix'
 
+# locate
+alias loc='locate'
+
 # OS別の設定
 case "${OSTYPE}" in
   darwin*)
