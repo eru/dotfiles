@@ -116,8 +116,11 @@ Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'othree/yajs.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 
+" typescript
+Plug 'leafgarland/typescript-vim', {'for': ['typescript']}
+
 " optional
-Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'othree/javascript-libraries-syntax.vim', {'for': ['javascript', 'html']}
 Plug 'othree/es.next.syntax.vim'
 
 " incremental search
