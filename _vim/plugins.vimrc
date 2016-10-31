@@ -19,6 +19,12 @@ if has('conceal')
     set conceallevel=2 concealcursor=niv
 endif
 
+" ruby
+Plug 'osyo-manga/vim-monster'
+let g:neocomplete#sources#omni#input_patterns = {
+\   'ruby' : '[^. *\t]\.\w*\|\h\w*::',
+\}
+
 " XML 編集を便利にする
 Plug 'sukima/xmledit', { 'for': 'xml' }
 

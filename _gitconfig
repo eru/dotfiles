@@ -121,3 +121,5 @@
     default = simple
 [github]
     user = eru
+[rebase]
+    autosquash = true
