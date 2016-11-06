@@ -9,7 +9,7 @@
     grep = auto
 [core]
     editor = vim
-    pager = less -R
+    pager = less -iRM
     quotepath = false
     filemode = true
 [merge]
