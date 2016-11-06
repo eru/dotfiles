@@ -5,11 +5,6 @@ set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,iso-2022-jp,euc-jp,sjis,cp932,cp20932
 set fileformats=unix,dos,mac
 
-" □とか○の文字があってもカーソル位置がずれないようにする
-if filereadable(expand('~/dotfiles/_vim/ambwidth.vimrc'))
-    source ~/.vim/ambwidth.vimrc
-endif
-
 " 行番号表示
 set number
 

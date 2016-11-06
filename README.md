@@ -1,11 +1,17 @@
 # my dotfiles
 
+## REQUIREMENTS
+
+- zsh
+- vim
+- tmux
+
 ## INSTALL
 
    ```
    git clone https://github.com/eru/dotfiles.git ~/dotfiles
    cd ~/dotfiles
-   ./INSTALL
+   ./scripts/install.zsh
    ```
 
 ## UPDATE
