@@ -1,6 +1,3 @@
-" dotfile runtime
-set runtimepath+=$HOME/dotfiles/_vim/
-
 " plugin
 source $HOME/dotfiles/_vim/manager.vim
 
