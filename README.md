@@ -9,8 +9,8 @@
 ## INSTALL
 
    ```
-   git clone https://github.com/eru/dotfiles.git ~/dotfiles
-   cd ~/dotfiles
+   git clone https://github.com/eru/dotfiles.git $HOME/dotfiles
+   cd $HOME/dotfiles
    ./scripts/install.zsh
    ```
 

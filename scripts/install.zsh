@@ -1,83 +1,83 @@
 #!/usr/bin/env zsh
 
 # zsh
-if [ -f ~/.zshrc ]; then
-  rm -f ~/.zshrc
+if [ -f $HOME/.zshrc ]; then
+  rm -f $HOME/.zshrc
 fi
-ln -s ~/dotfiles/_zshrc ~/.zshrc
-if [ -d ~/.zsh ]; then
-  rm -rf ~/.zsh
+ln -s $HOME/dotfiles/_zshrc $HOME/.zshrc
+if [ -d $HOME/.zsh ]; then
+  rm -rf $HOME/.zsh
 fi
-mkdir ~/.zsh
-if [ -f ~/.zshenv ]; then
-  rm -f ~/.zshenv
+mkdir $HOME/.zsh
+if [ -f $HOME/.zshenv ]; then
+  rm -f $HOME/.zshenv
 fi
-ln -s ~/dotfiles/_zshenv ~/.zshenv
-if [ -d ~/.zplug ]; then
-  rm -rf ~/.zplug
+ln -s $HOME/dotfiles/_zshenv $HOME/.zshenv
+if [ -d $HOME/.zplug ]; then
+  rm -rf $HOME/.zplug
 fi
 curl -sL zplug.sh/installer | zsh
 
 # tmux
-if [ -d ~/.tmux ]; then
-  rm -rf ~/.tmux
+if [ -d $HOME/.tmux ]; then
+  rm -rf $HOME/.tmux
 fi
-mkdir -p ~/.tmux/plugins
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-if [ -f ~/.tmux.conf ]; then
-  rm -f ~/.tmux.conf
+mkdir -p $HOME/.tmux/plugins
+git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
+if [ -f $HOME/.tmux.conf ]; then
+  rm -f $HOME/.tmux.conf
 fi
-ln -s ~/dotfiles/_tmux.conf ~/.tmux.conf
+ln -s $HOME/dotfiles/_tmux.conf $HOME/.tmux.conf
 
 # git
-if [ -f ~/.gitconfig ]; then
-  rm -f ~/.gitconfig
+if [ -f $HOME/.gitconfig ]; then
+  rm -f $HOME/.gitconfig
 fi
-ln -s ~/dotfiles/_gitconfig ~/.gitconfig
+ln -s $HOME/dotfiles/_gitconfig $HOME/.gitconfig
 
 # vim
-if [ -f ~/.vimrc ]; then
-  rm -f ~/.vimrc
+if [ -f $HOME/.vimrc ]; then
+  rm -f $HOME/.vimrc
 fi
-ln -s ~/dotfiles/_vimrc ~/.vimrc
-if [ -d ~/.vim ]; then
-  rm -rf ~/.vim
+ln -s $HOME/dotfiles/_vimrc $HOME/.vimrc
+if [ -d $HOME/.vim ]; then
+  rm -rf $HOME/.vim
 fi
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-if [ -d ~/.vim/colors ]; then
-  rm -rf ~/.vim/colors
+curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+if [ -d $HOME/.vim/colors ]; then
+  rm -rf $HOME/.vim/colors
 fi
-ln -s ~/dotfiles/_vim/colors ~/.vim/colors
-if [ -d ~/.vim/ftdetect ]; then
-  rm -f ~/.vim/ftdetect
+ln -s $HOME/dotfiles/_vim/colors $HOME/.vim/colors
+if [ -d $HOME/.vim/ftdetect ]; then
+  rm -f $HOME/.vim/ftdetect
 fi
-ln -s ~/dotfiles/_vim/ftdetect ~/.vim/ftdetect
+ln -s $HOME/dotfiles/_vim/ftdetect $HOME/.vim/ftdetect
 
 # xvim
-if [ -f ~/.xvimrc ]; then
-  rm -f ~/.xvimrc
+if [ -f $HOME/.xvimrc ]; then
+  rm -f $HOME/.xvimrc
 fi
-ln -s ~/dotfiles/_xvimrc ~/.xvimrc
+ln -s $HOME/dotfiles/_xvimrc $HOME/.xvimrc
 
 # powerline
-if [ ! -d ~/.config ]; then
-  mkdir ~/.config
+if [ ! -d $HOME/.config ]; then
+  mkdir $HOME/.config
 fi
-if [ -d ~/.config/powerline ]; then
-  rm -rf ~/.config/powerline
+if [ -d $HOME/.config/powerline ]; then
+  rm -rf $HOME/.config/powerline
 fi
-ln -s ~/dotfiles/_config/powerline ~/.config/powerline
+ln -s $HOME/dotfiles/_config/powerline $HOME/.config/powerline
 
 # tig
-if [ -f ~/.tigrc ]; then
-  rm -f ~/.tigrc
+if [ -f $HOME/.tigrc ]; then
+  rm -f $HOME/.tigrc
 fi
-ln -s ~/dotfiles/_tigrc ~/.tigrc
+ln -s $HOME/dotfiles/_tigrc $HOME/.tigrc
 
 # install plugins
 echo '
 ### Please execute these commands. ###
-~/.tmux/plugins/tpm/bin/install_plugins
+$HOME/.tmux/plugins/tpm/bin/install_plugins
 vim -c PlugUpdate
 exec $SHELL -l
 zplug update --self

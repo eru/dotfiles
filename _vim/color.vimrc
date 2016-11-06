@@ -6,7 +6,7 @@ set background=dark
 
 " ColorScheme
 "colorscheme developer
-if filereadable(expand('~/.vim/plugged/lanox-vim-theme/colors/lanox.vim'))
+if filereadable(expand($HOME.'/.vim/plugged/lanox-vim-theme/colors/lanox.vim'))
   colorscheme lanox
 endif
 

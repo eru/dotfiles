@@ -1,5 +1,5 @@
 # load zplug
-source ~/.zplug/init.zsh
+source $HOME/.zplug/init.zsh
 
 # plugins
 zplug "plugins/brew", from:oh-my-zsh
@@ -76,5 +76,5 @@ zplug load
 
 # Enable fzf key bindings
 if zplug check "junegunn/fzf"; then
-  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+  [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 fi
