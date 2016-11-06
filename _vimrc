@@ -1,14 +1,17 @@
+" dotfile runtime
+set runtimepath+=$HOME/dotfiles/_vim/
+
 " plugin
-source $HOME/dotfiles/_vim/manager.vimrc
+source $HOME/dotfiles/_vim/manager.vim
 
 " 基本設定
-source $HOME/dotfiles/_vim/basic.vimrc
+source $HOME/dotfiles/_vim/basic.vim
 
 " 色設定
-source $HOME/dotfiles/_vim/color.vimrc
+source $HOME/dotfiles/_vim/color.vim
 
 " キーマップ
-source $HOME/dotfiles/_vim/keys.vimrc
+source $HOME/dotfiles/_vim/keys.vim
 
 " コマンド
-source $HOME/dotfiles/_vim/cmd.vimrc
+source $HOME/dotfiles/_vim/cmd.vim

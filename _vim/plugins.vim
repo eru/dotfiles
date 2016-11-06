@@ -206,3 +206,6 @@ Plug 'tpope/vim-tbone'
 
 " color schema
 Plug 'lanox/lanox-vim-theme'
+
+" load plugin configs
+runtime! plugins/*.vimrc
