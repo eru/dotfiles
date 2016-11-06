@@ -7,8 +7,9 @@ Plug 'thinca/vim-ref'
 Plug 'Shougo/neocomplete.vim'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
-let g:neocomplete#sources#dictionary#dictionaries = {'_': '', 'php': $HOME .'/dotfiles/_vim/dict/php.dict'}
-let g:neoinclude#exts  = {'php': ['php', 'inc', 'ctp'], 'smarty': ['tpl']}
+let g:neosnippet#enable_snipmate_compatibility = 1
+let g:neosnippet#snippets_directory=$HOME . '/.vim/plugged/neosnippet-snippets/snippets'
+let g:neocomplete#sources#dictionary#dictionaries = {'_': '', 'php': $HOME . '/dotfiles/_vim/dict/php.dict'}
 let g:neocomplete#enable_at_startup = 1
 imap <C-@> <Plug>(neosnippet_expand_or_jump)
 smap <C-@> <Plug>(neosnippet_expand_or_jump)
