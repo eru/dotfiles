@@ -2,8 +2,6 @@
 source $HOME/.zplug/init.zsh
 
 # plugins
-zplug "plugins/brew", from:oh-my-zsh
-# zplug "plugins/brew-cask", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]", nice:18
 zplug "plugins/bundler", from:oh-my-zsh
 # zplug "plugins/cake", from:oh-my-zsh
 # zplug "plugins/cakephp3", from:oh-my-zsh
