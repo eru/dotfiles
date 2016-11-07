@@ -66,3 +66,12 @@ set laststatus=2
 "set statusline=%<%f\ %m%r%h%w
 "set statusline+=%{'['.(&fenc!=''?&fenc:&enc).']['.&fileformat.']'}
 "set statusline+=%=%l/%L,%c%V%8P
+
+" php
+let g:php_baselib       = 1
+let g:php_htmlInStrings = 1
+let g:php_noShortTags   = 1
+let g:php_sql_query     = 1
+
+" sql
+let g:sql_type_default = 'mysql'

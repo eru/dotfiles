@@ -1,3 +1,4 @@
+" MatchTagAlways.vim {{{
 let g:mta_filetypes = {
   \ 'html' : 1,
   \ 'xhtml' : 1,
@@ -7,3 +8,4 @@ let g:mta_filetypes = {
   \ 'smarty' : 1,
   \ }
 nnoremap <leader>% :MtaJumpToOtherTag<cr>
+" }}}

@@ -1,3 +1,4 @@
+" vim-quickrun.vim {{{
 let g:quickrun_config = {}
 
 " reST preview
@@ -8,3 +9,4 @@ let g:quickrun_config['rst'] = {
   \ 'cmdopt': 'html',
   \ 'exec': '%c %o'
   \ }
+" }}}

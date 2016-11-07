@@ -5,6 +5,7 @@ Plug 'thinca/vim-ref'
 
 " ちょーすごい補完
 Plug 'Shougo/neocomplete.vim'
+Plug 'Shougo/neoinclude.vim'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 
@@ -108,7 +109,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafgarland/typescript-vim', {'for': ['typescript']}
 
 " optional
-Plug 'othree/javascript-libraries-syntax.vim', {'for': ['javascript', 'html']}
+"Plug 'othree/javascript-libraries-syntax.vim', {'for': ['javascript', 'html']}
 Plug 'othree/es.next.syntax.vim'
 
 " incremental search
