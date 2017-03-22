@@ -7,12 +7,12 @@ zplug "plugins/bundler", from:oh-my-zsh
 # zplug "plugins/cakephp3", from:oh-my-zsh
 # zplug "plugins/coffee", from:oh-my-zsh
 zplug "plugins/cpanm", from:oh-my-zsh, if:"which cpanm"
-zplug "plugins/composer", from:oh-my-zsh, nice:18
+zplug "plugins/composer", from:oh-my-zsh, defer:2
 zplug "plugins/docker", from:oh-my-zsh, if:"which docker"
 zplug "plugins/docker-compose", from:oh-my-zsh, if:"which docker-compose"
 zplug "plugins/extract", from:oh-my-zsh
 zplug "plugins/fedora", from:oh-my-zsh, if:"which dnf"
-zplug "plugins/git", from:oh-my-zsh, nice:18
+zplug "plugins/git", from:oh-my-zsh, defer:2
 zplug "plugins/git-flow", from:oh-my-zsh
 # zplug "plugins/heroku", from:oh-my-zsh
 # zplug "plugins/history", from:oh-my-zsh
@@ -20,7 +20,7 @@ zplug "plugins/git-flow", from:oh-my-zsh
 # zplug "plugins/mosh", from:oh-my-zsh, if:"which mosh"
 # zplug "plugins/node", from:oh-my-zsh
 # zplug "plugins/npm", from:oh-my-zsh, if:"which npm"
-zplug "plugins/osx", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]", nice:18
+zplug "plugins/osx", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]", defer:2
 zplug "plugins/pip", from:oh-my-zsh, if:"which pip"
 # zplug "plugins/pyenv", from:oh-my-zsh
 # zplug "plugins/rsync", from:oh-my-zsh
@@ -40,10 +40,10 @@ zplug "junegunn/fzf", hook-build:"./install --all --key-bindings --no-completion
 zplug "b4b4r07/enhancd", use:init.sh, on:"junegunn/fzf"
 
 # autosuggestions should be loaded before Syntax highlighting and after compinit
-zplug "tarruda/zsh-autosuggestions", nice:19
+zplug "tarruda/zsh-autosuggestions", defer:3
 
 # Syntax highlighting oh-my-zsh.
-zplug "zsh-users/zsh-syntax-highlighting", nice:10
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 # emoji completion
 zplug "stedolan/jq", as:command, rename-to:jq, from:gh-r
