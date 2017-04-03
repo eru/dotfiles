@@ -12,6 +12,7 @@
     pager = less -iRM
     quotepath = false
     filemode = true
+    excludesfile = ~/dotfiles/_gitignore
 [merge]
     tool = vimdiff
 [alias]
