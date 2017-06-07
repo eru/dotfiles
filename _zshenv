@@ -38,7 +38,7 @@ manpath=(
 )
 
 # Don't allow duplication
-typeset -U manpath
+typeset -U infopath
 
 # (N-/): don't register directories which do not exist
 infopath=(
