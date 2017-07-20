@@ -1,4 +1,4 @@
-### https://raw.github.com/github/gitignore/2e58c0210950f9c9f9f7fd29ba5806b4a64c33ce/Global/Dropbox.gitignore
+### https://raw.github.com/github/gitignore/8edb8a95c4c4b3dce71a378aaaf89275510b9cef/Global/Dropbox.gitignore
 
 # Dropbox settings and caches
 .dropbox
@@ -6,7 +6,7 @@
 .dropbox.cache
 
 
-### https://raw.github.com/github/gitignore/2e58c0210950f9c9f9f7fd29ba5806b4a64c33ce/Global/Emacs.gitignore
+### https://raw.github.com/github/gitignore/8edb8a95c4c4b3dce71a378aaaf89275510b9cef/Global/Emacs.gitignore
 
 # -*- mode: gitignore; -*-
 *~
@@ -55,7 +55,7 @@ flycheck_*.el
 .dir-locals.el
 
 
-### https://raw.github.com/github/gitignore/2e58c0210950f9c9f9f7fd29ba5806b4a64c33ce/Global/Linux.gitignore
+### https://raw.github.com/github/gitignore/8edb8a95c4c4b3dce71a378aaaf89275510b9cef/Global/Linux.gitignore
 
 *~
 
@@ -72,8 +72,9 @@ flycheck_*.el
 .nfs*
 
 
-### https://raw.github.com/github/gitignore/2e58c0210950f9c9f9f7fd29ba5806b4a64c33ce/Global/macOS.gitignore
+### https://raw.github.com/github/gitignore/8edb8a95c4c4b3dce71a378aaaf89275510b9cef/Global/macOS.gitignore
 
+# General
 *.DS_Store
 .AppleDouble
 .LSOverride
@@ -101,28 +102,106 @@ Temporary Items
 .apdisk
 
 
-### https://raw.github.com/github/gitignore/2e58c0210950f9c9f9f7fd29ba5806b4a64c33ce/Global/Vim.gitignore
+### https://raw.github.com/github/gitignore/8edb8a95c4c4b3dce71a378aaaf89275510b9cef/Global/SublimeText.gitignore
 
-# swap
+# Cache files for Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+
+# Workspace files are user-specific
+*.sublime-workspace
+
+# Project files should be checked into the repository, unless a significant
+# proportion of contributors will probably not be using Sublime Text
+# *.sublime-project
+
+# SFTP configuration file
+sftp-config.json
+
+# Package control specific files
+Package Control.last-run
+Package Control.ca-list
+Package Control.ca-bundle
+Package Control.system-ca-bundle
+Package Control.cache/
+Package Control.ca-certs/
+Package Control.merged-ca-bundle
+Package Control.user-ca-bundle
+oscrypto-ca-bundle.crt
+bh_unicode_properties.cache
+
+# Sublime-github package stores a github token in this file
+# https://packagecontrol.io/packages/sublime-github
+GitHub.sublime-settings
+
+
+### https://raw.github.com/github/gitignore/8edb8a95c4c4b3dce71a378aaaf89275510b9cef/Global/SVN.gitignore
+
+.svn/
+
+
+### https://raw.github.com/github/gitignore/8edb8a95c4c4b3dce71a378aaaf89275510b9cef/Global/Vagrant.gitignore
+
+# General
+.vagrant/
+
+# Log files (if you are creating logs in debug mode, uncomment this)
+# *.logs
+
+
+### https://raw.github.com/github/gitignore/8edb8a95c4c4b3dce71a378aaaf89275510b9cef/Global/Vim.gitignore
+
+# Swap
 [._]*.s[a-v][a-z]
 [._]*.sw[a-p]
 [._]s[a-v][a-z]
 [._]sw[a-p]
-# session
+
+# Session
 Session.vim
-# temporary
+
+# Temporary
 .netrwhist
 *~
-# auto-generated tag files
+# Auto-generated tag files
 tags
 
 
-### https://raw.github.com/github/gitignore/2e58c0210950f9c9f9f7fd29ba5806b4a64c33ce/Global/Windows.gitignore
+### https://raw.github.com/github/gitignore/8edb8a95c4c4b3dce71a378aaaf89275510b9cef/Global/VirtualEnv.gitignore
+
+# Virtualenv
+# http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
+.Python
+[Bb]in
+[Ii]nclude
+[Ll]ib
+[Ll]ib64
+[Ll]ocal
+[Ss]cripts
+pyvenv.cfg
+.venv
+pip-selfcheck.json
+
+
+### https://raw.github.com/github/gitignore/8edb8a95c4c4b3dce71a378aaaf89275510b9cef/Global/VisualStudioCode.gitignore
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+
+### https://raw.github.com/github/gitignore/8edb8a95c4c4b3dce71a378aaaf89275510b9cef/Global/Windows.gitignore
 
 # Windows thumbnail cache files
 Thumbs.db
 ehthumbs.db
 ehthumbs_vista.db
+
+# Dump file
+*.stackdump
 
 # Folder config file
 Desktop.ini
@@ -138,5 +217,32 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+
+### https://raw.github.com/github/gitignore/8edb8a95c4c4b3dce71a378aaaf89275510b9cef/Global/Xcode.gitignore
+
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## Build generated
+build/
+DerivedData/
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+
+## Other
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
 
 

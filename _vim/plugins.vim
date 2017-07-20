@@ -153,6 +153,9 @@ Plug 'tpope/vim-tbone'
 " color schema
 Plug 'lanox/lanox-vim-theme'
 
+" twig syntax
+Plug 'lumiliet/vim-twig'
+
 " load plugin configs
 for f in split(glob($HOME.'/dotfiles/_vim/plugins/*.vim'), '\n')
     exe 'source' f
