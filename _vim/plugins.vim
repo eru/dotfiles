@@ -78,7 +78,7 @@ Plug 'mattn/emmet-vim', { 'for': ['html', 'php', 'smarty'] }
 "Plug 'rizzatti/dash.vim'
 
 " php with html
-Plug 'php.vim-html-enhanced', { 'for': 'php' }
+Plug 'vim-scripts/php.vim-html-enhanced', { 'for': 'php' }
 
 " vim-over :OverCommandLine
 Plug 'osyo-manga/vim-over'
@@ -87,7 +87,7 @@ Plug 'osyo-manga/vim-over'
 Plug 'Rykka/riv.vim', { 'for': 'rst' }
 
 " open-browser
-Plug 'open-browser.vim'
+Plug 'tyru/open-browser.vim'
 
 " sphinx quickrun hook
 Plug 'daisuzu/quickrun-hook-sphinx'
