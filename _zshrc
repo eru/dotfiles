@@ -123,3 +123,9 @@ esac
 
 # 環境ごとに違う設定は，.zshrc.mine に書く
 [ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
+
+# virtualenv
+if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+  export WORKON_HOME=$HOME/.virtualenvs
+  source /usr/local/bin/virtualenvwrapper.sh
+fi
