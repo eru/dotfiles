@@ -67,6 +67,9 @@ set laststatus=2
 "set statusline+=%{'['.(&fenc!=''?&fenc:&enc).']['.&fileformat.']'}
 "set statusline+=%=%l/%L,%c%V%8P
 
+" クリップボード使ってコピペ
+set clipboard=unnamed,autoselect
+
 " php
 let g:php_baselib       = 1
 let g:php_htmlInStrings = 1
