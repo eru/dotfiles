@@ -54,9 +54,6 @@ alias vi='vim'
 # extract
 alias ex='extract'
 
-# php-cs-fixer
-alias pfix='php-cs-fixer fix'
-
 # locate
 alias loc='locate'
 
@@ -144,6 +141,12 @@ function gcof() {
 
 # tree
 alias tree='tree -N'
+
+# php codestyle fixer
+function pfix() {
+  php-cs-fixer fix $1
+  phpcbf --standard=PSR2 $1
+}
 
 # update dotfile
 alias dot-update='OLD_DIR=`pwd` && cd ~/dotfiles && git pull && zplug update && vim -c PlugUpgrade -c PlugClean! -c PlugUpdate -c quit -c quit && cd "$OLD_DIR"'
