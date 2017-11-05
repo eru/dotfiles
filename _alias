@@ -148,5 +148,10 @@ function pfix() {
   phpcbf --standard=PSR2 $1
 }
 
+# location and copy
+function xcp() {
+  xargs -I{} cp {} $1
+}
+
 # update dotfile
 alias dot-update='OLD_DIR=`pwd` && cd ~/dotfiles && git pull && zplug update && vim -c PlugUpgrade -c PlugClean! -c PlugUpdate -c quit -c quit && cd "$OLD_DIR"'
