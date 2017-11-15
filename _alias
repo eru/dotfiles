@@ -150,7 +150,7 @@ function pfix() {
 
 # location and copy
 function xcp() {
-  xargs -I{} cp {} $1
+  xargs -d '\n' -I{} cp {} $1
 }
 
 # update dotfile
