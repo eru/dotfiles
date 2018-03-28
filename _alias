@@ -57,6 +57,9 @@ alias ex='extract'
 # locate
 alias loc='locate'
 
+# android emulator
+alias emu='$ANDROID_HOME/tools/emulator'
+
 # OS別の設定
 case "${OSTYPE}" in
   darwin*)
@@ -68,7 +71,9 @@ case "${OSTYPE}" in
     alias diff='colordiff'
 
     # gnu ls
-    alias ls='ls --color'
+    if ls --color > /dev/null 2>&1; then
+      alias ls='ls --color'
+    fi
 
     # spotlight locate
     alias locate='mdfind -name'

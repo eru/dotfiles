@@ -53,7 +53,7 @@ zplug "b4b4r07/emoji-cli", on:"stedolan/jq"
 zplug "mrowa44/emojify", as:command, use:"emojify"
 
 # phpctags
-zplug "vim-php/phpctags", hook-build:"make clean && make", as:command, use:"build/phpctags.phar", rename-to:phpctags, if:"which php"
+zplug "vim-php/phpctags", hook-build:"composer install && make clean && make", as:command, use:"build/phpctags.phar", rename-to:phpctags, if:"which php"
 
 # self management
 zplug "zplug/zplug"
