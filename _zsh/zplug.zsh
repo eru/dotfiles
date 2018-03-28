@@ -56,7 +56,7 @@ zplug "mrowa44/emojify", as:command, use:"emojify"
 zplug "vim-php/phpctags", hook-build:"composer install && make clean && make", as:command, use:"build/phpctags.phar", rename-to:phpctags, if:"which php"
 
 # self management
-zplug "zplug/zplug"
+zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check; then
