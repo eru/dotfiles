@@ -156,6 +156,9 @@ Plug 'lanox/lanox-vim-theme'
 " twig syntax
 Plug 'lumiliet/vim-twig'
 
+" editorconf
+Plug 'editorconfig/editorconfig-vim'
+
 " load plugin configs
 for f in split(glob($HOME.'/dotfiles/_vim/plugins/*.vim'), '\n')
     exe 'source' f
