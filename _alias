@@ -58,7 +58,10 @@ alias ex='extract'
 alias loc='locate'
 
 # android emulator
-alias emu='$ANDROID_HOME/tools/emulator'
+alias emu="${ANDROID_HOME}/tools/emulator"
+
+# docker-compose
+alias d='docker-compose'
 
 # OS別の設定
 case "${OSTYPE}" in
