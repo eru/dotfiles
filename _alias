@@ -49,8 +49,12 @@ alias su='su -l'
 # less
 alias less='less -iRM'
 
-# neovim
-alias vi='nvim'
+# (neo)?vim
+if which nvim > /dev/null 2>&1; then
+  alias vi='nvim'
+else
+  alias vi='vim'
+fi
 
 # extract
 alias ex='extract'

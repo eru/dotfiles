@@ -3,7 +3,8 @@
 ## REQUIREMENTS
 
 - zsh
-- vim
+- neovim/vim
+    - python3 if using vim
 - tmux
 
 ## INSTALL

@@ -43,7 +43,8 @@ ln -s $HOME/dotfiles/_vimrc $HOME/.vimrc
 if [ -d $HOME/.vim ]; then
   rm -rf $HOME/.vim
 fi
-curl -fLo $HOME/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 if [ -d $HOME/.vim/colors ]; then
   rm -rf $HOME/.vim/colors
 fi
@@ -59,10 +60,16 @@ if [ -f $HOME/.xvimrc ]; then
 fi
 ln -s $HOME/dotfiles/_xvimrc $HOME/.xvimrc
 
-# powerline
-if [ ! -d $HOME/.config ]; then
-  mkdir $HOME/.config
+# neovim
+mkdir -p $HOME/.config
+if [ -d $HOME/.config/nvim ]; then
+  rm -rf $HOME/.config/nvim
 fi
+ln -s $HOME/.vim $HOME/.config/nvim
+ln -s $HOME/.vimrc $HOME/.config/nvim/init.vim
+
+# powerline
+mkdir -p $HOME/.config
 if [ -d $HOME/.config/powerline ]; then
   rm -rf $HOME/.config/powerline
 fi

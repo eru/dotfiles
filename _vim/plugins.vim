@@ -7,16 +7,19 @@ Plug 'thinca/vim-ref'
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
+  " require
   Plug 'Shougo/deoplete.nvim'
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
+
+Plug 'Shougo/neco-syntax'
 Plug 'Shougo/neoinclude.vim'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 
-" ruby
-Plug 'osyo-manga/vim-monster'
+" Python
+Plug 'zchee/deoplete-jedi'
 
 " XML 編集を便利にする
 Plug 'sukima/xmledit', { 'for': 'xml' }
@@ -48,8 +51,7 @@ if filereadable(expand($HOME.'/.zplug/bin/phpctags'))
 endif
 
 " Vim にも Shell を！
-Plug 'Shougo/vimproc.vim', { 'do': 'make clean && make' }
-Plug 'Shougo/vimshell'
+Plug 'Shougo/deol.nvim'
 
 " 一覧
 if has('nvim')
@@ -99,9 +101,6 @@ Plug 'Rykka/riv.vim', { 'for': 'rst' }
 " open-browser
 Plug 'tyru/open-browser.vim'
 
-" sphinx quickrun hook
-Plug 'daisuzu/quickrun-hook-sphinx'
-
 " table mode
 "Plug 'dhruvasagar/vim-table-mode'
 
@@ -126,7 +125,11 @@ Plug 'othree/es.next.syntax.vim'
 Plug 'haya14busa/incsearch.vim'
 
 " quickrun (ex. \r)
+Plug 'Shougo/vimproc.vim', { 'do': 'make clean && make' }
 Plug 'thinca/vim-quickrun'
+
+" sphinx quickrun hook
+Plug 'daisuzu/quickrun-hook-sphinx'
 
 " git commit message editor
 Plug 'rhysd/committia.vim'
