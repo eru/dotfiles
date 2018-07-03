@@ -68,7 +68,11 @@ set laststatus=2
 "set statusline+=%=%l/%L,%c%V%8P
 
 " クリップボード使ってコピペ
-set clipboard=unnamed,autoselect
+if has('nvim')
+  set clipboard+=unnamedplus
+else
+  set clipboard=unnamed,autoselect
+endif
 
 " php
 let g:php_baselib       = 1

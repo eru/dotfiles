@@ -4,8 +4,6 @@ let g:mta_filetypes = {
   \ 'xhtml' : 1,
   \ 'xml' : 1,
   \ 'jinja' : 1,
-  \ 'php' : 1,
-  \ 'smarty' : 1,
   \ }
 nnoremap <leader>% :MtaJumpToOtherTag<cr>
 " }}}
