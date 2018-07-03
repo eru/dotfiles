@@ -16,7 +16,7 @@ ln -s $HOME/dotfiles/_zshenv $HOME/.zshenv
 if [ -d $HOME/.zplug ]; then
   rm -rf $HOME/.zplug
 fi
-curl -sL zplug.sh/installer | zsh
+curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
 # tmux
 if [ -d $HOME/.tmux ]; then
@@ -85,9 +85,8 @@ ln -s $HOME/dotfiles/_tigrc $HOME/.tigrc
 echo '
 ### Please execute these commands. ###
 $HOME/.tmux/plugins/tpm/bin/install_plugins
-vim -c PlugUpdate
 exec $SHELL -l
-zplug update --self
+vi -c PlugUpdate
 '
 
 # iTerm2 theme
