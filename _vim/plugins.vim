@@ -52,7 +52,11 @@ Plug 'Shougo/vimproc.vim', { 'do': 'make clean && make' }
 Plug 'Shougo/vimshell'
 
 " 一覧
-Plug 'Shougo/unite.vim'
+if has('nvim')
+  Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/denite.nvim'
+endif
 
 " 括弧閉じ忘れ防止
 Plug 'cohama/lexima.vim'
