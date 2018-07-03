@@ -137,7 +137,7 @@ alias ts='tmux-sync'
 # ag
 alias ag='ag --pager="less -iRM"'
 function vag () {
-  vim -c "Ag $1";
+  vi -c "Ag $1";
 }
 
 # git checkout
@@ -163,4 +163,4 @@ function xcp() {
 }
 
 # update dotfile
-alias dot-update='OLD_DIR=`pwd` && cd ~/dotfiles && git pull && zplug update && vim -c PlugUpgrade -c PlugClean! -c PlugUpdate -c quit -c quit && cd "$OLD_DIR"'
+alias dot-update='OLD_DIR=`pwd` && cd ~/dotfiles && git pull && zplug update && vi -c PlugUpgrade -c PlugClean! -c PlugUpdate -c quit -c quit && cd "$OLD_DIR"'
