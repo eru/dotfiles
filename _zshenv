@@ -6,7 +6,7 @@ path=(
     $HOME/.go/bin(N-/)
     $HOME/.fzf/bin(N-/)
     $HOME/.zplug/bin(N-/)
-    $HOME/.vim/plugged/powerline/scripts(N-/)
+    $HOME/.tmux/plugins/powerline/scripts(N-/)
     /usr/local/opt/coreutils/libexec/gnubin(N-/)
     /usr/local/opt/gnu-sed/libexec/gnubin(N-/)
     /usr/local/opt/gnu-getopt/bin(N-/)

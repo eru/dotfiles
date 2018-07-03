@@ -67,8 +67,8 @@ Plug 'tpope/vim-markdown', { 'for': 'markdown' }
 " ag (ex. :Ag)
 Plug 'rking/ag.vim'
 
-" powerline
-Plug 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim' }
+" airline
+Plug 'vim-airline/vim-airline'
 
 " emmet-vim (ex. C-y ,)
 Plug 'mattn/emmet-vim', { 'for': ['html', 'php', 'smarty'] }
