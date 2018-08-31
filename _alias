@@ -167,4 +167,4 @@ function xcp() {
 }
 
 # update dotfile
-alias dot-update='OLD_DIR=`pwd` && cd ~/dotfiles && git pull && zplug update && vi -c PlugUpgrade -c PlugClean! -c PlugUpdate -c quit -c quit && cd "$OLD_DIR"'
+alias dot-update='OLD_DIR=`pwd` && cd ~/dotfiles && git pull && zplug update && vi -c PlugUpgrade -c PlugClean! -c PlugUpdate -c UpdateRemotePlugins -c quitall && cd "$OLD_DIR"'
