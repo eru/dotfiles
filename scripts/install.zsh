@@ -68,18 +68,26 @@ fi
 ln -s $HOME/.vim $HOME/.config/nvim
 ln -s $HOME/.vimrc $HOME/.config/nvim/init.vim
 
-# powerline
-mkdir -p $HOME/.config
-if [ -d $HOME/.config/powerline ]; then
-  rm -rf $HOME/.config/powerline
-fi
-ln -s $HOME/dotfiles/_config/powerline $HOME/.config/powerline
-
 # tig
 if [ -f $HOME/.tigrc ]; then
   rm -f $HOME/.tigrc
 fi
 ln -s $HOME/dotfiles/_tigrc $HOME/.tigrc
+
+# .config
+mkdir -p $HOME/.config
+
+# powerline
+if [ -d $HOME/.config/powerline ]; then
+  rm -rf $HOME/.config/powerline
+fi
+ln -s $HOME/dotfiles/_config/powerline $HOME/.config/powerline
+
+# mpv
+if [ -d $HOME/.config/mpv ]; then
+  rm -rf $HOME/.config/mpv
+fi
+ln -s $HOME/dotfiles/_config/mpv $HOME/.config/mpv
 
 # install plugins
 echo '
