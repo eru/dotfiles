@@ -51,10 +51,9 @@ alias less='less -iRM'
 
 # (neo)?vim
 if which nvim > /dev/null 2>&1; then
-  alias vi='nvim'
-else
-  alias vi='vim'
+  alias vim='nvim'
 fi
+alias vi='vim'
 
 # extract
 alias ex='extract'

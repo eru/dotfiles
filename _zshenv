@@ -61,8 +61,16 @@ else
     export MANPAGER="less"
 fi
 
-# Use vim as editor
-export EDITOR="vim"
+# Use (neo)?vim as editor
+if which nvim > /dev/null 2>&1; then
+  export EDITOR="nvim"
+else
+  export EDITOR="vim"
+fi
+
+# User less as pager
+export PAGER="less"
+export LESSCHARSET="utf-8"
 
 # The basic language settings used by applications
 export LANG="ja_JP.UTF-8"
