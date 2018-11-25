@@ -74,6 +74,12 @@ if [ -f $HOME/.tigrc ]; then
 fi
 ln -s $HOME/dotfiles/_tigrc $HOME/.tigrc
 
+# Hyper
+if [ -f $HOME/.hyper.js ]; then
+  rm -f $HOME/.hyper.js
+fi
+ln -s $HOME/dotfiles/_hyper.js $HOME/.hyper.js
+
 # .config
 mkdir -p $HOME/.config
 
@@ -96,6 +102,3 @@ $HOME/.tmux/plugins/tpm/bin/install_plugins
 exec $SHELL -l
 vi -c PlugUpdate
 '
-
-# iTerm2 theme
-# https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Mathias.itermcolors
