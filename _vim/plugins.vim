@@ -149,7 +149,7 @@ Plug 'othree/html5.vim', { 'for': ['html', 'php', 'smarty'] }
 
 " css3
 Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
-Plug 'gorodinskiy/vim-coloresque', { 'for': ['css', 'html', 'php', 'smarty'] }
+Plug 'ObserverOfTime/coloresque.vim'
 
 " less
 Plug 'groenewege/vim-less', { 'for': 'less' }
