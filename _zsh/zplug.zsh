@@ -3,9 +3,6 @@ source $HOME/.zplug/init.zsh
 
 # plugins
 zplug "plugins/bundler", from:oh-my-zsh
-# zplug "plugins/cake", from:oh-my-zsh
-# zplug "plugins/cakephp3", from:oh-my-zsh
-# zplug "plugins/coffee", from:oh-my-zsh
 zplug "plugins/cpanm", from:oh-my-zsh, if:"which cpanm"
 zplug "plugins/composer", from:oh-my-zsh, defer:2
 zplug "plugins/docker", from:oh-my-zsh, if:"which docker"
@@ -14,23 +11,8 @@ zplug "plugins/extract", from:oh-my-zsh
 zplug "plugins/fedora", from:oh-my-zsh, if:"which dnf"
 zplug "plugins/git", from:oh-my-zsh, defer:2
 zplug "plugins/git-flow", from:oh-my-zsh
-# zplug "plugins/heroku", from:oh-my-zsh
-# zplug "plugins/history", from:oh-my-zsh
-# zplug "plugins/lein", from:oh-my-zsh
-# zplug "plugins/mosh", from:oh-my-zsh, if:"which mosh"
-# zplug "plugins/node", from:oh-my-zsh
-# zplug "plugins/npm", from:oh-my-zsh, if:"which npm"
 zplug "plugins/osx", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]", defer:2
 zplug "plugins/pip", from:oh-my-zsh, if:"which pip"
-# zplug "plugins/pyenv", from:oh-my-zsh
-# zplug "plugins/rsync", from:oh-my-zsh
-# zplug "plugins/systemd", from:oh-my-zsh, if:"systemctl"
-# zplug "plugins/tmux", from:oh-my-zsh
-# zplug "plugins/vagrant", from:oh-my-zsh
-# zplug "plugins/web-search", from:oh-my-zsh
-# zplug "plugins/xcode", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
-# zplug "plugins/yum", from:oh-my-zsh, if:"which yum"
-# zplug "plugins/zsh_reload", from:oh-my-zsh
 
 # Completions oh-my-zsh.
 zplug "zsh-users/zsh-completions"
