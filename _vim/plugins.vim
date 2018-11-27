@@ -82,10 +82,6 @@ Plug 'vim-airline/vim-airline'
 " emmet-vim (ex. C-y ,)
 Plug 'mattn/emmet-vim', { 'for': ['html', 'php', 'smarty'] }
 
-" Dash
-"Plug 'rizzatti/funcoo.vim'
-"Plug 'rizzatti/dash.vim'
-
 " php with html
 Plug 'vim-scripts/php.vim-html-enhanced', { 'for': 'php' }
 
@@ -98,9 +94,6 @@ Plug 'Rykka/riv.vim', { 'for': 'rst' }
 " open-browser
 Plug 'tyru/open-browser.vim'
 
-" table mode
-"Plug 'dhruvasagar/vim-table-mode'
-
 " renamer
 Plug 'qpkorr/vim-renamer'
 
@@ -112,7 +105,8 @@ Plug 'othree/yajs.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 
 " typescript
-Plug 'leafgarland/typescript-vim', {'for': ['typescript']}
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
 
 " optional
 "Plug 'othree/javascript-libraries-syntax.vim', {'for': ['javascript', 'html']}
@@ -174,6 +168,9 @@ Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ }
+
+" emoji
+Plug 'fszymanski/deoplete-emoji'
 
 " load plugin configs
 for f in split(glob($HOME.'/dotfiles/_vim/plugins/*.vim'), '\n')
