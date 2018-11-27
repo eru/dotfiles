@@ -21,9 +21,6 @@ Plug 'Shougo/neosnippet-snippets'
 " Python
 Plug 'zchee/deoplete-jedi'
 
-" XML 編集を便利にする
-Plug 'sukima/xmledit', { 'for': 'xml' }
-
 " 整形 (ex. :EasyAlign <keyword>)
 Plug 'junegunn/vim-easy-align'
 
@@ -38,9 +35,6 @@ Plug 'kana/vim-smartword'
 
 " vim の正規表現を perl とかと同じにする (ex. :%S/(aa|bb|cc|)//g)
 Plug 'othree/eregex.vim'
-
-" SQL 整形 (ex. :SQLUFormatter)
-"Plug 'SQLUtilities'
 
 " メソッド, 変数宣言一覧 (ex. :TagbarToggle)
 Plug 'majutsushi/tagbar'
@@ -174,6 +168,12 @@ Plug 'lumiliet/vim-twig'
 
 " editorconf
 Plug 'editorconfig/editorconfig-vim'
+
+" lsp
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
 
 " load plugin configs
 for f in split(glob($HOME.'/dotfiles/_vim/plugins/*.vim'), '\n')
