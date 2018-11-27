@@ -106,7 +106,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 
 " typescript
 Plug 'HerringtonDarkholme/yats.vim'
-Plug 'mhartington/nvim-typescript', {'do': './install.sh'}
+Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
 
 " optional
 "Plug 'othree/javascript-libraries-syntax.vim', {'for': ['javascript', 'html']}
