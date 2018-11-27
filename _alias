@@ -166,4 +166,14 @@ function xcp() {
 }
 
 # update dotfile
-alias dot-update='OLD_DIR=`pwd` && cd ~/dotfiles && git pull && zplug update && vi -c PlugUpgrade -c PlugClean! -c PlugUpdate -c UpdateRemotePlugins -c quitall && cd "$OLD_DIR"'
+function dot-update() {
+  OLD_DIR=`pwd`
+
+  cd ~/dotfiles && git pull
+  zplug update
+  vi -c PlugUpgrade -c PlugClean! -c PlugUpdate -c UpdateRemotePlugins -c quitall
+  pip3 list -o --format=json | jq -r '.[].name' | xargs pip3 install -U pip
+  npm -g update
+
+  cd "$OLD_DIR"
+}

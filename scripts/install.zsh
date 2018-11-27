@@ -95,6 +95,17 @@ if [ -d $HOME/.config/mpv ]; then
 fi
 ln -s $HOME/dotfiles/_config/mpv $HOME/.config/mpv
 
+# lsp servers
+if which pip3 > /dev/null 2>&1; then
+  pip3 install python-language-server
+  pip3 install 'python-language-server[Pyflakes]'
+  pip3 install 'python-language-server[pycodestyle]'
+  pip3 install 'python-language-server[pydocstyle]'
+fi
+if which npm > /dev/null 2>&1; then
+  npm -g install typescript javascript-typescript-langserver
+fi
+
 # install plugins
 echo '
 ### Please execute these commands. ###

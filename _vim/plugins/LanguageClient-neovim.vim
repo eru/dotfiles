@@ -1,6 +1,6 @@
 let g:LanguageClient_serverCommands = {
-    \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
-    \ 'python': ['/usr/local/bin/pyls'],
+    \ 'javascript': ['javascript-typescript-stdio'],
+    \ 'python': ['pyls'],
     \ }
 
 nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
