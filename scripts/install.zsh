@@ -68,10 +68,10 @@ fi
 ln -s $HOME/.vim $HOME/.config/nvim
 ln -s $HOME/.vimrc $HOME/.config/nvim/init.vim
 if which pip2 > /dev/null 2>&1; then
-  pip2 install neovim
+  pip2 install pynvim
 fi
 if which pip3 > /dev/null 2>&1; then
-  pip3 install neovim
+  pip3 install pynvim
 fi
 if which npm > /dev/null 2>&1; then
   npm -g install neovim
