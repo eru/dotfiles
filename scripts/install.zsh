@@ -67,6 +67,18 @@ if [ -d $HOME/.config/nvim ]; then
 fi
 ln -s $HOME/.vim $HOME/.config/nvim
 ln -s $HOME/.vimrc $HOME/.config/nvim/init.vim
+if which pip2 > /dev/null 2>&1; then
+  pip2 install neovim
+fi
+if which pip3 > /dev/null 2>&1; then
+  pip3 install neovim
+fi
+if which npm > /dev/null 2>&1; then
+  npm -g install neovim
+fi
+if which gem > /dev/null 2>&1; then
+  gem install neovim
+fi
 
 # tig
 if [ -f $HOME/.tigrc ]; then
