@@ -172,6 +172,9 @@ Plug 'autozimu/LanguageClient-neovim', {
 " emoji
 Plug 'fszymanski/deoplete-emoji'
 
+" blueprint
+Plug 'kylef/apiblueprint.vim'
+
 " load plugin configs
 for f in split(glob($HOME.'/dotfiles/_vim/plugins/*.vim'), '\n')
     exe 'source' f
