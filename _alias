@@ -165,6 +165,16 @@ function xcp() {
   xargs -d '\n' -I{} cp {} $1
 }
 
+# check certificate
+function ccert() {
+  IPADDR=$1
+  DOMAIN=$2
+  if [ ! $DOMAIN ]; then
+    DOMAIN=$IPADDR
+  fi
+  openssl s_client -connect $IPADDR:443 -servername $DOMAIN < /dev/null 2>&1 | openssl x509 -text | egrep '(Not After|Subject:|DNS)'
+}
+
 # update dotfile
 function dot-update() {
   OLD_DIR=`pwd`

@@ -82,14 +82,8 @@ Plug 'vim-airline/vim-airline'
 " emmet-vim (ex. C-y ,)
 Plug 'mattn/emmet-vim', { 'for': ['html', 'php', 'smarty'] }
 
-" php with html
-Plug 'vim-scripts/php.vim-html-enhanced', { 'for': 'php' }
-
 " vim-over :OverCommandLine
 Plug 'osyo-manga/vim-over'
-
-" Riv: reStructuredText in Vim
-Plug 'Rykka/riv.vim', { 'for': 'rst' }
 
 " open-browser
 Plug 'tyru/open-browser.vim'
@@ -99,18 +93,6 @@ Plug 'qpkorr/vim-renamer'
 
 " coffee-script
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
-
-" javascript/es6/jsx
-Plug 'othree/yajs.vim'
-Plug 'maxmellon/vim-jsx-pretty'
-
-" typescript
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'mhartington/nvim-typescript', { 'do': './install.sh' }
-
-" optional
-"Plug 'othree/javascript-libraries-syntax.vim', {'for': ['javascript', 'html']}
-Plug 'othree/es.next.syntax.vim'
 
 " incremental search
 Plug 'haya14busa/incsearch.vim'
@@ -132,21 +114,17 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " display indent level
 Plug 'nathanaelkane/vim-indent-guides'
 
-" html5
-Plug 'othree/html5.vim', { 'for': ['html', 'php', 'smarty'] }
-
-" css3
-Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
-Plug 'ObserverOfTime/coloresque.vim'
-
 " less
 Plug 'groenewege/vim-less', { 'for': 'less' }
 
-" html tag match
-Plug 'Valloric/MatchTagAlways', { 'for': ['html', 'php', 'smarty'] }
-
 " syntax check
 Plug 'scrooloose/syntastic'
+
+" language-pack
+Plug 'sheerun/vim-polyglot'
+
+" indent-line
+Plug 'Yggdroot/indentLine'
 
 " template
 Plug 'aperezdc/vim-template'
@@ -156,9 +134,6 @@ Plug 'tpope/vim-tbone'
 
 " color schema
 Plug 'lanox/lanox-vim-theme'
-
-" twig syntax
-Plug 'lumiliet/vim-twig'
 
 " editorconf
 Plug 'editorconfig/editorconfig-vim'
