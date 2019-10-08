@@ -37,6 +37,7 @@ alias gsl='git stash list'
 alias gsp='git stash pop'
 alias gss='git status -s'
 alias gm='git merge --no-ff'
+alias gcl1='git clone --depth 1'
 
 # du/df
 alias du='du -h'
@@ -172,7 +173,7 @@ function ccert() {
   if [ ! $DOMAIN ]; then
     DOMAIN=$IPADDR
   fi
-  openssl s_client -connect $IPADDR:443 -servername $DOMAIN < /dev/null 2>&1 | openssl x509 -text | egrep '(Not After|Subject:|DNS)'
+  openssl s_client -connect $IPADDR:443 -servername $DOMAIN < /dev/null 2>&1 | openssl x509 -text | egrep '(Not (Before|After)|Subject:|DNS)'
 }
 
 # update dotfile
