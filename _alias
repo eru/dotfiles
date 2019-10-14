@@ -185,7 +185,9 @@ function dot-update() {
   vi -c PlugUpgrade -c PlugClean! -c PlugUpdate -c UpdateRemotePlugins -c quitall
   pip2 list -o --format=json | jq -r '.[].name' | xargs pip2 install -U pip
   pip3 list -o --format=json | jq -r '.[].name' | xargs pip3 install -U pip
-  npm -g update
+  if [ ${EUID:-${UID}} != 0 ]; then
+    npm -g update
+  fi
   gem update
 
   cd "$OLD_DIR"
