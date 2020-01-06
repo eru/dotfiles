@@ -245,4 +245,4 @@ xcuserdata/
 *.xccheckout
 *.xcscmblueprint
 
-
+.envrc
