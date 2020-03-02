@@ -19,7 +19,7 @@ path=(
     /usr/local/opt/llvm/bin(N-/)
     /usr/local/opt/sphinx-doc/bin(N-/)
     /usr/local/opt/sqlite/bin(N-/)
-    /usr/local/opt/node@10/bin(N-/)
+    /usr/local/opt/node@12/bin(N-/)
     $HOME/.linuxbrew/bin(N-/)
     $HOME/local/sbin(N-/)
     $HOME/local/bin(N-/)
