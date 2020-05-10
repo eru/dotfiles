@@ -68,6 +68,11 @@ alias emu="${ANDROID_HOME}/tools/emulator"
 # docker-compose
 alias d='docker-compose'
 
+# gnu ls
+if ls --color > /dev/null 2>&1; then
+  alias ls='ls --color'
+fi
+
 # OS別の設定
 case "${OSTYPE}" in
   darwin*)
@@ -77,11 +82,6 @@ case "${OSTYPE}" in
 
     # colordiff
     alias diff='colordiff'
-
-    # gnu ls
-    if ls --color > /dev/null 2>&1; then
-      alias ls='ls --color'
-    fi
 
     # spotlight locate
     alias locate='mdfind -name'
@@ -154,6 +154,9 @@ function gcof() {
 
 # tree
 alias tree='tree -N'
+
+# jq
+alias jq='jq -C'
 
 # php codestyle fixer
 function pfix() {

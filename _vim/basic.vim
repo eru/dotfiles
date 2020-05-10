@@ -34,7 +34,7 @@ set showmatch
 set matchtime=1
 
 " スクロールした時にいい感じに
-set scrolloff=5
+set scrolloff=15
 
 " バックアップとらない
 set nobackup
