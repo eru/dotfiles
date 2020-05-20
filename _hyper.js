@@ -151,7 +151,8 @@ module.exports = {
     "hyper-search",
     "hyper-broadcast",
     "hyper-background",
-    "hyper-highlight-active-pane"
+    "hyper-highlight-active-pane",
+    "hyper-tab-icons"
   ],
 
   // in development, you can create a directory under

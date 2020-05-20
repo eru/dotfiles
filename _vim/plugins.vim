@@ -80,7 +80,7 @@ Plug 'rking/ag.vim'
 Plug 'vim-airline/vim-airline'
 
 " emmet-vim (ex. C-y ,)
-Plug 'mattn/emmet-vim', { 'for': ['html', 'php', 'smarty'] }
+Plug 'mattn/emmet-vim', { 'for': ['html', 'php', 'smarty', 'vue'] }
 
 " vim-over :OverCommandLine
 Plug 'osyo-manga/vim-over'
