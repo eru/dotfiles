@@ -10,5 +10,5 @@ set split-view-height = 80%
 # 空白差分無視 (diff -b相当）
 set ignore-space = all
 
-# 長い行を自動改行
-#set wrap-lines = yes
+# 差分をハイライト
+set diff-highlight = true
