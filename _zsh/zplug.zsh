@@ -8,7 +8,7 @@ zplug "plugins/composer", from:oh-my-zsh, defer:2
 zplug "plugins/docker", from:oh-my-zsh, if:"which docker"
 zplug "plugins/docker-compose", from:oh-my-zsh, if:"which docker-compose"
 zplug "plugins/extract", from:oh-my-zsh
-zplug "plugins/fedora", from:oh-my-zsh, if:"which dnf"
+zplug "plugins/dnf", from:oh-my-zsh, if:"which dnf"
 zplug "plugins/git", from:oh-my-zsh, defer:2
 zplug "plugins/git-flow", from:oh-my-zsh
 zplug "plugins/osx", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]", defer:2
