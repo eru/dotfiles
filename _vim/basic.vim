@@ -82,3 +82,7 @@ let g:php_sql_query     = 1
 
 " sql
 let g:sql_type_default = 'mysql'
+
+" python
+let g:python3_host_prog = expand('/usr/local/bin/python3')
+let g:python_host_prog = expand('/usr/local/bin/python2')

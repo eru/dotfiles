@@ -6,6 +6,7 @@ typeset -U path
 
 # (N-/): don't register directories which do not exist
 path=(
+    $HOME/.poetry/bin(N-/)
     $HOME/.go/bin(N-/)
     $HOME/.zplug/bin(N-/)
     $HOME/.tmux/plugins/powerline/scripts(N-/)
