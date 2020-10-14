@@ -21,6 +21,7 @@ path=(
     /usr/local/opt/mysql-client/bin(N-/)
     /usr/local/opt/sqlite/bin(N-/)
     /usr/local/share/git-core/contrib/diff-highlight(N-/)
+    /usr/share/git-core/contrib/(N-/)
     $HOME/.linuxbrew/bin(N-/)
     $HOME/local/sbin(N-/)
     $HOME/local/bin(N-/)
