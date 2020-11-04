@@ -150,6 +150,9 @@ Plug 'fszymanski/deoplete-emoji'
 " blueprint
 Plug 'kylef/apiblueprint.vim'
 
+" vim-abolish (ex. crc => camelCase, crs => snake_case)
+Plug 'tpope/vim-abolish'
+
 " load plugin configs
 for f in split(glob($HOME.'/dotfiles/_vim/plugins/*.vim'), '\n')
     exe 'source' f
