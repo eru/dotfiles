@@ -74,6 +74,11 @@ else
   set clipboard=unnamed,autoselect
 endif
 
+" provider
+let g:loaded_python_provider = 0
+let g:python3_host_prog = expand('/usr/local/bin/python3')
+let g:loaded_ruby_provider = 0
+
 " php
 let g:php_baselib       = 1
 let g:php_htmlInStrings = 1
@@ -82,7 +87,3 @@ let g:php_sql_query     = 1
 
 " sql
 let g:sql_type_default = 'mysql'
-
-" python
-let g:python3_host_prog = expand('/usr/local/bin/python3')
-let g:python_host_prog = expand('/usr/local/bin/python2')
