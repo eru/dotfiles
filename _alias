@@ -170,13 +170,28 @@ function xcp() {
 }
 
 # check certificate
-function ccert() {
+function check_cert() {
   IPADDR=$1
   DOMAIN=$2
   if [ ! $DOMAIN ]; then
     DOMAIN=$IPADDR
   fi
   openssl s_client -connect $IPADDR:443 -servername $DOMAIN < /dev/null 2>&1 | openssl x509 -text | egrep '(Not (Before|After)|Subject:|DNS)'
+}
+
+function hash_cert() {
+  CERT_FILE=$1
+  openssl x509 -in "$CERT_FILE" -pubkey -noout -outform pem | sha256sum
+}
+
+function hash_pem() {
+  PEM_FILE=$1
+  openssl pkey -in "$PEM_FILE" -pubout -outform pem | sha256sum
+}
+
+function hash_csr() {
+  CSR_FILE=$1
+  openssl req -in "$CSR_FILE" -pubkey -noout -outform pem | sha256sum
 }
 
 # update dotfile
