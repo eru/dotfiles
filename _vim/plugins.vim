@@ -37,8 +37,8 @@ Plug 'tpope/vim-fugitive'
 " ag (ex. :Ack)
 Plug 'mileszs/ack.vim'
 
-" airline
-Plug 'vim-airline/vim-airline'
+" status line
+Plug 'itchyny/lightline.vim'
 
 " emmet-vim (ex. C-y ,)
 Plug 'mattn/emmet-vim', { 'for': ['html', 'php', 'smarty', 'vue'] }
