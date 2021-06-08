@@ -40,10 +40,6 @@ Plug 'itchyny/lightline.vim'
 " emmet-vim (ex. C-y ,)
 Plug 'mattn/emmet-vim', { 'for': ['html', 'php', 'smarty', 'vue'] }
 
-" quickrun (ex. \r)
-Plug 'Shougo/vimproc.vim', { 'do': 'make clean && make' }
-Plug 'thinca/vim-quickrun'
-
 " git commit message editor
 Plug 'rhysd/committia.vim'
 

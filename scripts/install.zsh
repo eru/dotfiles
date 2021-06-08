@@ -48,10 +48,6 @@ if [ -d $HOME/.vim ]; then
 fi
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-if [ -d $HOME/.vim/colors ]; then
-  rm -rf $HOME/.vim/colors
-fi
-ln -s $HOME/dotfiles/_vim/colors $HOME/.vim/colors
 if [ -d $HOME/.vim/ftdetect ]; then
   rm -f $HOME/.vim/ftdetect
 fi

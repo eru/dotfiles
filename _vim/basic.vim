@@ -38,6 +38,7 @@ set scrolloff=15
 
 " バックアップとらない
 set nobackup
+set nowritebackup
 set noswapfile
 
 " 変更されたら自動読み込み
@@ -63,9 +64,13 @@ set ruler
 set showcmd
 set showmode
 set laststatus=2
-"set statusline=%<%f\ %m%r%h%w
-"set statusline+=%{'['.(&fenc!=''?&fenc:&enc).']['.&fileformat.']'}
-"set statusline+=%=%l/%L,%c%V%8P
+set cmdheight=2
+
+" CursorHold
+set updatetime=300
+
+" Press ENTER回避
+set shortmess+=c
 
 " クリップボード使ってコピペ
 if has('nvim')
@@ -74,16 +79,10 @@ else
   set clipboard=unnamed,autoselect
 endif
 
+" leader
+let mapleader = "\<Space>"
+
 " provider
 let g:loaded_python_provider = 0
 let g:python3_host_prog = expand('/usr/local/bin/python3')
 let g:loaded_ruby_provider = 0
-
-" php
-let g:php_baselib       = 1
-let g:php_htmlInStrings = 1
-let g:php_noShortTags   = 1
-let g:php_sql_query     = 1
-
-" sql
-let g:sql_type_default = 'mysql'
