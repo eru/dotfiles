@@ -1,5 +1,8 @@
 #!/usr/bin/env zsh
 
+# .config
+mkdir -p $HOME/.config
+
 # zsh
 if [ -f $HOME/.zshrc ]; then
   rm -f $HOME/.zshrc
@@ -62,7 +65,6 @@ fi
 ln -s $HOME/dotfiles/_xvimrc $HOME/.xvimrc
 
 # neovim
-mkdir -p $HOME/.config
 if [ -d $HOME/.config/nvim ]; then
   rm -rf $HOME/.config/nvim
 fi
@@ -93,9 +95,6 @@ if [ -f $HOME/.hyper.js ]; then
 fi
 ln -s $HOME/dotfiles/_hyper.js $HOME/.hyper.js
 
-# .config
-mkdir -p $HOME/.config
-
 # powerline
 if [ -d $HOME/.config/powerline ]; then
   rm -rf $HOME/.config/powerline
@@ -107,17 +106,6 @@ if [ -d $HOME/.config/mpv ]; then
   rm -rf $HOME/.config/mpv
 fi
 ln -s $HOME/dotfiles/_config/mpv $HOME/.config/mpv
-
-# lsp servers
-if which pip3 > /dev/null 2>&1; then
-  pip3 install python-language-server
-  pip3 install 'python-language-server[Pyflakes]'
-  pip3 install 'python-language-server[pycodestyle]'
-  pip3 install 'python-language-server[pydocstyle]'
-fi
-if which npm > /dev/null 2>&1; then
-  npm -g install typescript javascript-typescript-langserver
-fi
 
 # install plugins
 echo '

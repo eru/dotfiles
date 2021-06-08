@@ -1,3 +1,3 @@
 {
-  "coc.source.emoji.filetypes": ["gitcommit"]
+  "coc.source.emoji.filetypes": ["markdown", "gitcommit"]
 }
