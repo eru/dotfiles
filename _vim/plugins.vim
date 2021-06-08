@@ -15,9 +15,6 @@ Plug 'Shougo/deol.nvim'
 " 一覧
 Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
 
-" 括弧閉じ忘れ防止
-Plug 'cohama/lexima.vim'
-
 " 括弧の色分け
 Plug 'luochen1990/rainbow'
 

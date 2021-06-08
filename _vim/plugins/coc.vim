@@ -1,18 +1,23 @@
 " coc.nvim {{{
 let g:coc_global_extensions = [
-\  'coc-css',
-\  'coc-html',
-\  'coc-json',
-\  'coc-pyright',
-\  'coc-tsserver',
-\  'coc-vetur',
-\  'coc-emoji',
-\  'coc-emmet',
-\  'coc-pydocstring',
+  \ 'coc-css',
+  \ 'coc-html',
+  \ 'coc-json',
+  \ 'coc-pyright',
+  \ 'coc-tsserver',
+  \ 'coc-vetur',
+  \ 'coc-emoji',
+  \ 'coc-emmet',
+  \ 'coc-pydocstring',
+  \ 'coc-pairs',
 \]
 
 " Ctrl+@で補完確定
 inoremap <silent><expr> <c-@> coc#refresh()
+
+" 警告移動
+nmap <silent> gp <Plug>(coc-diagnostic-prev)
+nmap <silent> gn <Plug>(coc-diagnostic-next)
 
 " コード参照
 nmap <silent> gd <Plug>(coc-definition)
