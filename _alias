@@ -200,7 +200,13 @@ function dot-update() {
 
   cd ~/dotfiles && git pull
   zplug update
-  vi -c PlugUpgrade -c PlugClean! -c PlugUpdate -c UpdateRemotePlugins -c quitall
+  vi \
+    -c PlugUpgrade \
+    -c PlugClean! \
+    -c PlugUpdate \
+    -c UpdateRemotePlugins \
+    -c "CocInstall coc-css coc-html coc-json coc-pyright coc-tsserver coc-vetur" \
+    -c quitall
   pip2 list -o --format=json | jq -r '.[].name' | xargs pip2 install -U pip
   pip3 list -o --format=json | jq -r '.[].name' | xargs pip3 install -U pip
   if [ ${EUID:-${UID}} != 0 ]; then

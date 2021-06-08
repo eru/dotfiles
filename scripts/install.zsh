@@ -53,6 +53,7 @@ if [ -d $HOME/.vim/ftdetect ]; then
   rm -f $HOME/.vim/ftdetect
 fi
 ln -s $HOME/dotfiles/_vim/ftdetect $HOME/.vim/ftdetect
+ln -s $HOME/dotfiles/_vim/coc-settings.json $HOME/.vim/coc-settings.json
 
 # xvim
 if [ -f $HOME/.xvimrc ]; then

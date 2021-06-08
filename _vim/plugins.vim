@@ -1,10 +1,7 @@
 " Plugins
 
-" ちょーすごい補完
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
-" Python
-Plug 'zchee/deoplete-jedi'
+" all in ide
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 " テキストオブジェクトを便利にする
 Plug 'tpope/vim-surround'
@@ -54,9 +51,6 @@ Plug 'rhysd/committia.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
-" syntax check
-Plug 'dense-analysis/ale'
-
 " language-pack
 Plug 'sheerun/vim-polyglot'
 
@@ -68,15 +62,6 @@ Plug 'lanox/lanox-vim-theme'
 
 " editorconf
 Plug 'editorconfig/editorconfig-vim'
-
-" lsp
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
-
-" emoji
-Plug 'fszymanski/deoplete-emoji'
 
 " vim-abolish (ex. crc => camelCase, crs => snake_case)
 Plug 'tpope/vim-abolish'
