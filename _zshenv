@@ -4,6 +4,11 @@ setopt no_global_rcs
 # Don't allow duplication
 typeset -U path
 
+if [ -d "/opt/homebrew" ]; then
+    LOCAL_PREFIX="/opt/homebrew"
+else
+    LOCAL_PREFIX="/usr/local"
+fi
 
 # (N-/): don't register directories which do not exist
 path=(
@@ -12,17 +17,17 @@ path=(
     $HOME/.go/bin(N-/)
     $HOME/.zplug/bin(N-/)
     $HOME/.tmux/plugins/powerline/scripts(N-/)
-    /usr/local/opt/coreutils/libexec/gnubin(N-/)
-    /usr/local/opt/gnu-sed/libexec/gnubin(N-/)
-    /usr/local/opt/gnu-getopt/bin(N-/)
-    /usr/local/opt/gettext/bin(N-/)
+    $LOCAL_PREFIX/opt/coreutils/libexec/gnubin(N-/)
+    $LOCAL_PREFIX/opt/gnu-sed/libexec/gnubin(N-/)
+    $LOCAL_PREFIX/opt/gnu-getopt/bin(N-/)
+    $LOCAL_PREFIX/opt/gettext/bin(N-/)
     /Applications/VMware\ Fusion.app/Contents/Library(N-/)
-    /usr/local/opt/go/libexec/bin(N-/)
-    /usr/local/opt/llvm/bin(N-/)
-    /usr/local/opt/sphinx-doc/bin(N-/)
-    /usr/local/opt/mysql-client/bin(N-/)
-    /usr/local/opt/sqlite/bin(N-/)
-    /usr/local/share/git-core/contrib/diff-highlight(N-/)
+    $LOCAL_PREFIX/opt/go/libexec/bin(N-/)
+    $LOCAL_PREFIX/opt/llvm/bin(N-/)
+    $LOCAL_PREFIX/opt/sphinx-doc/bin(N-/)
+    $LOCAL_PREFIX/opt/mysql-client/bin(N-/)
+    $LOCAL_PREFIX/opt/sqlite/bin(N-/)
+    $LOCAL_PREFIX/share/git-core/contrib/diff-highlight(N-/)
     /usr/share/git-core/contrib/(N-/)
     $HOME/.linuxbrew/bin(N-/)
     $HOME/local/sbin(N-/)
@@ -41,10 +46,10 @@ typeset -U manpath
 
 # (N-/): don't register directories which do not exist
 manpath=(
-    /usr/local/opt/coreutils/libexec/gnuman(N-/)
-    /usr/local/opt/gnu-sed/libexec/gnuman(N-/)
-    /usr/local/opt/gnu-getopt/share/man(N-/)
-    /usr/local/opt/gettext/share/man(N-/)
+    $LOCAL_PREFIX/opt/coreutils/libexec/gnuman(N-/)
+    $LOCAL_PREFIX/opt/gnu-sed/libexec/gnuman(N-/)
+    $LOCAL_PREFIX/opt/gnu-getopt/share/man(N-/)
+    $LOCAL_PREFIX/opt/gettext/share/man(N-/)
     $HOME/.linuxbrew/share/man(N-/)
     $HOME/local/share/man(N-/)
     /usr/local/share/man(N-/)
@@ -104,8 +109,8 @@ export GOPATH=$HOME/.go
 export ANDROID_HOME=$HOME/Library/Android/sdk
 
 # zlib
-if [ -d /usr/local/opt/zlib ]; then
-  export LDFLAGS="${LDFLAGS} -L/usr/local/opt/zlib/lib"
-  export CPPFLAGS="${CPPFLAGS} -I/usr/local/opt/zlib/include"
-  export PKG_CONFIG_PATH="${PKG_CONFIG_PATH} /usr/local/opt/zlib/lib/pkgconfig"
-fi
+# if [ -d /usr/local/opt/zlib ]; then
+#   export LDFLAGS="${LDFLAGS} -L/usr/local/opt/zlib/lib"
+#   export CPPFLAGS="${CPPFLAGS} -I/usr/local/opt/zlib/include"
+#   export PKG_CONFIG_PATH="${PKG_CONFIG_PATH} /usr/local/opt/zlib/lib/pkgconfig"
+# fi
