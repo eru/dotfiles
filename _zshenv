@@ -33,6 +33,8 @@ path=(
     $HOME/local/sbin(N-/)
     $HOME/local/bin(N-/)
     /opt/X11/bin(N-/)
+    /opt/homebrew/sbin(N-/)
+    /opt/homebrew/bin(N-/)
     /usr/local/sbin(N-/)
     /usr/local/bin(N-/)
     /usr/sbin(N-/)
