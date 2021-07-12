@@ -141,7 +141,7 @@ alias ts='tmux-sync'
 # ag
 alias ag='ag --pager="less -iRM"'
 function vag () {
-  vi -c "Ack $1";
+  vi -c "Ack \"$1\"";
 }
 
 # git checkout
