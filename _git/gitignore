@@ -1,4 +1,4 @@
-### https://raw.github.com/github/gitignore/cdd9e946da421758c6f42c427c7bc65c8326155d/Global/Dropbox.gitignore
+### https://raw.github.com/github/gitignore/218a941be92679ce67d0484547e3e142b2f5f6f0/Global/Dropbox.gitignore
 
 # Dropbox settings and caches
 .dropbox
@@ -6,7 +6,7 @@
 .dropbox.cache
 
 
-### https://raw.github.com/github/gitignore/cdd9e946da421758c6f42c427c7bc65c8326155d/Global/Eclipse.gitignore
+### https://raw.github.com/github/gitignore/218a941be92679ce67d0484547e3e142b2f5f6f0/Global/Eclipse.gitignore
 
 .metadata
 bin/
@@ -70,7 +70,7 @@ local.properties
 #.project
 
 
-### https://raw.github.com/github/gitignore/cdd9e946da421758c6f42c427c7bc65c8326155d/Global/Emacs.gitignore
+### https://raw.github.com/github/gitignore/218a941be92679ce67d0484547e3e142b2f5f6f0/Global/Emacs.gitignore
 
 # -*- mode: gitignore; -*-
 *~
@@ -123,7 +123,7 @@ flycheck_*.el
 
 
 
-### https://raw.github.com/github/gitignore/cdd9e946da421758c6f42c427c7bc65c8326155d/Global/Linux.gitignore
+### https://raw.github.com/github/gitignore/218a941be92679ce67d0484547e3e142b2f5f6f0/Global/Linux.gitignore
 
 *~
 
@@ -140,7 +140,7 @@ flycheck_*.el
 .nfs*
 
 
-### https://raw.github.com/github/gitignore/cdd9e946da421758c6f42c427c7bc65c8326155d/Global/macOS.gitignore
+### https://raw.github.com/github/gitignore/218a941be92679ce67d0484547e3e142b2f5f6f0/Global/macOS.gitignore
 
 # General
 .DS_Store
@@ -170,7 +170,7 @@ Temporary Items
 .apdisk
 
 
-### https://raw.github.com/github/gitignore/cdd9e946da421758c6f42c427c7bc65c8326155d/Global/Vim.gitignore
+### https://raw.github.com/github/gitignore/218a941be92679ce67d0484547e3e142b2f5f6f0/Global/Vim.gitignore
 
 # Swap
 [._]*.s[a-v][a-z]
@@ -193,23 +193,17 @@ tags
 [._]*.un~
 
 
-### https://raw.github.com/github/gitignore/cdd9e946da421758c6f42c427c7bc65c8326155d/Global/VirtualEnv.gitignore
+### https://raw.github.com/github/gitignore/218a941be92679ce67d0484547e3e142b2f5f6f0/Global/VirtualEnv.gitignore
 
 # Virtualenv
 # http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
 .Python
-[Bb]in
-[Ii]nclude
-[Ll]ib
-[Ll]ib64
-[Ll]ocal
-[Ss]cripts
 pyvenv.cfg
 .venv
 pip-selfcheck.json
 
 
-### https://raw.github.com/github/gitignore/cdd9e946da421758c6f42c427c7bc65c8326155d/Global/Xcode.gitignore
+### https://raw.github.com/github/gitignore/218a941be92679ce67d0484547e3e142b2f5f6f0/Global/Xcode.gitignore
 
 # Xcode
 #
@@ -239,7 +233,7 @@ DerivedData/
 /*.gcno
 
 
-### https://raw.github.com/github/gitignore/cdd9e946da421758c6f42c427c7bc65c8326155d/Global/VisualStudioCode.gitignore
+### https://raw.github.com/github/gitignore/218a941be92679ce67d0484547e3e142b2f5f6f0/Global/VisualStudioCode.gitignore
 
 .vscode/*
 !.vscode/settings.json
@@ -252,7 +246,7 @@ DerivedData/
 .history/
 
 
-### https://raw.github.com/github/gitignore/cdd9e946da421758c6f42c427c7bc65c8326155d/Global/Windows.gitignore
+### https://raw.github.com/github/gitignore/218a941be92679ce67d0484547e3e142b2f5f6f0/Global/Windows.gitignore
 
 # Windows thumbnail cache files
 Thumbs.db
@@ -279,11 +273,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-
 ### My Projects
-
-# Project local vim config
 .vim/*
-
-# direnv
-.envrc

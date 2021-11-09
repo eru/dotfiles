@@ -1,0 +1,7 @@
+### My Projects
+
+# Project local vim config
+.vim/*
+
+# direnv
+.envrc

@@ -12,7 +12,7 @@
   pager = diff-highlight | less -iRM
   quotepath = false
   filemode = true
-  excludesfile = ~/dotfiles/_gitignore
+  excludesfile = ~/dotfiles/_git/gitignore
 [merge]
   tool = vimdiff
 [alias]

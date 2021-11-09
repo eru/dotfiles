@@ -195,6 +195,13 @@ function hash_csr() {
 }
 
 # update dotfile
+function gitignore-update() {
+  if which gibo > /dev/null 2>&1; then
+    gibo update
+    gibo dump Dropbox Eclipse Emacs Linux macOS Vim VirtualEnv Xcode VisualStudioCode Windows > ~/dotfiles/_gitignore
+    cat ~/dotfiles/_git/my.gitignore >> ~/dotfiles/_gitignore
+  fi
+}
 function dot-update() {
   OLD_DIR=`pwd`
 

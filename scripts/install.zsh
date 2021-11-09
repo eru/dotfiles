@@ -36,7 +36,7 @@ ln -s $HOME/dotfiles/_tmux.conf $HOME/.tmux.conf
 if [ -f $HOME/.gitconfig ]; then
   rm -f $HOME/.gitconfig
 fi
-ln -s $HOME/dotfiles/_gitconfig $HOME/.gitconfig
+ln -s $HOME/dotfiles/_git/gitconfig $HOME/.gitconfig
 
 # vim
 if [ -f $HOME/.vimrc ]; then
