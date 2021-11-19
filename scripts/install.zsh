@@ -103,6 +103,12 @@ if [ -d $HOME/.config/mpv ]; then
 fi
 ln -s $HOME/dotfiles/_config/mpv $HOME/.config/mpv
 
+# direnv
+if [ -f $HOME/.direnvrc ]; then
+  rm -f $HOME/.direnvrc
+fi
+ln -s $HOME/dotfiles/_direnvrc $HOME/.direnvrc
+
 # install plugins
 echo '
 ### Please execute these commands. ###

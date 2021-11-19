@@ -198,8 +198,8 @@ function hash_csr() {
 function gitignore-update() {
   if which gibo > /dev/null 2>&1; then
     gibo update
-    gibo dump Dropbox Eclipse Emacs Linux macOS Vim VirtualEnv Xcode VisualStudioCode Windows > ~/dotfiles/_gitignore
-    cat ~/dotfiles/_git/my.gitignore >> ~/dotfiles/_gitignore
+    gibo dump Dropbox Eclipse Emacs Linux macOS Vim VirtualEnv Xcode VisualStudioCode Windows > ~/dotfiles/_git/gitignore
+    cat ~/dotfiles/_git/my.gitignore >> ~/dotfiles/_git/gitignore
   fi
 }
 function dot-update() {
