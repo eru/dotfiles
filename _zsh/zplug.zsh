@@ -11,7 +11,7 @@ zplug "plugins/extract", from:oh-my-zsh
 zplug "plugins/dnf", from:oh-my-zsh, if:"which dnf"
 zplug "plugins/git", from:oh-my-zsh, defer:2
 zplug "plugins/git-flow", from:oh-my-zsh
-zplug "plugins/osx", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]", defer:2
+zplug "plugins/macos", from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]", defer:2
 zplug "plugins/pip", from:oh-my-zsh, if:"which pip"
 
 # Completions oh-my-zsh.
