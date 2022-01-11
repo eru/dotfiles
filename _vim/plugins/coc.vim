@@ -6,6 +6,7 @@ let g:coc_global_extensions = [
   \ 'coc-pyright',
   \ 'coc-tsserver',
   \ 'coc-vetur',
+  \ '@yaegassy/coc-volar',
   \ 'coc-emoji',
   \ 'coc-emmet',
   \ 'coc-pydocstring',
