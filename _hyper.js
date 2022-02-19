@@ -20,6 +20,12 @@ module.exports = {
     // font weight for bold characters: 'normal' or 'bold'
     fontWeightBold: 'bold',
 
+    // line height as a relative unit
+    lineHeight: 1,
+
+    // letter spacing as a relative unit
+    letterSpacing: 0,
+
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: '#c7c7c7',
 
@@ -37,7 +43,7 @@ module.exports = {
 
     // terminal background color
     // opacity is only supported on macOS
-    // backgroundColor: '#000',
+    backgroundColor: '#000',
 
     // terminal selection color
     selectionColor: 'rgba(244, 244, 244, 0.25)',
@@ -63,6 +69,9 @@ module.exports = {
 
     // custom CSS to embed in the terminal window
     termCSS: '',
+
+    // set custom startup directory (must be an absolute path)
+    workingDirectory: '',
 
     // if you're using a Linux setup which show native menus, set to false
     // default: `true` on Linux, `true` on Windows, ignored on macOS
@@ -96,6 +105,8 @@ module.exports = {
       lightMagenta: '#ff76ff',
       lightCyan: '#5ffdff',
       lightWhite: '#feffff',
+      limeGreen: '#32cd32',
+      lightCoral: '#f08080',
     },
 
     // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
@@ -122,6 +133,9 @@ module.exports = {
     // set to `false` for no bell
     bell: 'SOUND',
 
+    // An absolute file path to a sound file on the machine.
+    // bellSoundURL: '/path/to/sound/file',
+
     // if `true` (without backticks and without quotes), selected text will automatically be copied to the clipboard
     copyOnSelect: true,
 
@@ -132,8 +146,30 @@ module.exports = {
     // selection is present (`true` by default on Windows and disables the context menu feature)
     // quickEdit: true,
 
-    // URL to custom bell
-    // bellSoundURL: 'http://example.com/bell.mp3',
+    // choose either `'vertical'`, if you want the column mode when Option key is hold during selection (Default)
+    // or `'force'`, if you want to force selection regardless of whether the terminal is in mouse events mode
+    // (inside tmux or vim with mouse mode enabled for example).
+    macOptionSelectionMode: 'vertical',
+
+    // Whether to use the WebGL renderer. Set it to false to use canvas-based
+    // rendering (slower, but supports transparent backgrounds)
+    webGLRenderer: true,
+
+    // keypress required for weblink activation: [ctrl|alt|meta|shift]
+    // todo: does not pick up config changes automatically, need to restart terminal :/
+    webLinksActivationKey: '',
+
+    // if `false` (without backticks and without quotes), Hyper will use ligatures provided by some fonts
+    disableLigatures: true,
+
+    // set to true to disable auto updates
+    disableAutoUpdates: false,
+
+    // set to true to enable screen reading apps (like NVDA) to read the contents of the terminal
+    screenReaderMode: false,
+
+    // set to true to preserve working directory when creating splits or tabs
+    preserveCWD: true,
 
     // for advanced config flags please refer to https://hyper.is/#cfg
 
