@@ -6,8 +6,8 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 " テキストオブジェクトを便利にする
 Plug 'tpope/vim-surround'
 
-" メソッド, 変数宣言一覧 (ex. :TagbarToggle)
-Plug 'majutsushi/tagbar'
+" メソッド, 変数宣言一覧 (ex. :Vista coc)
+Plug 'liuchengxu/vista.vim'
 
 " Vim にも Shell を！
 Plug 'Shougo/deol.nvim'
@@ -49,6 +49,9 @@ Plug 'sheerun/vim-polyglot'
 
 " indent-line
 Plug 'Yggdroot/indentLine'
+
+" folding
+Plug 'tweekmonster/braceless.vim'
 
 " color schema
 Plug 'lanox/lanox-vim-theme'
