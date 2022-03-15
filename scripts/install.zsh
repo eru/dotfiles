@@ -109,6 +109,12 @@ if [ -f $HOME/.direnvrc ]; then
 fi
 ln -s $HOME/dotfiles/_direnvrc $HOME/.direnvrc
 
+# ag
+if [ -f $HOME/.agignore ]; then
+  rm -f $HOME/.agignore
+fi
+ln -s $HOME/dotfiles/_agignore $HOME/.agignore
+
 # install plugins
 echo '
 ### Please execute these commands. ###

@@ -1,3 +1,6 @@
 " vista.vim {{{
-nmap <F8> :Vista coc<CR>
+let g:vista_default_executive = 'coc'
+let g:vista#renderer#enable_icon = 0
+
+nmap <F8> :Vista!!<CR>
 " }}}
