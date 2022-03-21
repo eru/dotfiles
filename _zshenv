@@ -17,6 +17,7 @@ path=(
     $HOME/.go/bin(N-/)
     $HOME/.zplug/bin(N-/)
     $HOME/.tmux/plugins/powerline/scripts(N-/)
+    $LOCAL_PREFIX/opt/python@3.10/libexec/bin(N-/)
     $LOCAL_PREFIX/opt/coreutils/libexec/gnubin(N-/)
     $LOCAL_PREFIX/opt/gnu-sed/libexec/gnubin(N-/)
     $LOCAL_PREFIX/opt/gnu-getopt/bin(N-/)
