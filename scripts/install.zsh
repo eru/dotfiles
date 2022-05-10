@@ -115,6 +115,12 @@ if [ -f $HOME/.agignore ]; then
 fi
 ln -s $HOME/dotfiles/_agignore $HOME/.agignore
 
+# tabtab
+if [ -d $HOME/.config/tabtab ]; then
+  rm -rf $HOME/.config/tabtab
+fi
+ln -s $HOME/dotfiles/_config/tabtab $HOME/.config/tabtab
+
 # install plugins
 echo '
 ### Please execute these commands. ###
