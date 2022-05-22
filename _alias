@@ -223,7 +223,6 @@ function dot-update() {
   if [ ${EUID:-${UID}} != 0 ]; then
     npm -g update
   fi
-  gem update
 
   cd "$OLD_DIR"
 }
