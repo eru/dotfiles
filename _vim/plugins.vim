@@ -62,6 +62,13 @@ Plug 'editorconfig/editorconfig-vim'
 " vim-abolish (ex. crc => camelCase, crs => snake_case)
 Plug 'tpope/vim-abolish'
 
+" open-browser
+Plug 'tyru/open-browser.vim'
+Plug 'tyru/open-browser-github.vim'
+
+" previm (preview markdown on browser)
+Plug 'previm/previm'
+
 " load plugin configs
 for f in split(glob($HOME.'/dotfiles/_vim/plugins/*.vim'), '\n')
     exe 'source' f
