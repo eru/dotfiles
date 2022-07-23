@@ -130,3 +130,5 @@
   ignoreRevsFile = .git-blame-ignore-revs
 [advice]
   skippedCherryPicks = false
+[init]
+  defaultBranch = main
