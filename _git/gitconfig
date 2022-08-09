@@ -126,8 +126,6 @@
   autosquash = true
 [pull]
   rebase = true
-[blame]
-  ignoreRevsFile = .git-blame-ignore-revs
 [advice]
   skippedCherryPicks = false
 [init]
