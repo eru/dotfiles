@@ -69,7 +69,6 @@ Plug 'tyru/open-browser-github.vim'
 " previm (preview markdown on browser)
 Plug 'previm/previm'
 
-" load plugin configs
-for f in split(glob($HOME.'/dotfiles/_vim/plugins/*.vim'), '\n')
-    exe 'source' f
-endfor
+" context
+Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter-context'
