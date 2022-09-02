@@ -21,7 +21,6 @@ set expandtab
 
 " 自動インデント
 set autoindent
-set smartindent
 
 " 折りたたみ
 set foldmethod=indent
