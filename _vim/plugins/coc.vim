@@ -11,10 +11,26 @@ let g:coc_global_extensions = [
   \ 'coc-emmet',
   \ 'coc-pydocstring',
   \ 'coc-pairs',
+  \ 'coc-deno',
 \]
 
-" Ctrl+@で補完確定
-inoremap <silent><expr> <c-@> coc#refresh()
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Tab, Shift-Tabで候補移動
+inoremap <silent><expr> <TAB>
+  \ coc#pum#visible() ? coc#pum#next(1) :
+  \ CheckBackspace() ? "\<Tab>" :
+  \ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+" Ctrl+@, CRで補完確定
+inoremap <silent><expr> <c-@> coc#pum#visible() ? coc#pum#confirm()
+  \ : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+  \ : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " 警告移動
 nmap <silent> gp <Plug>(coc-diagnostic-prev)
@@ -57,4 +73,5 @@ nmap <leader>ac  <Plug>(coc-codeaction)
 
 " 自動修正
 nmap <leader>qf  <Plug>(coc-fix-current)
+
 " }}}
