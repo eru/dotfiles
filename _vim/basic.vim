@@ -65,6 +65,9 @@ set showmode
 set laststatus=2
 set cmdheight=2
 
+" mouse
+set mouse=
+
 " CursorHold
 set updatetime=300
 
