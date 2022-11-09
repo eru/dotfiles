@@ -12,6 +12,8 @@ let g:coc_global_extensions = [
   \ 'coc-pydocstring',
   \ 'coc-pairs',
   \ 'coc-deno',
+  \ 'coc-markdown-preview-enhanced',
+  \ 'coc-webview',
 \]
 
 function! CheckBackspace() abort
