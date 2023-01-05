@@ -41,8 +41,15 @@ Plug 'mattn/emmet-vim', { 'for': ['html', 'php', 'smarty', 'vue'] }
 Plug 'rhysd/committia.vim'
 
 " file tree
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'lambdalisue/fern.vim'
+Plug 'lambdalisue/nerdfont.vim'
+Plug 'lambdalisue/fern-renderer-nerdfont.vim'
+Plug 'lambdalisue/glyph-palette.vim'
+Plug 'lambdalisue/fern-git-status.vim'
+Plug 'lambdalisue/fern-mapping-git.vim'
+Plug 'lambdalisue/fern-mapping-project-top.vim'
+Plug 'lambdalisue/fern-hijack.vim'
+Plug 'yuki-yano/fern-preview.vim'
 
 " language-pack
 Plug 'sheerun/vim-polyglot'
