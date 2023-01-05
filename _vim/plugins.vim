@@ -72,3 +72,6 @@ Plug 'previm/previm'
 " context
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'nvim-treesitter/nvim-treesitter-context'
+
+" chatgpt
+Plug 'mattn/vim-chatgpt'
