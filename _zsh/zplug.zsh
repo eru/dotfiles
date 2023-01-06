@@ -27,11 +27,11 @@ zplug "zsh-users/zsh-autosuggestions", defer:3
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 # emoji completion
-zplug "stedolan/jq", as:command, rename-to:jq, from:gh-r
-zplug "b4b4r07/emoji-cli", on:"stedolan/jq"
+# zplug "stedolan/jq", as:command, rename-to:jq, from:gh-r
+# zplug "b4b4r07/emoji-cli", on:"stedolan/jq"
 
 # emoji on cli
-zplug "mrowa44/emojify", as:command, use:"emojify"
+# zplug "mrowa44/emojify", as:command, use:"emojify"
 
 # phpctags
 # zplug "vim-php/phpctags", hook-build:"composer install && make clean && make", as:command, use:"build/phpctags.phar", rename-to:phpctags, if:"which php"
