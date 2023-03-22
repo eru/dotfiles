@@ -82,3 +82,8 @@ Plug 'nvim-treesitter/nvim-treesitter-context'
 
 " chatgpt
 Plug 'mattn/vim-chatgpt'
+
+" dap
+Plug 'mfussenegger/nvim-dap'
+Plug 'rcarriga/nvim-dap-ui'
+Plug 'mfussenegger/nvim-dap-python'
