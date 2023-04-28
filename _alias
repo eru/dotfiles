@@ -36,6 +36,7 @@ alias gst='git stash'
 alias gsl='git stash list'
 alias gsp='git stash pop'
 alias gss='git status -s'
+alias gsu='git submodule update --recursive'
 alias gm='git merge --no-ff'
 alias gcl1='git clone --depth 1'
 
@@ -226,4 +227,11 @@ function dot-update() {
   fi
 
   cd "$OLD_DIR"
+}
+
+function prompt() {
+  PROMPT='$ '
+  PROMPT2=''
+  SPROMPT=''
+  RPROMPT=''
 }
