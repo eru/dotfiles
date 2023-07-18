@@ -40,6 +40,9 @@ Plug 'mattn/emmet-vim', { 'for': ['html', 'php', 'smarty', 'vue'] }
 " git commit message editor
 Plug 'rhysd/committia.vim'
 
+" git blame
+Plug 'f-person/git-blame.nvim'
+
 " file tree
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/nerdfont.vim'
