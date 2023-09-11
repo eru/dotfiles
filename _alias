@@ -4,8 +4,16 @@ alias ll='ls -lh'
 
 # rm, mv, cp する時は確認する
 alias rm='rm -i'
-alias mv='mv -i'
-alias cp='cp -i'
+if (mv --help 2>&1 | grep '\--progress-bar' > /dev/null 2>&1;); then
+  alias mv='mv -ig'
+else
+  alias mv='mv -i'
+fi
+if (cp --help 2>&1 | grep '\--progress-bar' > /dev/null 2>&1;); then
+  alias cp='cp -ig'
+else
+  alias cp='cp -i'
+fi
 
 # よく間違えるねん
 alias cd..='cd ..'
