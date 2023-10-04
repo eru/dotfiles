@@ -13,8 +13,14 @@
   quotepath = false
   filemode = true
   excludesfile = ~/dotfiles/_git/gitignore
+[diff]
+  tool = nvim
+[difftool]
+  prompt = false
+[difftool "nvim"]
+  cmd = nvim -d $LOCAL $REMOTE
 [merge]
-  tool = vimdiff
+  tool = nvim
 [alias]
   s = status
   st = status
@@ -85,6 +91,7 @@
   rhh5 = reset --hard HEAD~~~~~
   # diff関連
   di = diff
+  dt = difftool
   dm = diff master # masterとのdiff
   dw = diff --color-words # 単語単位でいろつけてdiff
   dc = diff --cached # addされているものとのdiff
