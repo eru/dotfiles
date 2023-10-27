@@ -6,7 +6,6 @@ let g:coc_global_extensions = [
   \ 'coc-pyright',
   \ 'coc-tsserver',
   \ 'coc-vetur',
-  \ '@yaegassy/coc-volar',
   \ 'coc-emoji',
   \ 'coc-emmet',
   \ 'coc-pydocstring',
@@ -14,6 +13,10 @@ let g:coc_global_extensions = [
   \ 'coc-deno',
   \ 'coc-markdown-preview-enhanced',
   \ 'coc-webview',
+  \ '@yaegassy/coc-volar',
+  \ '@yaegassy/coc-tailwindcss3',
+  \ '@yaegassy/coc-vitest',
+  \ '@yaegassy/coc-nginx',
 \]
 
 function! CheckBackspace() abort

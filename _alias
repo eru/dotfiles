@@ -224,11 +224,18 @@ function dot-update() {
     -c CocUpdateSync \
     -c TSUpdate \
     -c quitall
-  if which pip2 > /dev/null 2>&1; then
-    pip2 list -o --format=json | jq -r '.[].name' | xargs pip2 install -U pip pynvim psutil
-  fi
   if which pip3 > /dev/null 2>&1; then
-    pip3 list -o --format=json | jq -r '.[].name' | xargs pip3 install -U pip pynvim psutil
+    dependencies=(
+      pip
+      pynvim
+      # powerline
+      psutil
+      # coc-pyright
+      rope ruff
+      # coc-docstring
+      doq
+    )
+    pip3 list -o --format=json | jq -r '.[].name' | xargs pip3 install -U "${dependencies[@]}"
   fi
   if [ ${EUID:-${UID}} != 0 ]; then
     npm -g update

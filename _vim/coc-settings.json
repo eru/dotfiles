@@ -1,4 +1,8 @@
 {
   "coc.source.emoji.filetypes": ["markdown", "gitcommit"],
-  "vetur.ignoreProjectWarning": true
+  "vetur.ignoreProjectWarning": true,
+  "python.formatting.provider": "ruff",
+  "python.linting.ruffEnabled": true,
+  "pyright.organizeimports.provider": "ruff",
+  "pydocstring.formatter": "google"
 }
