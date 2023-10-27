@@ -226,7 +226,8 @@ function dot-update() {
     -c quitall
   if which pip3 > /dev/null 2>&1; then
     dependencies=(
-      pip
+      pip poetry
+      # neovim
       pynvim
       # powerline
       psutil
