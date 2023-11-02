@@ -120,6 +120,9 @@ pcolor() {
   echo
 }
 
+# xcolor (カラーコードの削除)
+alias xcolor='sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g"'
+
 # tmux-ssh
 function ssh() {
   if [[ -n $(printenv TMUX) ]]; then
