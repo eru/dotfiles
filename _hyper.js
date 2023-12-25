@@ -174,7 +174,7 @@ module.exports = {
     // for advanced config flags please refer to https://hyper.is/#cfg
 
     // hyper-background
-    backgroundImage: '../dotfiles/_hyper/background.png',
+    backgroundImage: "dotfiles/_hyper/background.png",
   },
 
   // a list of plugins to fetch and install from npm
