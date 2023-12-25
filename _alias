@@ -231,7 +231,7 @@ function dot-update() {
     dependencies=(
       pip poetry
       # neovim
-      pynvim
+      pynvim neovim
       # powerline
       psutil
       # coc-pyright
