@@ -218,7 +218,7 @@ function dot-update() {
   OLD_DIR=`pwd`
 
   cd ~/dotfiles && git pull
-  zplug update
+  sheldon lock --update
   vi \
     -c PlugUpgrade \
     -c PlugClean! \

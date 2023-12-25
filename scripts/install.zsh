@@ -16,10 +16,14 @@ if [ -f $HOME/.zshenv ]; then
   rm -f $HOME/.zshenv
 fi
 ln -s $HOME/dotfiles/_zshenv $HOME/.zshenv
-if [ -d $HOME/.zplug ]; then
-  rm -rf $HOME/.zplug
+if [ -d $HOME/.config/sheldon ]; then
+  rm -rf $HOME/.config/sheldon
 fi
-curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+ln -s $HOME/dotfiles/_config/sheldon $HOME/.config/sheldon
+# if [ -d $HOME/.zplug ]; then
+#   rm -rf $HOME/.zplug
+# fi
+# curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
 # tmux
 if [ -d $HOME/.tmux ]; then

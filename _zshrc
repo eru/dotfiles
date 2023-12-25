@@ -1,8 +1,7 @@
 # (d) is default on
 
-### zplug ###
-export ZPLUG_HOME="${HOME}/.zplug"
-[ -f ~/dotfiles/_zsh/zplug.zsh ] && source ~/dotfiles/_zsh/zplug.zsh
+### sheldon ###
+eval "$(sheldon source)"
 
 # ------------------------------
 # General Settings

@@ -1,0 +1,60 @@
+# `sheldon` configuration file
+# ----------------------------
+#
+# You can modify this file directly or you can use one of the following
+# `sheldon` commands which are provided to assist in editing the config file:
+#
+# - `sheldon add` to add a new plugin to the config file
+# - `sheldon edit` to open up the config file in the default editor
+# - `sheldon remove` to remove a plugin from the config file
+#
+# See the documentation for more https://github.com/rossmacarthur/sheldon#readme
+
+shell = "zsh"
+
+[plugins]
+
+[plugins.zsh-defer]
+github = "romkatv/zsh-defer"
+
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"
+
+[plugins.zsh-syntax-highlighting]
+github = "zsh-users/zsh-syntax-highlighting"
+apply = ["defer"]
+
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+use = ["{{ name }}.zsh"]
+
+[plugins.oh-my-zsh]
+github = "ohmyzsh/ohmyzsh"
+use = [
+  "plugins/docker-compose/docker-compose.plugin.zsh",
+  "plugins/extract/extract.plugin.zsh",
+  "plugins/dnf/dnf.plugin.zsh",
+  "plugins/git/git.plugin.zsh",
+  "plugins/git-flow/git-flow.plugin.zsh",
+  "plugins/macos/macos.zsh",
+]
+apply = ["defer"]
+
+[plugins.fzf]
+github = "junegunn/fzf"
+apply = ['fzf-install', 'fzf-source']
+
+[plugins.enhancd]
+github = "b4b4r07/enhancd"
+apply = ["defer"]
+
+[plugins.enhancd.hooks]
+pre = "export ENHANCD_DISABLE_DOT=1"
+
+[plugins.zsh-fzf-history-search]
+github = "joshskidmore/zsh-fzf-history-search"
+
+[templates]
+defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks?.post | nl }}"
+fzf-install = "{{ dir }}/install --bin > /dev/null \n[[ ! $PATH =~ {{ dir }} ]] && export PATH=\"$PATH:{{ dir }}/bin\"\n"
+fzf-source = "{% for file in files %}source \"{{ file }}\"\n{% endfor %}"
