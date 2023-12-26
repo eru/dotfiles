@@ -1,8 +1,5 @@
 # (d) is default on
 
-### sheldon ###
-eval "$(sheldon source)"
-
 # ------------------------------
 # General Settings
 # ------------------------------
@@ -123,6 +120,9 @@ preexec() {
 # ------------------------------
 # Other Settings
 # ------------------------------
+### sheldon ###
+eval "$(sheldon source)"
+
 ### Aliases ###
 [ -f ~/dotfiles/_alias ] && source ~/dotfiles/_alias
 
