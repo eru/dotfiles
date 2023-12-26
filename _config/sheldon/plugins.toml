@@ -34,6 +34,7 @@ use = [
   "plugins/docker-compose/docker-compose.plugin.zsh",
   "plugins/extract/extract.plugin.zsh",
   "plugins/dnf/dnf.plugin.zsh",
+  "lib/git.zsh",
   "plugins/git/git.plugin.zsh",
   "plugins/git-flow/git-flow.plugin.zsh",
   "plugins/macos/macos.zsh",
