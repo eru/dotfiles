@@ -224,7 +224,7 @@ function dot-update() {
     -c PlugClean! \
     -c PlugUpdate \
     -c UpdateRemotePlugins \
-    -c CocUpdateSync \
+    -c CocUpdate \
     -c TSUpdate \
     -c quitall
   if which pip3 > /dev/null 2>&1; then
