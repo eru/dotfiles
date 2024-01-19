@@ -32,6 +32,7 @@ path=(
     $HOME/.linuxbrew/bin(N-/)
     $HOME/local/sbin(N-/)
     $HOME/local/bin(N-/)
+    $HOME/local/.bin(N-/)
     /opt/X11/bin(N-/)
     /opt/homebrew/sbin(N-/)
     /opt/homebrew/bin(N-/)

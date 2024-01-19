@@ -90,3 +90,6 @@ Plug 'mattn/vim-chatgpt'
 Plug 'mfussenegger/nvim-dap'
 Plug 'rcarriga/nvim-dap-ui'
 Plug 'mfussenegger/nvim-dap-python'
+
+" copilot
+Plug 'github/copilot.vim'
