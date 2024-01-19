@@ -236,6 +236,8 @@ function dot-update() {
       psutil
       # coc-pyright
       rope ruff
+      # coc-ruff
+      ruff-lsp
       # coc-docstring
       doq
     )
