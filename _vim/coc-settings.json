@@ -1,7 +1,6 @@
 {
-  "coc.source.emoji.filetypes": ["markdown", "gitcommit"],
-  "python.formatting.provider": "ruff",
-  "python.linting.ruffEnabled": true,
-  "pyright.organizeimports.provider": "ruff",
-  "pydocstring.formatter": "google"
+  "pydocstring.formatter": "google",
+  "pylsp.plugins.pycodestyle.enabled": false,
+  "pylsp.plugins.pyflakes.enabled": false,
+  "pylsp.plugins.mccabe.enabled": false,
 }

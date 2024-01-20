@@ -234,10 +234,8 @@ function dot-update() {
       pynvim neovim
       # powerline
       psutil
-      # coc-pyright
-      rope ruff
-      # coc-ruff
-      ruff-lsp
+      # coc-pylsp
+      'python-lsp-server[all]' python-lsp-ruff pylsp-mypy pylsp-rope
       # coc-docstring
       doq
     )
