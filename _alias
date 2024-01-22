@@ -62,6 +62,7 @@ alias less='less -iRM'
 # (neo)?vim
 if which nvim > /dev/null 2>&1; then
   alias vim='nvim'
+  alias vimdiff='nvim -d'
 fi
 alias vi='vim'
 
