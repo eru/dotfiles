@@ -93,3 +93,6 @@ Plug 'mfussenegger/nvim-dap-python'
 
 " copilot
 Plug 'github/copilot.vim'
+
+" diffview
+Plug 'sindrets/diffview.nvim'

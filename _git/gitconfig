@@ -21,6 +21,11 @@
   cmd = nvim -d $LOCAL $REMOTE
 [merge]
   tool = nvim
+[mergetool]
+  prompt = false
+  keepBackup = false
+[mergetool "nvim"]
+  cmd = nvim -n -c "DiffviewOpen" "$MERGE"
 [alias]
   s = status
   st = status
