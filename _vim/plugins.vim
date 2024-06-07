@@ -88,6 +88,7 @@ Plug 'mattn/vim-chatgpt'
 
 " dap
 Plug 'mfussenegger/nvim-dap'
+Plug 'nvim-neotest/nvim-nio'
 Plug 'rcarriga/nvim-dap-ui'
 Plug 'mfussenegger/nvim-dap-python'
 
