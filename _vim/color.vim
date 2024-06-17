@@ -8,6 +8,7 @@ set background=dark
 "colorscheme developer
 if filereadable(expand($HOME.'/.vim/plugged/lanox-vim-theme/colors/lanox.vim'))
   colorscheme lanox
+  set notermguicolors
 endif
 
 " transparent background
