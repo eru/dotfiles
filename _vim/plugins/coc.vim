@@ -12,7 +12,6 @@ let g:coc_global_extensions = [
   \ 'coc-webview',
   \ 'coc-pydocstring',
   \ '@yaegassy/coc-volar',
-  \ '@yaegassy/coc-typescript-vue-plugin',
   \ '@yaegassy/coc-tailwindcss3',
   \ '@yaegassy/coc-vitest',
   \ '@yaegassy/coc-nginx',
