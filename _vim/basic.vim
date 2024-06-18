@@ -24,7 +24,6 @@ set autoindent
 
 " 折りたたみ
 set foldmethod=indent
-set foldlevel=100
 
 " ハイライト
 syntax on

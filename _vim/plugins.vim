@@ -61,7 +61,9 @@ Plug 'sheerun/vim-polyglot'
 Plug 'Yggdroot/indentLine'
 
 " folding
-Plug 'tweekmonster/braceless.vim'
+" Plug 'tweekmonster/braceless.vim'
+Plug 'kevinhwang91/promise-async'
+Plug 'kevinhwang91/nvim-ufo'
 
 " color schema
 Plug 'lanox/lanox-vim-theme'
