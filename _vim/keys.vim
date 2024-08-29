@@ -24,8 +24,9 @@ nnoremap gk k
 nnoremap Y y$
 
 " インクリメント
-nnoremap + <C-a>
-nnoremap - <C-x>
+" boole.nvimにまかせる
+" nnoremap + <C-a>
+" nnoremap - <C-x>
 
 "画面送り
 noremap <Leader>j <C-f>

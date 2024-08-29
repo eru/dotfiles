@@ -55,7 +55,7 @@ Plug 'lambdalisue/fern-hijack.vim'
 Plug 'yuki-yano/fern-preview.vim'
 
 " language-pack
-Plug 'sheerun/vim-polyglot'
+" Plug 'sheerun/vim-polyglot'
 
 " indent-line
 Plug 'Yggdroot/indentLine'
@@ -99,3 +99,6 @@ Plug 'github/copilot.vim'
 
 " diffview
 Plug 'sindrets/diffview.nvim'
+
+" toggle true <-> false
+Plug 'nat-418/boole.nvim'
