@@ -215,19 +215,21 @@ function gitignore-update() {
     cat ~/dotfiles/_git/my.gitignore >> ~/dotfiles/_git/gitignore
   fi
 }
+
 function dot-update() {
   OLD_DIR=`pwd`
 
+  # update dotfiles
   cd ~/dotfiles && git pull
+
+  # update zsh plugins
   sheldon lock --update
-  vi \
-    -c PlugUpgrade \
-    -c PlugClean! \
-    -c PlugUpdate \
-    -c UpdateRemotePlugins \
-    -c CocUpdate \
-    -c TSUpdate \
-    -c quitall
+
+  # update neovim plugins
+  nvim --headless "+Lazy! update" +qa
+  nvim --headless "+TSUpdate" +qa
+
+  # update python dependencies
   if which pip3 > /dev/null 2>&1; then
     dependencies=(
       pip poetry
@@ -235,13 +237,11 @@ function dot-update() {
       pynvim neovim
       # powerline
       psutil
-      # coc-pylsp
-      'python-lsp-server[all]' python-lsp-ruff pylsp-mypy pylsp-rope
-      # coc-docstring
-      doq
     )
     pip3 list -o --format=json | jq -r '.[].name' | xargs pip3 install -U "${dependencies[@]}"
   fi
+
+  # update nodejs dependencies
   if [ ${EUID:-${UID}} != 0 ]; then
     npm -g update
   fi

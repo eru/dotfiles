@@ -1,5 +1,27 @@
 #!/usr/bin/env zsh
 
+# denepndencies
+if which brew > /dev/null 2>&1; then
+  dependenies=()
+
+  # zsh
+  dependencies+=("zsh" "sheldon")
+  # tmux
+  dependencies+=("tmux" "reattach-to-user-namespace")
+  # git
+  dependencies+=("git" "tig")
+  # neovim
+  dependencies+=("neovim" "lua" "luarocks" "tree-sitter" "font-sauce-code-pro-nerd-font")
+  # thumbnail
+  dependencies+=("mpv" "mplayer" "imagemagick")
+  # any2zip
+  dependencies+=("parallel" "terminal-notifier" "rar")
+  # env
+  dependencies+=("direnv" "ripgrep" "coreutils" "findutils" "gnu-getopt" "gnu-sed" "gnu-tar" "jq" "yq")
+
+  brew install ${dependencies[@]}
+fi
+
 # .config
 mkdir -p $HOME/.config
 
@@ -20,10 +42,6 @@ if [ -d $HOME/.config/sheldon ]; then
   rm -rf $HOME/.config/sheldon
 fi
 ln -s $HOME/dotfiles/_config/sheldon $HOME/.config/sheldon
-# if [ -d $HOME/.zplug ]; then
-#   rm -rf $HOME/.zplug
-# fi
-# curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
 # tmux
 if [ -d $HOME/.tmux ]; then
@@ -46,30 +64,20 @@ ln -s $HOME/dotfiles/_git/gitconfig $HOME/.gitconfig
 if [ -f $HOME/.vimrc ]; then
   rm -f $HOME/.vimrc
 fi
-ln -s $HOME/dotfiles/_vimrc $HOME/.vimrc
 if [ -d $HOME/.vim ]; then
   rm -rf $HOME/.vim
 fi
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-if [ -d $HOME/.vim/ftdetect ]; then
-  rm -f $HOME/.vim/ftdetect
-fi
-ln -s $HOME/dotfiles/_vim/ftdetect $HOME/.vim/ftdetect
-ln -s $HOME/dotfiles/_vim/coc-settings.json $HOME/.vim/coc-settings.json
 
 # xvim
 if [ -f $HOME/.xvimrc ]; then
   rm -f $HOME/.xvimrc
 fi
-ln -s $HOME/dotfiles/_xvimrc $HOME/.xvimrc
 
 # neovim
 if [ -d $HOME/.config/nvim ]; then
   rm -rf $HOME/.config/nvim
 fi
-ln -s $HOME/.vim $HOME/.config/nvim
-ln -s $HOME/.vimrc $HOME/.config/nvim/init.vim
+ln -s $HOME/dotfiles/_config/nvim $HOME/.config/nvim
 if which pip2 > /dev/null 2>&1; then
   pip2 install pynvim
 fi
