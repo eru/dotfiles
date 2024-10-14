@@ -64,6 +64,9 @@ ln -s $HOME/dotfiles/_git/gitconfig $HOME/.gitconfig
 if [ -f $HOME/.vimrc ]; then
   rm -f $HOME/.vimrc
 fi
+if [ -f $HOME/.vim ]; then
+  rm -f $HOME/.vim
+fi
 if [ -d $HOME/.vim ]; then
   rm -rf $HOME/.vim
 fi
@@ -74,8 +77,11 @@ if [ -f $HOME/.xvimrc ]; then
 fi
 
 # neovim
+if [ -f $HOME/.config/nvim ]; then
+  rm -f $HOME/.config/nvim
+fi
 if [ -d $HOME/.config/nvim ]; then
-  rm -rf $HOME/.config/nvim
+  rm -rm $HOME/.config/nvim
 fi
 ln -s $HOME/dotfiles/_config/nvim $HOME/.config/nvim
 if which pip2 > /dev/null 2>&1; then
