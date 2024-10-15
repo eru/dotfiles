@@ -15,7 +15,6 @@ path=(
     $HOME/.poetry/bin(N-/)
     $HOME/.pyenv/shims(N-/)
     $HOME/.go/bin(N-/)
-    $HOME/.tmux/plugins/powerline/scripts(N-/)
     $LOCAL_PREFIX/opt/coreutils/libexec/gnubin(N-/)
     $LOCAL_PREFIX/opt/findutils/libexec/gnubin(N-/)
     $LOCAL_PREFIX/opt/gnu-tar/libexec/gnubin(N-/)

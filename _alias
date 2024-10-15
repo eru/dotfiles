@@ -235,8 +235,6 @@ function dot-update() {
       pip poetry
       # neovim
       pynvim neovim
-      # powerline
-      psutil
     )
     pip3 list -o --format=json | jq -r '.[].name' | xargs pip3 install -U "${dependencies[@]}"
   fi

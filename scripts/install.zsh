@@ -53,6 +53,10 @@ if [ -f $HOME/.tmux.conf ]; then
   rm -f $HOME/.tmux.conf
 fi
 ln -s $HOME/dotfiles/_tmux.conf $HOME/.tmux.conf
+if [ -d $HOME/.config/tmux-powerline ]; then
+  rm -rf $HOME/.config/tmux-powerline
+fi
+ln -s $HOME/dotfiles/_config/tmux-powerline $HOME/.config/tmux-powerline
 
 # git
 if [ -f $HOME/.gitconfig ]; then
