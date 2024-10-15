@@ -1,0 +1,43 @@
+[window]
+decorations = "Buttonless"
+padding = { x = 10, y = 10 }
+opacity = 0.75
+startup_mode = "Maximized"
+
+[font]
+normal = { family = "SauceCodePro Nerd Font", style = "Regular" }
+size = 14.0
+
+[colors.primary]
+background = "#000000"
+foreground = "#c7c7c7"
+
+[colors.normal]
+black = "#000000"
+blue = "#cfa3ff"
+cyan = "#76dff3"
+green = "#b3e439"
+magenta = "#fd4285"
+red = "#ec392c"
+white = "#f4f4f4"
+yellow = "#fea525"
+
+[colors.bright]
+black = "#676767"
+blue = "#6871ff"
+cyan = "#5ffdff"
+green = "#5ff967"
+magenta = "#ff76ff"
+red = "#ff6d67"
+white = "#feffff"
+yellow = "#fefb67"
+
+[selection]
+save_to_clipboard = true
+
+[cursor]
+style = { shape = "Block", blinking = "On" }
+blink_timeout = 0
+
+[mouse]
+hide_when_typing = true

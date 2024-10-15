@@ -110,6 +110,12 @@ if [ -f $HOME/.hyper.js ]; then
 fi
 ln -s $HOME/dotfiles/_hyper.js $HOME/.hyper.js
 
+# Alacritty
+if [ -d $HOME/.config/alacritty ]; then
+  rm -rf $HOME/.config/alacritty
+fi
+ln -s $HOME/dotfiles/_config/alacritty $HOME/.config/alacritty
+
 # powerline
 if [ -d $HOME/.config/powerline ]; then
   rm -rf $HOME/.config/powerline
