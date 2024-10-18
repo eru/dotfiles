@@ -8,7 +8,7 @@ return {
     "3rd/image.nvim",
   },
   config = function()
-      vim.keymap.set("n", "<F7>", "<cmd>Neotree action=show<CR>", { noremap = true, silent = true })
+      vim.keymap.set("n", "<F7>", "<cmd>Neotree toggle action=show<CR>", { noremap = true, silent = true })
 
     require("neo-tree").setup({
       filesystem = {
