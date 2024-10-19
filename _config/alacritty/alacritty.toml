@@ -1,12 +1,15 @@
 [window]
 decorations = "Buttonless"
-padding = { x = 10, y = 10 }
+padding = { x = 8, y = 8 }
 opacity = 0.75
 startup_mode = "Maximized"
 
 [font]
 normal = { family = "SauceCodePro Nerd Font", style = "Regular" }
 size = 14.0
+
+[colors]
+draw_bold_text_with_bright_colors = true
 
 [colors.primary]
 background = "#000000"
@@ -37,6 +40,7 @@ save_to_clipboard = true
 
 [cursor]
 style = { shape = "Block", blinking = "On" }
+blink_interval = 700
 blink_timeout = 0
 
 [mouse]
