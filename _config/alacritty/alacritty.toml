@@ -45,3 +45,8 @@ blink_timeout = 0
 
 [mouse]
 hide_when_typing = true
+
+[keyboard]
+bindings = [
+  { key = "¥", chars = "\\" },
+]
