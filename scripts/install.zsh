@@ -116,6 +116,12 @@ if [ -d $HOME/.config/alacritty ]; then
 fi
 ln -s $HOME/dotfiles/_config/alacritty $HOME/.config/alacritty
 
+# Ghostty
+if [ -d $HOME/.config/ghostty ]; then
+  rm -rf $HOME/.config/ghostty
+fi
+ln -s $HOME/dotfiles/_config/ghostty $HOME/.config/ghostty
+
 # powerline
 if [ -d $HOME/.config/powerline ]; then
   rm -rf $HOME/.config/powerline
