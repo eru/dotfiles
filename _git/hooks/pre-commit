@@ -10,4 +10,9 @@ if [ "${branch##refs/heads/}" = "main" ]; then
     echo "can't commit on main branch."
     echo "please commit on topic branch."
     exit 1
+elif [[ "${branch##refs/heads/}" =~ ^release/ ]]; then
+    printf "\e[31m%s\n\e[m" "[Error]"
+    echo "can't commit on release branch."
+    echo "please commit on topic branch."
+    exit 1
 fi
