@@ -1,5 +1,6 @@
 font-family = ""
 font-family = "SauceCodePro Nerd Font"
+font-feature = -dlig
 font-thicken = true
 font-size = 14
 theme = tndl
