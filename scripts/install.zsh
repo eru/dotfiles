@@ -98,6 +98,15 @@ if which gem > /dev/null 2>&1; then
   gem install neovim
 fi
 
+# mcphub
+if [ -L $HOME/.config/mcphub ]; then
+  rm -f $HOME/.config/mcphub
+fi
+if [ -d $HOME/.config/mcphub ]; then
+  rm -rm $HOME/.config/mcphub
+fi
+ln -s $HOME/dotfiles/_config/mcphub $HOME/.config/mcphub
+
 # tig
 if [ -f $HOME/.tigrc ]; then
   rm -f $HOME/.tigrc
