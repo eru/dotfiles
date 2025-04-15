@@ -14,3 +14,4 @@ copy-on-select = clipboard
 quick-terminal-animation-duration = 0
 bold-is-bright = true
 macos-titlebar-style = tabs
+confirm-close-surface = false
