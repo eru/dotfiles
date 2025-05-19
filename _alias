@@ -75,8 +75,9 @@ alias loc='locate'
 # android emulator
 alias emu="${ANDROID_HOME}/tools/emulator"
 
-# docker-compose
+# docker, docker compose
 alias d='docker compose'
+alias dpa='docker ps -a'
 
 # gnu ls
 if ls --color > /dev/null 2>&1; then
