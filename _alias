@@ -227,7 +227,7 @@ function dot-update() {
   sheldon lock --update
 
   # update neovim plugins
-  nvim --headless "+Lazy! update" +qa
+  nvim --headless "+Lazy! sync" +qa
   nvim --headless "+TSUpdate" +qa
 
   # update python dependencies
