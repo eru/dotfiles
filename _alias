@@ -84,6 +84,11 @@ if ls --color > /dev/null 2>&1; then
   alias ls='ls --color'
 fi
 
+# ldns
+if which drill > /dev/null 2>&1; then
+  alias dig='drill'
+fi
+
 # OS別の設定
 case "${OSTYPE}" in
   darwin*)
