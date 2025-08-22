@@ -8,7 +8,7 @@ return {
       suggestion = {
         enabled = false,
       },
-      copilot_node_command = "/opt/homebrew/bin/node",
+      copilot_node_command = "node",
     })
   end
 }
