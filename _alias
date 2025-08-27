@@ -66,6 +66,9 @@ if which nvim > /dev/null 2>&1; then
 fi
 alias vi='vim'
 
+# wget to curl
+alias wget='curl -O'
+
 # extract
 alias ex='extract'
 
