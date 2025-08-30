@@ -67,7 +67,7 @@ fi
 alias vi='vim'
 
 # wget to curl
-alias wget='curl -O'
+alias wget='curl -LO'
 
 # extract
 alias ex='extract'
