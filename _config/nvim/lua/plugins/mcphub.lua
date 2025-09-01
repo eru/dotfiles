@@ -12,6 +12,11 @@ return {
       require("mcphub").setup({
         -- This sets vim.g.mcphub_auto_approve to false by default (can also be toggled from the HUB UI with `ga`)
         auto_approve = false,
+        extensions = {
+          avante = {
+            make_slash_commands = true, -- make /slash commands from MCP server prompts
+          }
+        },
       })
     end,
 }

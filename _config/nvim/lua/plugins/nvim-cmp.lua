@@ -10,7 +10,8 @@ return {
     "hrsh7th/cmp-vsnip",
     "onsails/lspkind.nvim",
     "neovim/nvim-lspconfig",
-    "zbirenbaum/copilot-cmp",
+    -- "zbirenbaum/copilot-cmp",
+    "jvune0/copilot-cmp",
     "windwp/nvim-autopairs",
   },
   config = function()

@@ -1,5 +1,6 @@
 return {
-  "zbirenbaum/copilot-cmp",
+  -- "zbirenbaum/copilot-cmp",
+  "jvune0/copilot-cmp",
   dependencies = {
     "zbirenbaum/copilot.lua",
   },
