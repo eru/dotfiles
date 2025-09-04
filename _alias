@@ -48,6 +48,9 @@ alias gsu='git submodule update --recursive'
 alias gm='git merge --no-ff'
 alias gcl1='git clone --depth 1'
 
+# gitmoji
+alias gitmoji='NODENV_VERSION="system" gitmoji'
+
 # du/df
 alias du='du -h'
 alias df='df -h'

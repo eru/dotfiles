@@ -4,7 +4,9 @@ return {
     "nvim-lua/plenary.nvim", -- Required for git operations
   },
   config = function()
-    require("claude-code").setup()
+    require("claude-code").setup({
+      command = 'NODENV_VERSION="system" npx @anthropic-ai/claude-code',
+    })
 
     vim.keymap.set('n', '<leader>cc', '<cmd>ClaudeCode<CR>', { desc = 'Toggle Claude Code' })
   end
