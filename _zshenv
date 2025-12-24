@@ -13,7 +13,6 @@ fi
 # (N-/): don't register directories which do not exist
 path=(
     $HOME/.poetry/bin(N-/)
-    $HOME/.pyenv/shims(N-/)
     $HOME/.go/bin(N-/)
     $LOCAL_PREFIX/opt/coreutils/libexec/gnubin(N-/)
     $LOCAL_PREFIX/opt/findutils/libexec/gnubin(N-/)

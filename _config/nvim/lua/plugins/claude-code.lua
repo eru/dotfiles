@@ -5,7 +5,7 @@ return {
   },
   config = function()
     require("claude-code").setup({
-      command = 'NODENV_VERSION="system" npx @anthropic-ai/claude-code',
+      command = 'claude',
     })
 
     vim.keymap.set('n', '<leader>cc', '<cmd>ClaudeCode<CR>', { desc = 'Toggle Claude Code' })
