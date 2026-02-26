@@ -15,6 +15,9 @@ else
   alias cp='cp -i'
 fi
 
+# mkdir
+alias mp='mkdir -p'
+
 # よく間違えるねん
 alias cd..='cd ..'
 
