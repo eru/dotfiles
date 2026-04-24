@@ -5,14 +5,9 @@
 branch="$(git symbolic-ref HEAD 2>/dev/null)" || \
        "$(git describe --contains --all HEAD)"
 
-if [ "${branch##refs/heads/}" = "main" ]; then
+if [[ "${branch##refs/heads/}" =~ ^(main|staging|release/) ]]; then
     printf "\e[31m%s\n\e[m" "[Error]"
-    echo "can't commit on main branch."
-    echo "please commit on topic branch."
-    exit 1
-elif [[ "${branch##refs/heads/}" =~ ^release/ ]]; then
-    printf "\e[31m%s\n\e[m" "[Error]"
-    echo "can't commit on release branch."
+    echo "can't commit on protected branch."
     echo "please commit on topic branch."
     exit 1
 fi
