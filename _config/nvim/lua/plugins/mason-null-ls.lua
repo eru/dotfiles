@@ -11,9 +11,11 @@ return {
     require("mason-null-ls").setup({
       ensure_installed = {
         "css-lsp",
+        "delve",
         "deno",
         "emmet-language-server",
         "eslint-lsp",
+        "gopls",
         "html-lsp",
         "json-lsp",
         "nginx-language-server",
