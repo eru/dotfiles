@@ -65,14 +65,9 @@ infopath=(
     $HOME/.linuxbrew/share/info(N-/)
 )
 
-# Use most as pager, otherwise use less.
-if which most > /dev/null 2>&1; then
-    export PAGER="most"
-    export MANPAGER="most"
-else
-    export PAGER="less"
-    export MANPAGER="less"
-fi
+# Use less as pager
+export PAGER="less -iRM"
+export LESSCHARSET="utf-8"
 
 # Use (neo)?vim as editor
 if which nvim > /dev/null 2>&1; then
@@ -81,9 +76,6 @@ else
   export EDITOR="vim"
 fi
 
-# User less as pager
-export PAGER="less"
-export LESSCHARSET="utf-8"
 
 # The basic language settings used by applications
 export LANG="ja_JP.UTF-8"
