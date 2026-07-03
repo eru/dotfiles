@@ -65,6 +65,9 @@ alias su='su -l'
 # less
 alias less='less -iRM'
 
+# markdown viewer
+alias glow='glow -t'
+
 # (neo)?vim
 if which nvim > /dev/null 2>&1; then
   alias vim='NODENV_VERSION="system" nvim'
