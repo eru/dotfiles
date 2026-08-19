@@ -90,6 +90,7 @@ alias emu="${ANDROID_HOME}/tools/emulator"
 # docker, docker compose
 alias d='docker compose'
 alias dpa='docker ps -a'
+alias ddwn='d down -v --remove-orphans'
 
 # gnu ls
 if ls --color > /dev/null 2>&1; then
