@@ -171,7 +171,7 @@ function tmux-sync() {
 alias ts='tmux-sync'
 
 # ag
-alias ag='ag --pager="less -iRM"'
+alias ag='rg'
 function vag () {
   vi -c "Ack \"$1\"";
 }
